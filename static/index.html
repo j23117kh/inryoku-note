@@ -29,25 +29,26 @@
         }
     </style>
 </head>
-<body class="p-6 h-screen flex flex-col overflow-hidden">
+<body class="p-4 md:p-6 min-h-screen flex flex-col">
 
-    <header class="flex justify-between items-center mb-6 px-2">
+    <header class="flex flex-col md:flex-row justify-between items-center mb-6 px-2 gap-4">
         <div>
-            <h1 class="text-2xl font-bold tracking-tight"><i class="fa-solid fa-brain mr-2 text-emerald-500"></i>AIを活用した<span class="accent-text">動的思考連想システム</span></h1>
+            <h1 class="text-xl md:text-2xl font-bold tracking-tight"><i class="fa-solid fa-brain mr-2 text-emerald-500"></i>AIを活用した<span class="accent-text">動的思考連想システム</span></h1>
         </div>
-        <div class="text-right text-xs text-slate-500 flex gap-4 items-center">
+        <div class="text-right text-xs text-slate-500 flex gap-4 items-center w-full md:w-auto justify-between md:justify-end">
             <div class="flex gap-2">
-                <input type="text" id="ask-input" placeholder="メモに質問する..." class="px-3 py-1 rounded-lg text-xs w-48">
+                <input type="text" id="ask-input" placeholder="メモに質問する..." class="px-3 py-1 rounded-lg text-xs w-36 md:w-48">
                 <button onclick="askMemos()" class="px-3 py-1 bg-emerald-700 hover:bg-emerald-600 rounded-lg text-white font-bold"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-            <p id="status-text"><i class="fa-solid fa-circle text-[8px] text-emerald-500 mr-1"></i> System Online</p>
+            <p id="status-text" class="hidden md:block"><i class="fa-solid fa-circle text-[8px] text-emerald-500 mr-1"></i> System Online</p>
         </div>
     </header>
 
-    <main class="grid grid-cols-12 gap-6 flex-grow overflow-hidden">
+    <!-- スマホでは縦並び(grid-cols-1)、大画面で12カラム(lg:grid-cols-12)に調整 -->
+    <main class="grid grid-cols-1 lg:grid-cols-12 gap-6 flex-grow">
         
         <!-- 左カラム：アーカイブ -->
-        <div class="col-span-3 flex flex-col glass-panel rounded-2xl p-5 overflow-hidden">
+        <div class="col-span-1 lg:col-span-3 flex flex-col glass-panel rounded-2xl p-5 h-[400px] lg:h-auto overflow-hidden">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-sm font-bold flex items-center"><i class="fa-solid fa-database mr-2 text-emerald-500"></i> 蓄積された思考</h3>
                 <button onclick="clearEditor()" class="text-xs text-slate-400 hover:text-emerald-400"><i class="fa-solid fa-pen-to-square"></i> 新規作成</button>
@@ -58,10 +59,10 @@
         </div>
 
         <!-- 中央カラム：エディタと検索設定 -->
-        <div class="col-span-5 flex flex-col glass-panel rounded-2xl p-5 gap-4 relative">
+        <div class="col-span-1 lg:col-span-5 flex flex-col glass-panel rounded-2xl p-5 gap-4 relative min-h-[500px] lg:min-h-0">
             
-            <input type="text" id="memo-title" placeholder="無題の思考" class="w-full p-2 bg-transparent border-none text-2xl font-bold placeholder-slate-600 focus:ring-0">
-            <textarea id="editor" class="w-full flex-grow p-2 bg-transparent border-none resize-none text-base leading-relaxed custom-scrollbar placeholder-slate-600 focus:ring-0" placeholder="ここに今の考えを書き連ねてください..."></textarea>
+            <input type="text" id="memo-title" placeholder="無題の思考" class="w-full p-2 bg-transparent border-none text-xl md:text-2xl font-bold placeholder-slate-600 focus:ring-0">
+            <textarea id="editor" class="w-full h-48 lg:h-auto lg:flex-grow p-2 bg-transparent border-none resize-none text-base leading-relaxed custom-scrollbar placeholder-slate-600 focus:ring-0" placeholder="ここに今の考えを書き連ねてください..."></textarea>
             
             <div class="flex justify-between items-center px-2">
                 <span id="char-count" class="text-[10px] text-slate-500">0文字</span>
@@ -74,7 +75,7 @@
             <div class="mt-2 bg-slate-900/80 p-4 rounded-xl border border-slate-700">
                 <div class="text-[10px] text-slate-400 font-bold mb-2 uppercase tracking-wider">検索モードの比較（実験用）</div>
                 
-                <div class="flex gap-2 mb-3">
+                <div class="flex flex-col sm:flex-row gap-2 mb-3">
                     <button id="mode-thought_evolution" onclick="setMode('thought_evolution')" class="tab-btn tab-active flex-1 py-2 text-xs rounded-lg border">
                         <i class="fa-solid fa-code-branch mr-1"></i> 提案手法 (思考系譜)
                     </button>
@@ -107,7 +108,7 @@
         </div>
 
         <!-- 右カラム：検索結果 -->
-        <div class="col-span-4 flex flex-col glass-panel rounded-2xl p-5 overflow-hidden">
+        <div class="col-span-1 lg:col-span-4 flex flex-col glass-panel rounded-2xl p-5 h-[500px] lg:h-auto overflow-hidden">
             <div class="flex justify-between items-center mb-4">
                 <h3 class="text-sm font-bold flex items-center"><i class="fa-solid fa-network-wired mr-2 text-emerald-500"></i> 関連する記憶</h3>
                 <div class="flex bg-slate-800 rounded-lg p-1">
@@ -130,15 +131,12 @@
             </div>
 
             <!-- マップビュー -->
-            <div id="view-map" class="flex-grow bg-slate-950 rounded-xl border border-slate-800 overflow-hidden relative hidden">
-            
-                <!-- マップ表示形式の切り替えスイッチ -->
+            <div id="view-map" class="flex-grow bg-slate-950 rounded-xl border border-slate-800 overflow-hidden relative hidden min-h-[300px]">
                 <div class="absolute top-2 left-2 z-10 flex bg-slate-800/80 backdrop-blur-sm rounded-lg p-1 border border-slate-700">
                     <button id="map-style-hybrid" onclick="changeMapStyle('hybrid')" class="px-2 py-1 text-[9px] font-bold rounded-md bg-emerald-600/80 text-white border border-emerald-500/50">全体像</button>
                     <button id="map-style-time" onclick="changeMapStyle('time')" class="px-2 py-1 text-[9px] font-bold rounded-md text-slate-400 hover:text-slate-200">時間軸</button>
                     <button id="map-style-topic" onclick="changeMapStyle('topic')" class="px-2 py-1 text-[9px] font-bold rounded-md text-slate-400 hover:text-slate-200">トピック</button>
                 </div>
-
                 <div id="mynetwork" class="w-full h-full"></div>
                 <div class="absolute bottom-3 left-3 text-[9px] text-slate-600 pointer-events-none">距離 = 意味の近さ</div>
             </div>
