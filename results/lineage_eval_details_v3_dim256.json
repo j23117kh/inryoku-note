@@ -1,0 +1,8482 @@
+{
+  "semantic": {
+    "c002-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    }
+  },
+  "graph": {
+    "c002-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    }
+  },
+  "full": {
+    "c002-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    }
+  },
+  "recency_demote": {
+    "c002-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    }
+  },
+  "old_first": {
+    "c002-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    }
+  },
+  "oracle": {
+    "c002-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    }
+  },
+  "lineage_tau0.7": {
+    "c002-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    }
+  },
+  "lineage_tau0.76": {
+    "c002-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    }
+  },
+  "lineage_tau0.78": {
+    "c002-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    }
+  },
+  "lineage_tau0.82": {
+    "c002-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c030-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c032-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c034-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c036-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c038-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c040-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c042-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c044-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c046-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c048-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c050-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c052-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c054-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c056-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c058-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c060-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c062-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c064-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c066-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c068-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c070-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c072-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c074-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c076-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c078-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-current": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c080-asof": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c002-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c004-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c006-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c008-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c010-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c012-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c014-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c016-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c018-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c020-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c022-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c024-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c026-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    },
+    "c028-win": {
+      "mrr": 0.0,
+      "p@1": 0.0,
+      "stale_rate@5": 0.0,
+      "recall@10": 0.0,
+      "ndcg@10": 0.0,
+      "turning@5": null,
+      "root@5": null
+    }
+  }
+}

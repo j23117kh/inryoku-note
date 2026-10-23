@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>AIを活用した動的思考連想システム</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { background-color: #0b0f12; color: #e2e8f0; font-family: 'Inter', 'Noto Sans JP', sans-serif; }
+        .glass-panel { background: rgba(20, 27, 34, 0.8); border: 1px solid #222f3e; backdrop-filter: blur(10px); }
+        textarea, input, select { background-color: #0f172a !important; border: 1px solid #1e293b !important; color: #f8fafc !important; }
+        textarea:focus, input:focus, select:focus { border-color: #10b981 !important; outline: none; }
+        .accent-text { color: #10b981; }
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+        
+        .tab-btn { transition: all 0.2s; }
+        .tab-active { background-color: #059669; color: white; border-color: #059669; font-weight: bold; }
+        .tab-inactive { background-color: #1e293b; color: #94a3b8; border-color: #334155; }
+        .tab-inactive:hover { background-color: #334155; color: #e2e8f0; }
+
+        /* Vis.js 描画エリアのサイズ自動調整 */
+        #mynetwork {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+        }
+    </style>
+</head>
+<body class="p-6 h-screen flex flex-col overflow-hidden">
+
+    <header class="flex justify-between items-center mb-6 px-2">
+        <div>
+            <h1 class="text-2xl font-bold tracking-tight"><i class="fa-solid fa-brain mr-2 text-emerald-500"></i>AIを活用した<span class="accent-text">動的思考連想システム</span></h1>
+        </div>
+        <div class="text-right text-xs text-slate-500 flex gap-4 items-center">
+            <div class="flex gap-2">
+                <input type="text" id="ask-input" placeholder="メモに質問する..." class="px-3 py-1 rounded-lg text-xs w-48">
+                <button onclick="askMemos()" class="px-3 py-1 bg-emerald-700 hover:bg-emerald-600 rounded-lg text-white font-bold"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <p id="status-text"><i class="fa-solid fa-circle text-[8px] text-emerald-500 mr-1"></i> System Online</p>
+        </div>
+    </header>
+
+    <main class="grid grid-cols-12 gap-6 flex-grow overflow-hidden">
+        
+        <!-- 左カラム：アーカイブ -->
+        <div class="col-span-3 flex flex-col glass-panel rounded-2xl p-5 overflow-hidden">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-sm font-bold flex items-center"><i class="fa-solid fa-database mr-2 text-emerald-500"></i> 蓄積された思考</h3>
+                <button onclick="clearEditor()" class="text-xs text-slate-400 hover:text-emerald-400"><i class="fa-solid fa-pen-to-square"></i> 新規作成</button>
+            </div>
+            <div id="memo-archive" class="flex-grow overflow-y-auto custom-scrollbar space-y-3">
+                <p class="text-center text-slate-600 text-xs mt-10">思考を保存してください</p>
+            </div>
+        </div>
+
+        <!-- 中央カラム：エディタと検索設定 -->
+        <div class="col-span-5 flex flex-col glass-panel rounded-2xl p-5 gap-4 relative">
+            
+            <input type="text" id="memo-title" placeholder="無題の思考" class="w-full p-2 bg-transparent border-none text-2xl font-bold placeholder-slate-600 focus:ring-0">
+            <textarea id="editor" class="w-full flex-grow p-2 bg-transparent border-none resize-none text-base leading-relaxed custom-scrollbar placeholder-slate-600 focus:ring-0" placeholder="ここに今の考えを書き連ねてください..."></textarea>
+            
+            <div class="flex justify-between items-center px-2">
+                <span id="char-count" class="text-[10px] text-slate-500">0文字</span>
+                <button onclick="saveMemo()" class="px-6 py-2 bg-emerald-600 hover:bg-emerald-500 rounded-xl font-bold text-sm transition-all shadow-lg shadow-emerald-900/20">
+                    <i class="fa-solid fa-floppy-disk mr-1"></i> 保存
+                </button>
+            </div>
+
+            <!-- 検索設定パネル -->
+            <div class="mt-2 bg-slate-900/80 p-4 rounded-xl border border-slate-700">
+                <div class="text-[10px] text-slate-400 font-bold mb-2 uppercase tracking-wider">検索モードの比較（実験用）</div>
+                
+                <div class="flex gap-2 mb-3">
+                    <button id="mode-thought_evolution" onclick="setMode('thought_evolution')" class="tab-btn tab-active flex-1 py-2 text-xs rounded-lg border">
+                        <i class="fa-solid fa-code-branch mr-1"></i> 提案手法 (思考系譜)
+                    </button>
+                    <button id="mode-full" onclick="setMode('full')" class="tab-btn tab-inactive flex-1 py-2 text-xs rounded-lg border">
+                        <i class="fa-solid fa-circle-nodes mr-1"></i> 従来手法 (グラフ)
+                    </button>
+                    <button id="mode-semantic" onclick="setMode('semantic')" class="tab-btn tab-inactive flex-1 py-2 text-xs rounded-lg border">
+                        <i class="fa-solid fa-robot mr-1"></i> ベース (ベクトル)
+                    </button>
+                </div>
+                <input type="hidden" id="search-mode" value="thought_evolution">
+
+                <div class="flex justify-between items-center text-xs text-slate-400">
+                    <div class="flex items-center gap-2">
+                        <label for="threshold-slider">閾値:</label>
+                        <input type="range" id="threshold-slider" min="0" max="100" value="30" class="w-24 accent-emerald-500">
+                        <span id="threshold-val-display" class="font-bold text-emerald-400 w-6 text-right">30</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <label for="memo-count">探索数:</label>
+                        <select id="memo-count" class="px-2 py-1 rounded">
+                            <option value="10">10件</option>
+                            <option value="30" selected>30件</option>
+                            <option value="100">100件</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- 右カラム：検索結果 -->
+        <div class="col-span-4 flex flex-col glass-panel rounded-2xl p-5 overflow-hidden">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-sm font-bold flex items-center"><i class="fa-solid fa-network-wired mr-2 text-emerald-500"></i> 関連する記憶</h3>
+                <div class="flex bg-slate-800 rounded-lg p-1">
+                    <button id="btn-list" onclick="switchView('list')" class="px-3 py-1 text-[10px] font-bold rounded-md bg-slate-700 text-emerald-400">LIST</button>
+                    <button id="btn-map" onclick="switchView('map')" class="px-3 py-1 text-[10px] font-bold rounded-md text-slate-500">MAP</button>
+                </div>
+            </div>
+
+            <!-- 質問結果表示エリア -->
+            <div id="ask-result" class="hidden mb-4 p-3 bg-slate-900 border border-slate-700 rounded-lg text-xs max-h-40 overflow-y-auto custom-scrollbar relative">
+                <button onclick="this.parentElement.classList.add('hidden')" class="absolute top-2 right-2 text-slate-500 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
+                <div id="ask-result-content"></div>
+            </div>
+
+            <!-- リストビュー -->
+            <div id="view-list" class="flex-grow overflow-y-auto custom-scrollbar pr-2">
+                <div id="association-list" class="space-y-4">
+                    <p class="text-center text-slate-600 text-xs mt-10">入力すると自動で検索されます</p>
+                </div>
+            </div>
+
+            <!-- マップビュー -->
+            <div id="view-map" class="flex-grow bg-slate-950 rounded-xl border border-slate-800 overflow-hidden relative hidden">
+            
+                <!-- マップ表示形式の切り替えスイッチ -->
+                <div class="absolute top-2 left-2 z-10 flex bg-slate-800/80 backdrop-blur-sm rounded-lg p-1 border border-slate-700">
+                    <button id="map-style-hybrid" onclick="changeMapStyle('hybrid')" class="px-2 py-1 text-[9px] font-bold rounded-md bg-emerald-600/80 text-white border border-emerald-500/50">全体像</button>
+                    <button id="map-style-time" onclick="changeMapStyle('time')" class="px-2 py-1 text-[9px] font-bold rounded-md text-slate-400 hover:text-slate-200">時間軸</button>
+                    <button id="map-style-topic" onclick="changeMapStyle('topic')" class="px-2 py-1 text-[9px] font-bold rounded-md text-slate-400 hover:text-slate-200">トピック</button>
+                </div>
+
+                <div id="mynetwork" class="w-full h-full"></div>
+                <div class="absolute bottom-3 left-3 text-[9px] text-slate-600 pointer-events-none">距離 = 意味の近さ</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- モーダル -->
+    <div id="proposal-modal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-50">
+        <div class="glass-panel rounded-2xl p-6 w-[480px] max-h-[80vh] overflow-y-auto custom-scrollbar border border-slate-700 shadow-2xl">
+            <h3 class="text-sm font-bold mb-2"><i class="fa-solid fa-code-compare mr-2 text-emerald-400"></i> 過去のメモを更新しましたか？</h3>
+            <p class="text-xs text-slate-400 mb-4">今回のメモが、以下の過去メモを更新・訂正している可能性があります。更新として扱うものを選んでください。</p>
+            <div id="proposal-list" class="space-y-3 mb-5"></div>
+            <div class="flex gap-3">
+                <button onclick="resolveProposals(false)" class="flex-1 bg-slate-800 hover:bg-slate-700 py-2 rounded-xl text-xs font-bold border border-slate-700">そのまま残す</button>
+                <button onclick="resolveProposals(true)" class="flex-[2] bg-emerald-600 hover:bg-emerald-500 py-2 rounded-xl text-xs font-bold">選んだ内容を更新として反映</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentView = 'list';
+        let currentMapStyle = 'hybrid'; // 追加：マップの表示形式管理用
+        let lastResults = [];
+        let searchTimer = null;
+        let memoNetwork = null;
+
+        window.onload = loadArchive;
+
+        function esc(s) {
+            return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        }
+
+        function clearEditor() {
+            document.getElementById('memo-title').value = '';
+            document.getElementById('editor').value = '';
+            document.getElementById('char-count').innerText = "0文字";
+            document.getElementById('association-list').innerHTML = '<p class="text-center text-slate-600 text-xs mt-10">入力すると自動で検索されます</p>';
+        }
+
+        async function loadArchive() {
+            try {
+                const res = await fetch('/api/memos');
+                const archive = await res.json();
+                window.archiveData = archive;
+                
+                const container = document.getElementById('memo-archive');
+                container.innerHTML = '';
+                if (archive.length === 0) {
+                    container.innerHTML = '<p class="text-center text-slate-600 text-xs mt-10">思考を保存してください</p>';
+                    return;
+                }
+                archive.forEach(m => {
+                    const div = document.createElement('div');
+                    div.className = "p-3 bg-slate-900/50 border border-slate-800 rounded-lg hover:border-emerald-500/50 cursor-pointer transition-all" + (m.stale ? " opacity-50" : "");
+                    div.onclick = () => { 
+                        document.getElementById('memo-title').value = m.title; 
+                        document.getElementById('editor').value = m.content; 
+                        searchRelatedMemos(); 
+                    };
+                    const staleBadge = m.stale ? '<span class="ml-2 text-[9px] px-1.5 py-0.5 rounded bg-amber-900/40 text-amber-400 border border-amber-800/50">更新済み</span>' : '';
+                    div.innerHTML = `<div class="text-[10px] text-slate-500 mb-1">${esc(m.date)}${staleBadge}</div><div class="text-xs font-bold truncate text-slate-200">${esc(m.title)}</div>`;
+                    container.appendChild(div);
+                });
+            } catch (e) {
+                console.error("アーカイブ読み込みエラー:", e);
+            }
+        }
+
+        function setMode(mode) {
+            document.getElementById('search-mode').value = mode;
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('tab-active');
+                btn.classList.add('tab-inactive');
+            });
+            const activeBtn = document.getElementById(`mode-${mode}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('tab-inactive');
+                activeBtn.classList.add('tab-active');
+            }
+            
+            if (document.getElementById('editor').value.trim() !== '') {
+                searchRelatedMemos();
+            }
+        }
+
+        // マップ・リストの表示形式（全体像・時間軸・トピック）を切り替える関数
+        function changeMapStyle(style) {
+            currentMapStyle = style;
+            
+            ['hybrid', 'time', 'topic'].forEach(s => {
+                const btn = document.getElementById('map-style-' + s);
+                if (!btn) return;
+                if (s === style) {
+                    btn.className = "px-2 py-1 text-[9px] font-bold rounded-md bg-emerald-600/80 text-white border border-emerald-500/50";
+                } else {
+                    btn.className = "px-2 py-1 text-[9px] font-bold rounded-md text-slate-400 hover:text-slate-200";
+                }
+            });
+
+            if (lastResults && lastResults.length > 0) {
+                drawMap(lastResults);
+                drawList(lastResults);
+            }
+        }
+
+        async function saveMemo() {
+            const title = document.getElementById('memo-title').value;
+            const content = document.getElementById('editor').value;
+            if (!content.trim()) return alert("内容を入力してください");
+
+            document.getElementById('status-text').innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Saving...';
+
+            try {
+                const res = await fetch('/api/save', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ title, content, auto_apply: true })
+                });
+                const data = await res.json();
+                if (data.status === "success") {
+                    clearEditor();
+                    await loadArchive();
+                    document.getElementById('status-text').innerHTML = '<i class="fa-solid fa-circle text-[8px] text-emerald-500 mr-1"></i> System Online';
+                    
+                    if (!data.auto_applied && data.proposals && data.proposals.length > 0) {
+                        showProposals(data.id, data.proposals);
+                    }
+                } else {
+                    alert(data.message || "保存に失敗しました");
+                }
+            } catch (e) {
+                console.error("保存エラー:", e);
+                document.getElementById('status-text').innerHTML = '<i class="fa-solid fa-circle text-[8px] text-red-500 mr-1"></i> Error';
+            }
+        }
+
+        async function searchRelatedMemos() {
+            const title = document.getElementById('memo-title').value;
+            const text = document.getElementById('editor').value;
+            const mode = document.getElementById('search-mode').value;
+            const threshold = parseInt(document.getElementById('threshold-slider').value, 10);
+            const memoCount = parseInt(document.getElementById('memo-count').value, 10);
+            
+            if (!text.trim()) return;
+            
+            document.getElementById('status-text').innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> Analyzing...';
+            
+            try {
+                const res = await fetch('/api/gravity', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ title: title, text: text, mode: mode, threshold: threshold, count: memoCount })
+                });
+                
+                lastResults = await res.json();
+                if (!Array.isArray(lastResults)) { lastResults = []; }
+                
+                drawMap(lastResults);
+                drawList(lastResults);
+                document.getElementById('status-text').innerHTML = '<i class="fa-solid fa-circle text-[8px] text-emerald-500 mr-1"></i> System Online';
+            } catch (e) {
+                console.error("検索処理エラー:", e);
+                document.getElementById('status-text').innerHTML = '<i class="fa-solid fa-circle text-[8px] text-red-500 mr-1"></i> Error';
+            }
+        }
+
+        function drawList(data) {
+            const container = document.getElementById('association-list');
+            container.innerHTML = ''; 
+
+            if (!Array.isArray(data) || data.length === 0) {
+                container.innerHTML = '<p class="text-center text-slate-600 text-xs mt-10">該当する記憶が見つかりませんでした</p>';
+                return;
+            }
+
+            const mode = document.getElementById('search-mode').value;
+
+            const createCard = (m, originalIndex) => {
+                const div = document.createElement('div');
+                div.className = "p-4 bg-slate-900/80 border border-slate-700 hover:border-emerald-500/50 transition-all rounded-xl shadow-sm" + (m.stale ? " opacity-60" : "");
+                
+                let badge = m.stale ? '<span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-900/40 text-amber-400 border border-amber-800/50 mr-2"><i class="fa-solid fa-rotate-left"></i> 更新済み (過去)</span>' : '';
+                if (mode === 'thought_evolution') {
+                    if (m.evolution_anchor) {
+                        badge += '<span class="text-[9px] px-1.5 py-0.5 rounded bg-blue-900/40 text-blue-400 border border-blue-800/50 mr-2"><i class="fa-solid fa-anchor"></i> 検索起点 (アンカー)</span>';
+                    } else if (m.thought_evolution) {
+                        const hopText = (m.hop !== undefined && m.hop !== null) ? ` (${m.hop}世代前の思考)` : '';
+                        badge += `<span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-900/40 text-purple-400 border border-purple-800/50 mr-2"><i class="fa-solid fa-code-branch"></i> 思考の系譜${hopText}</span>`;
+                    }
+                }
+
+                const scoreDetails = m.parts ? `
+                    <div class="flex gap-2 text-[9px] mt-2 bg-slate-950 p-1.5 rounded-lg border border-slate-800">
+                        <span class="text-slate-400">ベクトル: ${m.parts.sem || 0}</span>
+                        ${m.parts.evolution ? `<span class="text-purple-400">系譜: ${m.parts.evolution}</span>` : ''}
+                        ${m.parts.graph ? `<span class="text-blue-400">グラフ: ${m.parts.graph}</span>` : ''}
+                    </div>
+                ` : '';
+
+                div.innerHTML = `
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            ${badge}
+                            <span class="text-[9px] text-slate-500">${esc(m.date)}</span>
+                        </div>
+                        <span class="text-[10px] font-bold text-emerald-400">Score: ${m.score}</span>
+                    </div>
+                    <h4 class="text-sm font-bold text-slate-100 mb-1">${esc(m.title)}</h4>
+                    <p class="memo-content text-xs text-slate-400 line-clamp-3 mb-2 leading-relaxed">${esc(m.content)}</p>
+                    ${scoreDetails}
+                    <div class="flex gap-2 mt-3">
+                        <button onclick="toggleMemo(this)" class="flex-1 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 text-[10px] font-bold rounded-lg transition-all border border-slate-700">全容</button>
+                        <button onclick="quoteAt(${originalIndex})" class="flex-[2] py-1.5 bg-emerald-900/20 hover:bg-emerald-900/40 text-emerald-400 text-[10px] font-bold rounded-lg transition-all border border-emerald-900/50">引用</button>
+                    </div>
+                `;
+                return div;
+            };
+
+            if (mode === 'thought_evolution') {
+                const evolutionData = data.filter(m => m.thought_evolution || m.evolution_anchor);
+                const semanticData = data.filter(m => !m.thought_evolution && !m.evolution_anchor);
+
+                if ((currentMapStyle === 'hybrid' || currentMapStyle === 'time') && evolutionData.length > 0) {
+                    const header = document.createElement('div');
+                    header.innerHTML = '<h4 class="text-xs font-bold text-purple-400 mb-3 mt-1 border-b border-purple-900/50 pb-1"><i class="fa-solid fa-code-branch mr-1"></i> 過去の思考の系譜</h4>';
+                    container.appendChild(header);
+                    
+                    const grid = document.createElement('div');
+                    grid.className = "space-y-4";
+                    evolutionData.forEach(m => grid.appendChild(createCard(m, data.indexOf(m))));
+                    container.appendChild(grid);
+                }
+
+                if ((currentMapStyle === 'hybrid' || currentMapStyle === 'topic') && semanticData.length > 0) {
+                    const header = document.createElement('div');
+                    header.className = (currentMapStyle === 'hybrid' && evolutionData.length > 0) ? "mt-6" : "mt-1";
+                    header.innerHTML = '<h4 class="text-xs font-bold text-slate-400 mb-3 border-b border-slate-700 pb-1"><i class="fa-solid fa-robot mr-1"></i> 意味的に近い記憶</h4>';
+                    container.appendChild(header);
+
+                    const grid = document.createElement('div');
+                    grid.className = "space-y-4";
+                    semanticData.forEach(m => grid.appendChild(createCard(m, data.indexOf(m))));
+                    container.appendChild(grid);
+                }
+
+                // もし抽出データがゼロ件のときの安全装置（全件表示）
+                if (container.children.length === 0) {
+                    const grid = document.createElement('div');
+                    grid.className = "space-y-4";
+                    data.forEach((m, i) => grid.appendChild(createCard(m, i)));
+                    container.appendChild(grid);
+                }
+            } else {
+                const grid = document.createElement('div');
+                grid.className = "space-y-4";
+                data.forEach((m, i) => grid.appendChild(createCard(m, i)));
+                container.appendChild(grid);
+            }
+        }
+
+        // 描画のたびに Network インスタンスを作り直さないためのグローバル変数
+        
+        
+
+        function drawMap(data) {
+            const container = document.getElementById('mynetwork');
+            const modeElement = document.getElementById('search-mode');
+
+            if (!container || !modeElement || typeof vis === 'undefined') {
+                return;
+            }
+
+            const mode = modeElement.value;
+            const style =
+                typeof currentMapStyle !== 'undefined'
+                    ? currentMapStyle
+                    : 'hybrid';
+
+            const input = Array.isArray(data) ? data : [];
+            const threshold = parseInt(document.getElementById('threshold-slider').value, 10) || 0;
+
+            const byId = new Map();
+            input.forEach(memo => {
+                if (!memo || memo.id == null) return;
+                if (memo.score !== undefined && memo.score !== null) {
+                    if (Number(memo.score) < threshold) return;
+                }
+                byId.set(String(memo.id), memo);
+            });
+
+            const memos = [...byId.values()];
+            const ids = new Set(memos.map(m => String(m.id)));
+
+            const C = {
+                query: '#10b981',
+                temporal: '#a855f7',
+                semantic: '#3b82f6',
+                lineage: '#f59e0b',
+                neutral: '#64748b',
+                stale: '#78350f',
+                text: '#cbd5e1'
+            };
+
+            const QUERY_ID = '__query__';
+            const nodes = [{
+                id: QUERY_ID,
+                label: '現在の検索',
+                shape: 'dot',
+                size: 22,
+                color: C.query,
+                font: { color: '#ffffff', bold: true },
+                level: 0
+            }];
+
+            const edges = [];
+            const nodeIds = new Set([QUERY_ID]);
+            const edgeKeys = new Set();
+
+            function scoreOf(memo) {
+                const value = Number(memo.score);
+                return Number.isFinite(value) ? value : null;
+            }
+
+            function timestampOf(memo) {
+                const value =
+                    memo.created_at ??
+                    memo.createdAt ??
+                    memo.timestamp ??
+                    memo.date;
+
+                if (value == null || value === '') return null;
+
+                const time = typeof value === 'number'
+                    ? (value < 1e12 ? value * 1000 : value)
+                    : Date.parse(value);
+
+                return Number.isFinite(time) ? time : null;
+            }
+
+            function normalizeIds(value) {
+                if (value == null) return [];
+                const values = Array.isArray(value) ? value : [value];
+                return values
+                    .map(item => {
+                        if (item && typeof item === 'object') {
+                            return item.id ?? item.memo_id ?? item.target_id;
+                        }
+                        return item;
+                    })
+                    .filter(value => value != null)
+                    .map(String);
+            }
+
+            function addNode(memo, extra = {}) {
+                const id = String(memo.id);
+                if (nodeIds.has(id)) return;
+
+                nodeIds.add(id);
+
+                nodes.push({
+                    id,
+                    label: String(memo.title || '無題'),
+                    title: String(memo.title || '無題'),
+                    shape: 'dot',
+                    size: 14,
+                    color: memo.stale ? C.stale : C.neutral,
+                    font: { color: C.text, size: 11 },
+                    ...extra
+                });
+            }
+
+            function addEdge(from, to, type, extra = {}) {
+                from = String(from);
+                to = String(to);
+
+                if (from === to || !nodeIds.has(from) || !nodeIds.has(to)) return;
+
+                const key = `${type}:${from}->${to}`;
+                if (edgeKeys.has(key)) return;
+                edgeKeys.add(key);
+
+                const base = {
+                    from,
+                    to,
+                    arrows: { to: { enabled: true, scaleFactor: 0.7 } },
+                    width: 1.5,
+                    color: { color: C.neutral, opacity: 0.5 },
+                    label: '',
+                    font: { color: C.text, size: 10, align: 'middle' }
+                };
+
+                const styles = {
+                    temporal: {
+                        label: '時系列チェーン',
+                        color: { color: C.temporal, opacity: 0.85 },
+                        width: 2
+                    },
+                    supersedes: {
+                        label: '更新・置換',
+                        color: { color: C.lineage, opacity: 0.95 },
+                        width: 2.5
+                    },
+                    related: {
+                        label: '関連メモ',
+                        color: { color: C.semantic, opacity: 0.8 },
+                        dashes: true,
+                        arrows: ''
+                    },
+                    retrieval: {
+                        label: '検索ヒット',
+                        color: { color: C.neutral, opacity: 0.25 },
+                        dashes: true,
+                        arrows: ''
+                    },
+                    semantic: {
+                        label: '関連度',
+                        color: { color: C.semantic, opacity: 0.65 }
+                    }
+                };
+
+                edges.push({
+                    ...base,
+                    ...(styles[type] || {}),
+                    ...extra
+                });
+            }
+
+            memos.forEach(memo => addNode(memo));
+
+            // 1. 実データの系譜（supersedes）と類似の自動リンク
+            function addLineageAndRelatedEdges() {
+                memos.forEach(memo => {
+                    const newId = String(memo.id);
+
+                    normalizeIds(memo.supersedes).forEach(oldId => {
+                        if (!ids.has(oldId)) return;
+                        addEdge(oldId, newId, 'supersedes');
+                    });
+
+                    normalizeIds(memo.related_ids).forEach(otherId => {
+                        if (!ids.has(otherId)) return;
+                        const a = [newId, otherId].sort()[0];
+                        const b = [newId, otherId].sort()[1];
+                        addEdge(a, b, 'related');
+                    });
+                });
+            }
+
+            // 2. 時系列の連続チェーン（古い順 → 新しい順 → 検索起点）
+            function addTemporalChainEdges() {
+                const ordered = [...memos].sort((a, b) => {
+                    const ta = timestampOf(a);
+                    const tb = timestampOf(b);
+                    if (ta == null && tb == null) return String(a.id).localeCompare(String(b.id));
+                    if (ta == null) return 1;
+                    if (tb == null) return -1;
+                    return ta - tb;
+                });
+
+                ordered.forEach((memo, index) => {
+                    const id = String(memo.id);
+                    const node = nodes.find(n => n.id === id);
+                    if (node) {
+                        node.level = index + 1;
+                        node.color = memo.stale ? C.stale : C.temporal;
+                    }
+
+                    if (index > 0) {
+                        const fromId = String(ordered[index - 1].id);
+                        addEdge(fromId, id, 'temporal');
+                    }
+                });
+
+                const queryNode = nodes.find(n => n.id === QUERY_ID);
+                if (queryNode) {
+                    queryNode.level = ordered.length + 1;
+                }
+
+                if (ordered.length > 0) {
+                    const newestId = String(ordered[ordered.length - 1].id);
+                    addEdge(newestId, QUERY_ID, 'temporal');
+                }
+            }
+
+            function addTopicNetworkEdges() {
+                memos.forEach(memo => {
+                    const id = String(memo.id);
+                    const score = scoreOf(memo);
+                    addEdge(QUERY_ID, id, 'semantic', {
+                        title: score == null ? '検索結果' : `検索スコア: ${score}`
+                    });
+                });
+
+                memos.forEach((memo, i) => {
+                    const newId = String(memo.id);
+                    const rels = normalizeIds(memo.related_ids);
+
+                    if (rels.length > 0) {
+                        rels.forEach(otherId => {
+                            if (!ids.has(otherId)) return;
+                            const a = [newId, otherId].sort()[0];
+                            const b = [newId, otherId].sort()[1];
+                            addEdge(a, b, 'related');
+                        });
+                    } else {
+                        for (let k = 1; k <= 2; k++) {
+                            if (i + k < memos.length) {
+                                const otherId = String(memos[i + k].id);
+                                const a = [newId, otherId].sort()[0];
+                                const b = [newId, otherId].sort()[1];
+                                addEdge(a, b, 'related');
+                            }
+                        }
+                    }
+                });
+            }
+
+            if (mode === 'thought_evolution') {
+                if (style === 'time') {
+                    addTemporalChainEdges();
+                } else if (style === 'topic') {
+                    addTopicNetworkEdges();
+                } else {
+                    addLineageAndRelatedEdges();
+                    memos.forEach(memo => {
+                        const id = String(memo.id);
+                        const hasConnection = edges.some(e => e.from === id || e.to === id);
+                        if (!hasConnection) {
+                            addEdge(QUERY_ID, id, 'retrieval');
+                        }
+                    });
+                }
+            } else if (style === 'time' || mode === 'time') {
+                addTemporalChainEdges();
+            } else if (style === 'topic' || mode === 'semantic') {
+                addTopicNetworkEdges();
+            } else {
+                addLineageAndRelatedEdges();
+            }
+
+            const isTemporal =
+                (mode === 'thought_evolution' && style === 'time') ||
+                mode === 'time';
+
+            const options = {
+                autoResize: true,
+                interaction: { hover: true, navigationButtons: true, keyboard: true },
+                nodes: { borderWidth: 1 },
+                edges: { smooth: { enabled: true, type: 'dynamic', roundness: 0.2 } },
+                layout: isTemporal
+                    ? {
+                        hierarchical: {
+                            enabled: true,
+                            direction: 'UD',
+                            sortMethod: 'directed',
+                            nodeSpacing: 160,
+                            levelSeparation: 100
+                        }
+                    }
+                    : { improvedLayout: true },
+                physics: isTemporal
+                    ? { enabled: false }
+                    : {
+                        enabled: true,
+                        solver: 'forceAtlas2Based',
+                        stabilization: { iterations: 100 },
+                        forceAtlas2Based: {
+                            gravitationalConstant: -50,
+                            centralGravity: 0.1,
+                            springLength: 100,
+                            springConstant: 0.08
+                        }
+                    }
+            };
+
+            // ネットワークインスタンスの破棄は1回に整理
+            if (memoNetwork) {
+                memoNetwork.destroy();
+                memoNetwork = null;
+            }
+            container.replaceChildren();
+
+            // ==========================================
+            // クエリを中心とした同心円状座標配置（非・時間軸モードのときのみ適用）
+            // ==========================================
+            if (!isTemporal) {
+                const queryNode = nodes.find(n => n.id === QUERY_ID);
+                if (queryNode) {
+                    queryNode.x = 0;
+                    queryNode.y = 0;
+                    queryNode.fixed = { x: true, y: true };
+                }
+
+                const memoNodes = nodes.filter(n => n.id !== QUERY_ID);
+                const baseRadius = 160;
+                
+                memoNodes.forEach((node, index) => {
+                    const ring = Math.floor(index / 8); 
+                    const radius = baseRadius + (ring * 120);
+                    const countInRing = Math.min(memoNodes.length - (ring * 8), 8);
+                    const indexInRing = index % 8;
+                    const angle = (indexInRing / countInRing) * 2 * Math.PI;
+                    
+                    node.x = radius * Math.cos(angle);
+                    node.y = radius * Math.sin(angle);
+                });
+            }
+
+            memoNetwork = new vis.Network(
+                container,
+                {
+                    nodes: new vis.DataSet(nodes),
+                    edges: new vis.DataSet(edges)
+                },
+                options
+            );
+
+            memoNetwork.on('selectNode', params => {
+                const id = String(params.nodes[0]);
+                if (id === QUERY_ID) return;
+                const memo = byId.get(id);
+                if (memo) {
+                    console.debug('選択メモ:', memo);
+                }
+            });
+        }
+
+        function toggleMemo(btn) {
+            const p = btn.closest('.p-4').querySelector('.memo-content');
+            if (p.classList.contains('line-clamp-3')) {
+                p.classList.remove('line-clamp-3');
+                btn.innerHTML = '閉じる';
+            } else {
+                p.classList.add('line-clamp-3');
+                btn.innerHTML = '全容';
+            }
+        }
+
+        function quoteAt(i) {
+            const m = lastResults[i];
+            if (m) {
+                const editor = document.getElementById('editor');
+                editor.value += `\n\n【引用：${m.title}】\n${m.content}\n`;
+                document.getElementById('char-count').innerText = editor.value.length + "文字";
+            }
+        }
+
+        document.getElementById('editor').addEventListener('input', (e) => {
+            document.getElementById('char-count').innerText = e.target.value.length + "文字";
+            clearTimeout(searchTimer);
+            searchTimer = setTimeout(searchRelatedMemos, 800);
+        });
+
+        document.getElementById('threshold-slider').addEventListener('input', (e) => {
+            document.getElementById('threshold-val-display').innerText = e.target.value;
+        });
+        document.getElementById('threshold-slider').addEventListener('change', () => {
+            if (document.getElementById('editor').value.trim() !== '') searchRelatedMemos();
+        });
+
+        function switchView(v) {
+            currentView = v;
+            document.getElementById('view-map').classList.toggle('hidden', v !== 'map');
+            document.getElementById('view-list').classList.toggle('hidden', v !== 'list');
+            document.getElementById('btn-map').className = v === 'map' ? "px-3 py-1 text-[10px] font-bold rounded-md bg-slate-700 text-emerald-400" : "px-3 py-1 text-[10px] font-bold rounded-md text-slate-500";
+            document.getElementById('btn-list').className = v === 'list' ? "px-3 py-1 text-[10px] font-bold rounded-md bg-slate-700 text-emerald-400" : "px-3 py-1 text-[10px] font-bold rounded-md text-slate-500";
+
+            if (v === 'map' && lastResults && lastResults.length > 0) {
+                setTimeout(() => { drawMap(lastResults); }, 50);
+            }
+        }
+
+        async function askMemos() {
+            const question = document.getElementById('ask-input').value.trim();
+            if (!question) return;
+            const box = document.getElementById('ask-result');
+            const content = document.getElementById('ask-result-content');
+            box.classList.remove('hidden');
+            content.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-1"></i> 確認中...';
+            try {
+                const res = await fetch('/api/ask', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({question})
+                });
+                const d = await res.json();
+                if (!res.ok || d.status === 'error') { content.textContent = d.error || d.message; return; }
+                
+                let html = `<div class="text-slate-100 leading-relaxed font-bold">${esc(d.answer)}</div>`;
+                if (d.evidence && d.evidence.length) {
+                    html += '<div class="mt-2 text-[10px] text-slate-500 border-t border-slate-700 pt-1">根拠: ' + d.evidence.map(e => esc(e.title)).join(' / ') + '</div>';
+                }
+                content.innerHTML = html;
+            } catch (e) { content.textContent = '通信エラーが発生しました'; }
+        }
+        document.getElementById('ask-input').addEventListener('keydown', (e) => { if (e.key === 'Enter') askMemos(); });
+
+        let pendingId = null;
+        function showProposals(newId, proposals) {
+            pendingId = newId;
+            const list = document.getElementById('proposal-list');
+            list.innerHTML = '';
+            proposals.forEach(p => {
+                const label = document.createElement('label');
+                label.className = "flex gap-3 p-3 bg-slate-900 border border-slate-800 rounded-lg cursor-pointer";
+                label.innerHTML = `<input type="checkbox" class="mt-1 accent-emerald-500" data-id="${esc(p.id)}" checked>
+                    <div><div class="text-[10px] text-slate-500">${esc(p.date)}</div>
+                    <div class="text-sm font-bold text-slate-200">${esc(p.title)}</div></div>`;
+                list.appendChild(label);
+            });
+            document.getElementById('proposal-modal').classList.remove('hidden');
+        }
+
+        async function resolveProposals(apply) {
+            const accept = apply ? [...document.querySelectorAll('#proposal-list input:checked')].map(i => i.dataset.id) : [];
+            await fetch('/api/confirm', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({id: pendingId, accept})
+            });
+            document.getElementById('proposal-modal').classList.add('hidden');
+            pendingId = null;
+            loadArchive();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+﻿method,n,mrr,p@1,recall@10,ndcg@10,turning@5,root@5
+semantic,94,0.0,0.0,0.0,0.0,nan,nan
+graph,94,0.0,0.0,0.0,0.0,nan,nan
+full,94,0.0,0.0,0.0,0.0,nan,nan
+recency_demote,94,0.0,0.0,0.0,0.0,nan,nan
+old_first,94,0.0,0.0,0.0,0.0,nan,nan
+oracle,94,0.0,0.0,0.0,0.0,nan,nan
+lineage_tau0.7,94,0.0,0.0,0.0,0.0,nan,nan
+lineage_tau0.76,94,0.0,0.0,0.0,0.0,nan,nan
+lineage_tau0.78,94,0.0,0.0,0.0,0.0,nan,nan
+lineage_tau0.82,94,0.0,0.0,0.0,0.0,nan,nan

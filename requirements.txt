@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+numpy
+networkx
+google-genai
+python-dotenv
+matplotlib

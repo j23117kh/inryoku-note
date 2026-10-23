@@ -1,0 +1,2180 @@
+[
+  {
+    "qid": "c001-current",
+    "type": "current",
+    "text": "アルバイトの面談はいつどこだっけ",
+    "as_of": null,
+    "relevant_id": "c001-v2",
+    "stale_ids": [
+      "c001-v1"
+    ],
+    "chain_id": "c001",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c001-asof",
+    "type": "as_of",
+    "text": "アルバイトの面談の集合時間と場所を確認したい",
+    "as_of": "2026-04-08",
+    "relevant_id": "c001-v1",
+    "stale_ids": [],
+    "chain_id": "c001",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c002-current",
+    "type": "current",
+    "text": "自動車の点検の予定を教えて",
+    "as_of": null,
+    "relevant_id": "c002-v2",
+    "stale_ids": [
+      "c002-v1"
+    ],
+    "chain_id": "c002",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c002-asof",
+    "type": "as_of",
+    "text": "自動車の点検はいつどこだっけ",
+    "as_of": "2026-05-01",
+    "relevant_id": "c002-v1",
+    "stale_ids": [],
+    "chain_id": "c002",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c003-current",
+    "type": "current",
+    "text": "サークルの新歓の予定を教えて",
+    "as_of": null,
+    "relevant_id": "c003-v2",
+    "stale_ids": [
+      "c003-v1"
+    ],
+    "chain_id": "c003",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c003-asof",
+    "type": "as_of",
+    "text": "サークルの新歓の予定を教えて",
+    "as_of": "2026-04-08",
+    "relevant_id": "c003-v1",
+    "stale_ids": [],
+    "chain_id": "c003",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c004-current",
+    "type": "current",
+    "text": "読書会の集合時間と場所を確認したい",
+    "as_of": null,
+    "relevant_id": "c004-v3",
+    "stale_ids": [
+      "c004-v1",
+      "c004-v2"
+    ],
+    "chain_id": "c004",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c004-asof",
+    "type": "as_of",
+    "text": "読書会の集合時間と場所を確認したい",
+    "as_of": "2026-05-04",
+    "relevant_id": "c004-v1",
+    "stale_ids": [],
+    "chain_id": "c004",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c005-current",
+    "type": "current",
+    "text": "映画の約束はいつどこだっけ",
+    "as_of": null,
+    "relevant_id": "c005-v2",
+    "stale_ids": [
+      "c005-v1"
+    ],
+    "chain_id": "c005",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c005-asof",
+    "type": "as_of",
+    "text": "映画の約束の集合時間と場所を確認したい",
+    "as_of": "2026-04-07",
+    "relevant_id": "c005-v1",
+    "stale_ids": [],
+    "chain_id": "c005",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c006-current",
+    "type": "current",
+    "text": "引っ越しの立ち会いの集合時間と場所を確認したい",
+    "as_of": null,
+    "relevant_id": "c006-v3",
+    "stale_ids": [
+      "c006-v1",
+      "c006-v2"
+    ],
+    "chain_id": "c006",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c006-asof",
+    "type": "as_of",
+    "text": "引っ越しの立ち会いの集合時間と場所を確認したい",
+    "as_of": "2026-05-12",
+    "relevant_id": "c006-v1",
+    "stale_ids": [],
+    "chain_id": "c006",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c007-current",
+    "type": "current",
+    "text": "美容室の予約はいつどこだっけ",
+    "as_of": null,
+    "relevant_id": "c007-v2",
+    "stale_ids": [
+      "c007-v1"
+    ],
+    "chain_id": "c007",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c007-asof",
+    "type": "as_of",
+    "text": "美容室の予約の予定を教えて",
+    "as_of": "2026-04-17",
+    "relevant_id": "c007-v1",
+    "stale_ids": [],
+    "chain_id": "c007",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c008-current",
+    "type": "current",
+    "text": "家族の食事会の予定を教えて",
+    "as_of": null,
+    "relevant_id": "c008-v2",
+    "stale_ids": [
+      "c008-v1"
+    ],
+    "chain_id": "c008",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c008-asof",
+    "type": "as_of",
+    "text": "家族の食事会はいつどこだっけ",
+    "as_of": "2026-05-13",
+    "relevant_id": "c008-v1",
+    "stale_ids": [],
+    "chain_id": "c008",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c009-current",
+    "type": "current",
+    "text": "英会話のレッスンの予定を教えて",
+    "as_of": null,
+    "relevant_id": "c009-v2",
+    "stale_ids": [
+      "c009-v1"
+    ],
+    "chain_id": "c009",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c009-asof",
+    "type": "as_of",
+    "text": "英会話のレッスンの予定を教えて",
+    "as_of": "2026-04-21",
+    "relevant_id": "c009-v1",
+    "stale_ids": [],
+    "chain_id": "c009",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c010-current",
+    "type": "current",
+    "text": "旅行の集合はいつどこだっけ",
+    "as_of": null,
+    "relevant_id": "c010-v2",
+    "stale_ids": [
+      "c010-v1"
+    ],
+    "chain_id": "c010",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c010-asof",
+    "type": "as_of",
+    "text": "旅行の集合の予定を教えて",
+    "as_of": "2026-05-07",
+    "relevant_id": "c010-v1",
+    "stale_ids": [],
+    "chain_id": "c010",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c011-current",
+    "type": "current",
+    "text": "結婚式の二次会の集合時間と場所を確認したい",
+    "as_of": null,
+    "relevant_id": "c011-v2",
+    "stale_ids": [
+      "c011-v1"
+    ],
+    "chain_id": "c011",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c011-asof",
+    "type": "as_of",
+    "text": "結婚式の二次会はいつどこだっけ",
+    "as_of": "2026-05-11",
+    "relevant_id": "c011-v1",
+    "stale_ids": [],
+    "chain_id": "c011",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c012-current",
+    "type": "current",
+    "text": "OB会はいつどこだっけ",
+    "as_of": null,
+    "relevant_id": "c012-v2",
+    "stale_ids": [
+      "c012-v1"
+    ],
+    "chain_id": "c012",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c012-asof",
+    "type": "as_of",
+    "text": "OB会の集合時間と場所を確認したい",
+    "as_of": "2026-05-01",
+    "relevant_id": "c012-v1",
+    "stale_ids": [],
+    "chain_id": "c012",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c013-current",
+    "type": "current",
+    "text": "留学説明会の集合時間と場所を確認したい",
+    "as_of": null,
+    "relevant_id": "c013-v2",
+    "stale_ids": [
+      "c013-v1"
+    ],
+    "chain_id": "c013",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c013-asof",
+    "type": "as_of",
+    "text": "留学説明会の集合時間と場所を確認したい",
+    "as_of": "2026-04-04",
+    "relevant_id": "c013-v1",
+    "stale_ids": [],
+    "chain_id": "c013",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c014-current",
+    "type": "current",
+    "text": "指導教員との面談の集合時間と場所を確認したい",
+    "as_of": null,
+    "relevant_id": "c014-v3",
+    "stale_ids": [
+      "c014-v1",
+      "c014-v2"
+    ],
+    "chain_id": "c014",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c014-asof",
+    "type": "as_of",
+    "text": "指導教員との面談はいつどこだっけ",
+    "as_of": "2026-04-14",
+    "relevant_id": "c014-v1",
+    "stale_ids": [],
+    "chain_id": "c014",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c015-current",
+    "type": "current",
+    "text": "インターンの説明会はいつどこだっけ",
+    "as_of": null,
+    "relevant_id": "c015-v2",
+    "stale_ids": [
+      "c015-v1"
+    ],
+    "chain_id": "c015",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c015-asof",
+    "type": "as_of",
+    "text": "インターンの説明会はいつどこだっけ",
+    "as_of": "2026-04-12",
+    "relevant_id": "c015-v1",
+    "stale_ids": [],
+    "chain_id": "c015",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c016-current",
+    "type": "current",
+    "text": "勉強会の集合時間と場所を確認したい",
+    "as_of": null,
+    "relevant_id": "c016-v3",
+    "stale_ids": [
+      "c016-v1",
+      "c016-v2"
+    ],
+    "chain_id": "c016",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c016-asof",
+    "type": "as_of",
+    "text": "勉強会の集合時間と場所を確認したい",
+    "as_of": "2026-04-14",
+    "relevant_id": "c016-v1",
+    "stale_ids": [],
+    "chain_id": "c016",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c017-current",
+    "type": "current",
+    "text": "ゼミの中間発表の集合時間と場所を確認したい",
+    "as_of": null,
+    "relevant_id": "c017-v2",
+    "stale_ids": [
+      "c017-v1"
+    ],
+    "chain_id": "c017",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c017-asof",
+    "type": "as_of",
+    "text": "ゼミの中間発表の集合時間と場所を確認したい",
+    "as_of": "2026-04-10",
+    "relevant_id": "c017-v1",
+    "stale_ids": [],
+    "chain_id": "c017",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c018-current",
+    "type": "current",
+    "text": "ボランティア説明会の集合時間と場所を確認したい",
+    "as_of": null,
+    "relevant_id": "c018-v3",
+    "stale_ids": [
+      "c018-v1",
+      "c018-v2"
+    ],
+    "chain_id": "c018",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c018-asof",
+    "type": "as_of",
+    "text": "ボランティア説明会はいつどこだっけ",
+    "as_of": "2026-04-26",
+    "relevant_id": "c018-v1",
+    "stale_ids": [],
+    "chain_id": "c018",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c019-current",
+    "type": "current",
+    "text": "同窓会の集合時間と場所を確認したい",
+    "as_of": null,
+    "relevant_id": "c019-v2",
+    "stale_ids": [
+      "c019-v1"
+    ],
+    "chain_id": "c019",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c019-asof",
+    "type": "as_of",
+    "text": "同窓会の集合時間と場所を確認したい",
+    "as_of": "2026-04-16",
+    "relevant_id": "c019-v1",
+    "stale_ids": [],
+    "chain_id": "c019",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c020-current",
+    "type": "current",
+    "text": "研究室の飲み会はいつどこだっけ",
+    "as_of": null,
+    "relevant_id": "c020-v2",
+    "stale_ids": [
+      "c020-v1"
+    ],
+    "chain_id": "c020",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c020-asof",
+    "type": "as_of",
+    "text": "研究室の飲み会の予定を教えて",
+    "as_of": "2026-05-12",
+    "relevant_id": "c020-v1",
+    "stale_ids": [],
+    "chain_id": "c020",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c021-current",
+    "type": "current",
+    "text": "就活セミナーの予定を教えて",
+    "as_of": null,
+    "relevant_id": "c021-v2",
+    "stale_ids": [
+      "c021-v1"
+    ],
+    "chain_id": "c021",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c021-asof",
+    "type": "as_of",
+    "text": "就活セミナーの集合時間と場所を確認したい",
+    "as_of": "2026-04-15",
+    "relevant_id": "c021-v1",
+    "stale_ids": [],
+    "chain_id": "c021",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c022-current",
+    "type": "current",
+    "text": "内定者懇親会の予定を教えて",
+    "as_of": null,
+    "relevant_id": "c022-v2",
+    "stale_ids": [
+      "c022-v1"
+    ],
+    "chain_id": "c022",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c022-asof",
+    "type": "as_of",
+    "text": "内定者懇親会の予定を教えて",
+    "as_of": "2026-04-16",
+    "relevant_id": "c022-v1",
+    "stale_ids": [],
+    "chain_id": "c022",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c023-current",
+    "type": "current",
+    "text": "就職面接はいつどこだっけ",
+    "as_of": null,
+    "relevant_id": "c023-v2",
+    "stale_ids": [
+      "c023-v1"
+    ],
+    "chain_id": "c023",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c023-asof",
+    "type": "as_of",
+    "text": "就職面接の集合時間と場所を確認したい",
+    "as_of": "2026-04-13",
+    "relevant_id": "c023-v1",
+    "stale_ids": [],
+    "chain_id": "c023",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c024-current",
+    "type": "current",
+    "text": "ゴルフコンペはいつどこだっけ",
+    "as_of": null,
+    "relevant_id": "c024-v3",
+    "stale_ids": [
+      "c024-v1",
+      "c024-v2"
+    ],
+    "chain_id": "c024",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c024-asof",
+    "type": "as_of",
+    "text": "ゴルフコンペはいつどこだっけ",
+    "as_of": "2026-05-17",
+    "relevant_id": "c024-v1",
+    "stale_ids": [],
+    "chain_id": "c024",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c025-current",
+    "type": "current",
+    "text": "運転免許の更新の集合時間と場所を確認したい",
+    "as_of": null,
+    "relevant_id": "c025-v2",
+    "stale_ids": [
+      "c025-v1"
+    ],
+    "chain_id": "c025",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c025-asof",
+    "type": "as_of",
+    "text": "運転免許の更新はいつどこだっけ",
+    "as_of": "2026-04-19",
+    "relevant_id": "c025-v1",
+    "stale_ids": [],
+    "chain_id": "c025",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c026-current",
+    "type": "current",
+    "text": "健康診断の集合時間と場所を確認したい",
+    "as_of": null,
+    "relevant_id": "c026-v2",
+    "stale_ids": [
+      "c026-v1"
+    ],
+    "chain_id": "c026",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c026-asof",
+    "type": "as_of",
+    "text": "健康診断の集合時間と場所を確認したい",
+    "as_of": "2026-04-10",
+    "relevant_id": "c026-v1",
+    "stale_ids": [],
+    "chain_id": "c026",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c027-current",
+    "type": "current",
+    "text": "親戚の法事の予定を教えて",
+    "as_of": null,
+    "relevant_id": "c027-v2",
+    "stale_ids": [
+      "c027-v1"
+    ],
+    "chain_id": "c027",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c027-asof",
+    "type": "as_of",
+    "text": "親戚の法事の集合時間と場所を確認したい",
+    "as_of": "2026-04-24",
+    "relevant_id": "c027-v1",
+    "stale_ids": [],
+    "chain_id": "c027",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c028-current",
+    "type": "current",
+    "text": "歯医者の予約の集合時間と場所を確認したい",
+    "as_of": null,
+    "relevant_id": "c028-v2",
+    "stale_ids": [
+      "c028-v1"
+    ],
+    "chain_id": "c028",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c028-asof",
+    "type": "as_of",
+    "text": "歯医者の予約の集合時間と場所を確認したい",
+    "as_of": "2026-04-08",
+    "relevant_id": "c028-v1",
+    "stale_ids": [],
+    "chain_id": "c028",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c029-current",
+    "type": "current",
+    "text": "ノートPCにかかった費用を知りたい",
+    "as_of": null,
+    "relevant_id": "c029-v2",
+    "stale_ids": [
+      "c029-v1"
+    ],
+    "chain_id": "c029",
+    "kind": "correction"
+  },
+  {
+    "qid": "c029-asof",
+    "type": "as_of",
+    "text": "ノートPCにかかった費用を知りたい",
+    "as_of": "2026-04-25",
+    "relevant_id": "c029-v1",
+    "stale_ids": [],
+    "chain_id": "c029",
+    "kind": "correction"
+  },
+  {
+    "qid": "c030-current",
+    "type": "current",
+    "text": "学会の参加費の金額",
+    "as_of": null,
+    "relevant_id": "c030-v3",
+    "stale_ids": [
+      "c030-v1",
+      "c030-v2"
+    ],
+    "chain_id": "c030",
+    "kind": "correction"
+  },
+  {
+    "qid": "c030-asof",
+    "type": "as_of",
+    "text": "学会の参加費の金額",
+    "as_of": "2026-04-07",
+    "relevant_id": "c030-v1",
+    "stale_ids": [],
+    "chain_id": "c030",
+    "kind": "correction"
+  },
+  {
+    "qid": "c031-current",
+    "type": "current",
+    "text": "図書カードはいくらだったっけ",
+    "as_of": null,
+    "relevant_id": "c031-v2",
+    "stale_ids": [
+      "c031-v1"
+    ],
+    "chain_id": "c031",
+    "kind": "correction"
+  },
+  {
+    "qid": "c031-asof",
+    "type": "as_of",
+    "text": "図書カードにかかった費用を知りたい",
+    "as_of": "2026-05-20",
+    "relevant_id": "c031-v1",
+    "stale_ids": [],
+    "chain_id": "c031",
+    "kind": "correction"
+  },
+  {
+    "qid": "c032-current",
+    "type": "current",
+    "text": "卒論の印刷代にかかった費用を知りたい",
+    "as_of": null,
+    "relevant_id": "c032-v2",
+    "stale_ids": [
+      "c032-v1"
+    ],
+    "chain_id": "c032",
+    "kind": "correction"
+  },
+  {
+    "qid": "c032-asof",
+    "type": "as_of",
+    "text": "卒論の印刷代の金額",
+    "as_of": "2026-05-09",
+    "relevant_id": "c032-v1",
+    "stale_ids": [],
+    "chain_id": "c032",
+    "kind": "correction"
+  },
+  {
+    "qid": "c033-current",
+    "type": "current",
+    "text": "参考書の金額",
+    "as_of": null,
+    "relevant_id": "c033-v2",
+    "stale_ids": [
+      "c033-v1"
+    ],
+    "chain_id": "c033",
+    "kind": "correction"
+  },
+  {
+    "qid": "c033-asof",
+    "type": "as_of",
+    "text": "参考書はいくらだったっけ",
+    "as_of": "2026-05-13",
+    "relevant_id": "c033-v1",
+    "stale_ids": [],
+    "chain_id": "c033",
+    "kind": "correction"
+  },
+  {
+    "qid": "c034-current",
+    "type": "current",
+    "text": "新幹線の切符にかかった費用を知りたい",
+    "as_of": null,
+    "relevant_id": "c034-v2",
+    "stale_ids": [
+      "c034-v1"
+    ],
+    "chain_id": "c034",
+    "kind": "correction"
+  },
+  {
+    "qid": "c034-asof",
+    "type": "as_of",
+    "text": "新幹線の切符にかかった費用を知りたい",
+    "as_of": "2026-05-01",
+    "relevant_id": "c034-v1",
+    "stale_ids": [],
+    "chain_id": "c034",
+    "kind": "correction"
+  },
+  {
+    "qid": "c035-current",
+    "type": "current",
+    "text": "引っ越しの見積もりはいくらだったっけ",
+    "as_of": null,
+    "relevant_id": "c035-v2",
+    "stale_ids": [
+      "c035-v1"
+    ],
+    "chain_id": "c035",
+    "kind": "correction"
+  },
+  {
+    "qid": "c035-asof",
+    "type": "as_of",
+    "text": "引っ越しの見積もりにかかった費用を知りたい",
+    "as_of": "2026-05-14",
+    "relevant_id": "c035-v1",
+    "stale_ids": [],
+    "chain_id": "c035",
+    "kind": "correction"
+  },
+  {
+    "qid": "c036-current",
+    "type": "current",
+    "text": "コーヒー豆にかかった費用を知りたい",
+    "as_of": null,
+    "relevant_id": "c036-v3",
+    "stale_ids": [
+      "c036-v1",
+      "c036-v2"
+    ],
+    "chain_id": "c036",
+    "kind": "correction"
+  },
+  {
+    "qid": "c036-asof",
+    "type": "as_of",
+    "text": "コーヒー豆にかかった費用を知りたい",
+    "as_of": "2026-04-20",
+    "relevant_id": "c036-v1",
+    "stale_ids": [],
+    "chain_id": "c036",
+    "kind": "correction"
+  },
+  {
+    "qid": "c037-current",
+    "type": "current",
+    "text": "ジムの月会費の金額",
+    "as_of": null,
+    "relevant_id": "c037-v3",
+    "stale_ids": [
+      "c037-v1",
+      "c037-v2"
+    ],
+    "chain_id": "c037",
+    "kind": "correction"
+  },
+  {
+    "qid": "c037-asof",
+    "type": "as_of",
+    "text": "ジムの月会費の金額",
+    "as_of": "2026-05-18",
+    "relevant_id": "c037-v1",
+    "stale_ids": [],
+    "chain_id": "c037",
+    "kind": "correction"
+  },
+  {
+    "qid": "c038-current",
+    "type": "current",
+    "text": "プリンターのインクの金額",
+    "as_of": null,
+    "relevant_id": "c038-v3",
+    "stale_ids": [
+      "c038-v1",
+      "c038-v2"
+    ],
+    "chain_id": "c038",
+    "kind": "correction"
+  },
+  {
+    "qid": "c038-asof",
+    "type": "as_of",
+    "text": "プリンターのインクにかかった費用を知りたい",
+    "as_of": "2026-04-17",
+    "relevant_id": "c038-v1",
+    "stale_ids": [],
+    "chain_id": "c038",
+    "kind": "correction"
+  },
+  {
+    "qid": "c039-current",
+    "type": "current",
+    "text": "家賃の金額",
+    "as_of": null,
+    "relevant_id": "c039-v2",
+    "stale_ids": [
+      "c039-v1"
+    ],
+    "chain_id": "c039",
+    "kind": "correction"
+  },
+  {
+    "qid": "c039-asof",
+    "type": "as_of",
+    "text": "家賃はいくらだったっけ",
+    "as_of": "2026-05-14",
+    "relevant_id": "c039-v1",
+    "stale_ids": [],
+    "chain_id": "c039",
+    "kind": "correction"
+  },
+  {
+    "qid": "c040-current",
+    "type": "current",
+    "text": "研究室の会費にかかった費用を知りたい",
+    "as_of": null,
+    "relevant_id": "c040-v2",
+    "stale_ids": [
+      "c040-v1"
+    ],
+    "chain_id": "c040",
+    "kind": "correction"
+  },
+  {
+    "qid": "c040-asof",
+    "type": "as_of",
+    "text": "研究室の会費にかかった費用を知りたい",
+    "as_of": "2026-04-20",
+    "relevant_id": "c040-v1",
+    "stale_ids": [],
+    "chain_id": "c040",
+    "kind": "correction"
+  },
+  {
+    "qid": "c041-current",
+    "type": "current",
+    "text": "スマホの修理代にかかった費用を知りたい",
+    "as_of": null,
+    "relevant_id": "c041-v3",
+    "stale_ids": [
+      "c041-v1",
+      "c041-v2"
+    ],
+    "chain_id": "c041",
+    "kind": "correction"
+  },
+  {
+    "qid": "c041-asof",
+    "type": "as_of",
+    "text": "スマホの修理代にかかった費用を知りたい",
+    "as_of": "2026-04-26",
+    "relevant_id": "c041-v1",
+    "stale_ids": [],
+    "chain_id": "c041",
+    "kind": "correction"
+  },
+  {
+    "qid": "c042-current",
+    "type": "current",
+    "text": "運動靴にかかった費用を知りたい",
+    "as_of": null,
+    "relevant_id": "c042-v2",
+    "stale_ids": [
+      "c042-v1"
+    ],
+    "chain_id": "c042",
+    "kind": "correction"
+  },
+  {
+    "qid": "c042-asof",
+    "type": "as_of",
+    "text": "運動靴はいくらだったっけ",
+    "as_of": "2026-05-12",
+    "relevant_id": "c042-v1",
+    "stale_ids": [],
+    "chain_id": "c042",
+    "kind": "correction"
+  },
+  {
+    "qid": "c043-current",
+    "type": "current",
+    "text": "ゼミ合宿の費用の金額",
+    "as_of": null,
+    "relevant_id": "c043-v2",
+    "stale_ids": [
+      "c043-v1"
+    ],
+    "chain_id": "c043",
+    "kind": "correction"
+  },
+  {
+    "qid": "c043-asof",
+    "type": "as_of",
+    "text": "ゼミ合宿の費用はいくらだったっけ",
+    "as_of": "2026-05-24",
+    "relevant_id": "c043-v1",
+    "stale_ids": [],
+    "chain_id": "c043",
+    "kind": "correction"
+  },
+  {
+    "qid": "c044-current",
+    "type": "current",
+    "text": "資格試験の受験料の金額",
+    "as_of": null,
+    "relevant_id": "c044-v2",
+    "stale_ids": [
+      "c044-v1"
+    ],
+    "chain_id": "c044",
+    "kind": "correction"
+  },
+  {
+    "qid": "c044-asof",
+    "type": "as_of",
+    "text": "資格試験の受験料の金額",
+    "as_of": "2026-05-25",
+    "relevant_id": "c044-v1",
+    "stale_ids": [],
+    "chain_id": "c044",
+    "kind": "correction"
+  },
+  {
+    "qid": "c045-current",
+    "type": "current",
+    "text": "地域の清掃活動に行くんだっけ",
+    "as_of": null,
+    "relevant_id": "c045-v2",
+    "stale_ids": [
+      "c045-v1"
+    ],
+    "chain_id": "c045",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c045-asof",
+    "type": "as_of",
+    "text": "地域の清掃活動って結局どうなった？",
+    "as_of": "2026-04-08",
+    "relevant_id": "c045-v1",
+    "stale_ids": [],
+    "chain_id": "c045",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c046-current",
+    "type": "current",
+    "text": "野球観戦って結局どうなった？",
+    "as_of": null,
+    "relevant_id": "c046-v2",
+    "stale_ids": [
+      "c046-v1"
+    ],
+    "chain_id": "c046",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c046-asof",
+    "type": "as_of",
+    "text": "野球観戦に行くんだっけ",
+    "as_of": "2026-05-02",
+    "relevant_id": "c046-v1",
+    "stale_ids": [],
+    "chain_id": "c046",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c047-current",
+    "type": "current",
+    "text": "映画の試写会って結局どうなった？",
+    "as_of": null,
+    "relevant_id": "c047-v2",
+    "stale_ids": [
+      "c047-v1"
+    ],
+    "chain_id": "c047",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c047-asof",
+    "type": "as_of",
+    "text": "映画の試写会の予定はどうなった",
+    "as_of": "2026-04-20",
+    "relevant_id": "c047-v1",
+    "stale_ids": [],
+    "chain_id": "c047",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c048-current",
+    "type": "current",
+    "text": "英会話の体験会って結局どうなった？",
+    "as_of": null,
+    "relevant_id": "c048-v2",
+    "stale_ids": [
+      "c048-v1"
+    ],
+    "chain_id": "c048",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c048-asof",
+    "type": "as_of",
+    "text": "英会話の体験会に行くんだっけ",
+    "as_of": "2026-05-07",
+    "relevant_id": "c048-v1",
+    "stale_ids": [],
+    "chain_id": "c048",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c049-current",
+    "type": "current",
+    "text": "サイクリングの予定はどうなった",
+    "as_of": null,
+    "relevant_id": "c049-v2",
+    "stale_ids": [
+      "c049-v1"
+    ],
+    "chain_id": "c049",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c049-asof",
+    "type": "as_of",
+    "text": "サイクリングの予定はどうなった",
+    "as_of": "2026-04-21",
+    "relevant_id": "c049-v1",
+    "stale_ids": [],
+    "chain_id": "c049",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c050-current",
+    "type": "current",
+    "text": "美術館の見学って結局どうなった？",
+    "as_of": null,
+    "relevant_id": "c050-v2",
+    "stale_ids": [
+      "c050-v1"
+    ],
+    "chain_id": "c050",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c050-asof",
+    "type": "as_of",
+    "text": "美術館の見学に行くんだっけ",
+    "as_of": "2026-05-08",
+    "relevant_id": "c050-v1",
+    "stale_ids": [],
+    "chain_id": "c050",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c051-current",
+    "type": "current",
+    "text": "学内の就活ガイダンスの予定はどうなった",
+    "as_of": null,
+    "relevant_id": "c051-v2",
+    "stale_ids": [
+      "c051-v1"
+    ],
+    "chain_id": "c051",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c051-asof",
+    "type": "as_of",
+    "text": "学内の就活ガイダンスって結局どうなった？",
+    "as_of": "2026-05-20",
+    "relevant_id": "c051-v1",
+    "stale_ids": [],
+    "chain_id": "c051",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c052-current",
+    "type": "current",
+    "text": "ハッカソンの予定はどうなった",
+    "as_of": null,
+    "relevant_id": "c052-v2",
+    "stale_ids": [
+      "c052-v1"
+    ],
+    "chain_id": "c052",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c052-asof",
+    "type": "as_of",
+    "text": "ハッカソンに行くんだっけ",
+    "as_of": "2026-04-23",
+    "relevant_id": "c052-v1",
+    "stale_ids": [],
+    "chain_id": "c052",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c053-current",
+    "type": "current",
+    "text": "友人とのキャンプって結局どうなった？",
+    "as_of": null,
+    "relevant_id": "c053-v2",
+    "stale_ids": [
+      "c053-v1"
+    ],
+    "chain_id": "c053",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c053-asof",
+    "type": "as_of",
+    "text": "友人とのキャンプの予定はどうなった",
+    "as_of": "2026-05-22",
+    "relevant_id": "c053-v1",
+    "stale_ids": [],
+    "chain_id": "c053",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c054-current",
+    "type": "current",
+    "text": "料理教室に行くんだっけ",
+    "as_of": null,
+    "relevant_id": "c054-v2",
+    "stale_ids": [
+      "c054-v1"
+    ],
+    "chain_id": "c054",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c054-asof",
+    "type": "as_of",
+    "text": "料理教室の予定はどうなった",
+    "as_of": "2026-05-14",
+    "relevant_id": "c054-v1",
+    "stale_ids": [],
+    "chain_id": "c054",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c055-current",
+    "type": "current",
+    "text": "研究室の花見って結局どうなった？",
+    "as_of": null,
+    "relevant_id": "c055-v2",
+    "stale_ids": [
+      "c055-v1"
+    ],
+    "chain_id": "c055",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c055-asof",
+    "type": "as_of",
+    "text": "研究室の花見に行くんだっけ",
+    "as_of": "2026-05-06",
+    "relevant_id": "c055-v1",
+    "stale_ids": [],
+    "chain_id": "c055",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c056-current",
+    "type": "current",
+    "text": "日帰りのバス旅行って結局どうなった？",
+    "as_of": null,
+    "relevant_id": "c056-v2",
+    "stale_ids": [
+      "c056-v1"
+    ],
+    "chain_id": "c056",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c056-asof",
+    "type": "as_of",
+    "text": "日帰りのバス旅行の予定はどうなった",
+    "as_of": "2026-05-04",
+    "relevant_id": "c056-v1",
+    "stale_ids": [],
+    "chain_id": "c056",
+    "kind": "cancel"
+  },
+  {
+    "qid": "c057-current",
+    "type": "current",
+    "text": "免許更新の予約は終わったっけ",
+    "as_of": null,
+    "relevant_id": "c057-v2",
+    "stale_ids": [
+      "c057-v1"
+    ],
+    "chain_id": "c057",
+    "kind": "progress"
+  },
+  {
+    "qid": "c057-asof",
+    "type": "as_of",
+    "text": "免許更新の予約の進み具合",
+    "as_of": "2026-04-27",
+    "relevant_id": "c057-v1",
+    "stale_ids": [],
+    "chain_id": "c057",
+    "kind": "progress"
+  },
+  {
+    "qid": "c058-current",
+    "type": "current",
+    "text": "研究計画書は終わったっけ",
+    "as_of": null,
+    "relevant_id": "c058-v3",
+    "stale_ids": [
+      "c058-v1",
+      "c058-v2"
+    ],
+    "chain_id": "c058",
+    "kind": "progress"
+  },
+  {
+    "qid": "c058-asof",
+    "type": "as_of",
+    "text": "研究計画書ってどうなってる？",
+    "as_of": "2026-05-06",
+    "relevant_id": "c058-v1",
+    "stale_ids": [],
+    "chain_id": "c058",
+    "kind": "progress"
+  },
+  {
+    "qid": "c059-current",
+    "type": "current",
+    "text": "同期への連絡は終わったっけ",
+    "as_of": null,
+    "relevant_id": "c059-v3",
+    "stale_ids": [
+      "c059-v1",
+      "c059-v2"
+    ],
+    "chain_id": "c059",
+    "kind": "progress"
+  },
+  {
+    "qid": "c059-asof",
+    "type": "as_of",
+    "text": "同期への連絡ってどうなってる？",
+    "as_of": "2026-04-24",
+    "relevant_id": "c059-v1",
+    "stale_ids": [],
+    "chain_id": "c059",
+    "kind": "progress"
+  },
+  {
+    "qid": "c060-current",
+    "type": "current",
+    "text": "旅費の精算は終わったっけ",
+    "as_of": null,
+    "relevant_id": "c060-v3",
+    "stale_ids": [
+      "c060-v1",
+      "c060-v2"
+    ],
+    "chain_id": "c060",
+    "kind": "progress"
+  },
+  {
+    "qid": "c060-asof",
+    "type": "as_of",
+    "text": "旅費の精算ってどうなってる？",
+    "as_of": "2026-04-20",
+    "relevant_id": "c060-v1",
+    "stale_ids": [],
+    "chain_id": "c060",
+    "kind": "progress"
+  },
+  {
+    "qid": "c061-current",
+    "type": "current",
+    "text": "英語のレポートってどうなってる？",
+    "as_of": null,
+    "relevant_id": "c061-v2",
+    "stale_ids": [
+      "c061-v1"
+    ],
+    "chain_id": "c061",
+    "kind": "progress"
+  },
+  {
+    "qid": "c061-asof",
+    "type": "as_of",
+    "text": "英語のレポートってどうなってる？",
+    "as_of": "2026-04-23",
+    "relevant_id": "c061-v1",
+    "stale_ids": [],
+    "chain_id": "c061",
+    "kind": "progress"
+  },
+  {
+    "qid": "c062-current",
+    "type": "current",
+    "text": "図書館の予約本は終わったっけ",
+    "as_of": null,
+    "relevant_id": "c062-v3",
+    "stale_ids": [
+      "c062-v1",
+      "c062-v2"
+    ],
+    "chain_id": "c062",
+    "kind": "progress"
+  },
+  {
+    "qid": "c062-asof",
+    "type": "as_of",
+    "text": "図書館の予約本ってどうなってる？",
+    "as_of": "2026-04-07",
+    "relevant_id": "c062-v1",
+    "stale_ids": [],
+    "chain_id": "c062",
+    "kind": "progress"
+  },
+  {
+    "qid": "c063-current",
+    "type": "current",
+    "text": "ゼミの発表資料の進み具合",
+    "as_of": null,
+    "relevant_id": "c063-v2",
+    "stale_ids": [
+      "c063-v1"
+    ],
+    "chain_id": "c063",
+    "kind": "progress"
+  },
+  {
+    "qid": "c063-asof",
+    "type": "as_of",
+    "text": "ゼミの発表資料は終わったっけ",
+    "as_of": "2026-05-14",
+    "relevant_id": "c063-v1",
+    "stale_ids": [],
+    "chain_id": "c063",
+    "kind": "progress"
+  },
+  {
+    "qid": "c064-current",
+    "type": "current",
+    "text": "卒論の第2章ってどうなってる？",
+    "as_of": null,
+    "relevant_id": "c064-v2",
+    "stale_ids": [
+      "c064-v1"
+    ],
+    "chain_id": "c064",
+    "kind": "progress"
+  },
+  {
+    "qid": "c064-asof",
+    "type": "as_of",
+    "text": "卒論の第2章ってどうなってる？",
+    "as_of": "2026-04-26",
+    "relevant_id": "c064-v1",
+    "stale_ids": [],
+    "chain_id": "c064",
+    "kind": "progress"
+  },
+  {
+    "qid": "c065-current",
+    "type": "current",
+    "text": "実験データの整理ってどうなってる？",
+    "as_of": null,
+    "relevant_id": "c065-v2",
+    "stale_ids": [
+      "c065-v1"
+    ],
+    "chain_id": "c065",
+    "kind": "progress"
+  },
+  {
+    "qid": "c065-asof",
+    "type": "as_of",
+    "text": "実験データの整理ってどうなってる？",
+    "as_of": "2026-04-07",
+    "relevant_id": "c065-v1",
+    "stale_ids": [],
+    "chain_id": "c065",
+    "kind": "progress"
+  },
+  {
+    "qid": "c066-current",
+    "type": "current",
+    "text": "履歴書の進み具合",
+    "as_of": null,
+    "relevant_id": "c066-v3",
+    "stale_ids": [
+      "c066-v1",
+      "c066-v2"
+    ],
+    "chain_id": "c066",
+    "kind": "progress"
+  },
+  {
+    "qid": "c066-asof",
+    "type": "as_of",
+    "text": "履歴書の進み具合",
+    "as_of": "2026-05-03",
+    "relevant_id": "c066-v1",
+    "stale_ids": [],
+    "chain_id": "c066",
+    "kind": "progress"
+  },
+  {
+    "qid": "c067-current",
+    "type": "current",
+    "text": "実験ノートの提出の進み具合",
+    "as_of": null,
+    "relevant_id": "c067-v2",
+    "stale_ids": [
+      "c067-v1"
+    ],
+    "chain_id": "c067",
+    "kind": "progress"
+  },
+  {
+    "qid": "c067-asof",
+    "type": "as_of",
+    "text": "実験ノートの提出ってどうなってる？",
+    "as_of": "2026-04-11",
+    "relevant_id": "c067-v1",
+    "stale_ids": [],
+    "chain_id": "c067",
+    "kind": "progress"
+  },
+  {
+    "qid": "c068-current",
+    "type": "current",
+    "text": "住民票の取得ってどうなってる？",
+    "as_of": null,
+    "relevant_id": "c068-v3",
+    "stale_ids": [
+      "c068-v1",
+      "c068-v2"
+    ],
+    "chain_id": "c068",
+    "kind": "progress"
+  },
+  {
+    "qid": "c068-asof",
+    "type": "as_of",
+    "text": "住民票の取得は終わったっけ",
+    "as_of": "2026-04-14",
+    "relevant_id": "c068-v1",
+    "stale_ids": [],
+    "chain_id": "c068",
+    "kind": "progress"
+  },
+  {
+    "qid": "c069-current",
+    "type": "current",
+    "text": "卒論の図表の進み具合",
+    "as_of": null,
+    "relevant_id": "c069-v3",
+    "stale_ids": [
+      "c069-v1",
+      "c069-v2"
+    ],
+    "chain_id": "c069",
+    "kind": "progress"
+  },
+  {
+    "qid": "c069-asof",
+    "type": "as_of",
+    "text": "卒論の図表ってどうなってる？",
+    "as_of": "2026-04-24",
+    "relevant_id": "c069-v1",
+    "stale_ids": [],
+    "chain_id": "c069",
+    "kind": "progress"
+  },
+  {
+    "qid": "c070-current",
+    "type": "current",
+    "text": "論文の要約ってどうなってる？",
+    "as_of": null,
+    "relevant_id": "c070-v2",
+    "stale_ids": [
+      "c070-v1"
+    ],
+    "chain_id": "c070",
+    "kind": "progress"
+  },
+  {
+    "qid": "c070-asof",
+    "type": "as_of",
+    "text": "論文の要約の進み具合",
+    "as_of": "2026-04-24",
+    "relevant_id": "c070-v1",
+    "stale_ids": [],
+    "chain_id": "c070",
+    "kind": "progress"
+  },
+  {
+    "qid": "c071-current",
+    "type": "current",
+    "text": "奨学金の書類ってどうなってる？",
+    "as_of": null,
+    "relevant_id": "c071-v2",
+    "stale_ids": [
+      "c071-v1"
+    ],
+    "chain_id": "c071",
+    "kind": "progress"
+  },
+  {
+    "qid": "c071-asof",
+    "type": "as_of",
+    "text": "奨学金の書類ってどうなってる？",
+    "as_of": "2026-05-09",
+    "relevant_id": "c071-v1",
+    "stale_ids": [],
+    "chain_id": "c071",
+    "kind": "progress"
+  },
+  {
+    "qid": "c072-current",
+    "type": "current",
+    "text": "会計報告ってどうなってる？",
+    "as_of": null,
+    "relevant_id": "c072-v2",
+    "stale_ids": [
+      "c072-v1"
+    ],
+    "chain_id": "c072",
+    "kind": "progress"
+  },
+  {
+    "qid": "c072-asof",
+    "type": "as_of",
+    "text": "会計報告ってどうなってる？",
+    "as_of": "2026-05-03",
+    "relevant_id": "c072-v1",
+    "stale_ids": [],
+    "chain_id": "c072",
+    "kind": "progress"
+  },
+  {
+    "qid": "c073-current",
+    "type": "current",
+    "text": "統計学の課題は終わったっけ",
+    "as_of": null,
+    "relevant_id": "c073-v2",
+    "stale_ids": [
+      "c073-v1"
+    ],
+    "chain_id": "c073",
+    "kind": "progress"
+  },
+  {
+    "qid": "c073-asof",
+    "type": "as_of",
+    "text": "統計学の課題は終わったっけ",
+    "as_of": "2026-04-24",
+    "relevant_id": "c073-v1",
+    "stale_ids": [],
+    "chain_id": "c073",
+    "kind": "progress"
+  },
+  {
+    "qid": "c074-current",
+    "type": "current",
+    "text": "確定申告は終わったっけ",
+    "as_of": null,
+    "relevant_id": "c074-v2",
+    "stale_ids": [
+      "c074-v1"
+    ],
+    "chain_id": "c074",
+    "kind": "progress"
+  },
+  {
+    "qid": "c074-asof",
+    "type": "as_of",
+    "text": "確定申告の進み具合",
+    "as_of": "2026-05-06",
+    "relevant_id": "c074-v1",
+    "stale_ids": [],
+    "chain_id": "c074",
+    "kind": "progress"
+  },
+  {
+    "qid": "c075-current",
+    "type": "current",
+    "text": "エントリーシートの進み具合",
+    "as_of": null,
+    "relevant_id": "c075-v2",
+    "stale_ids": [
+      "c075-v1"
+    ],
+    "chain_id": "c075",
+    "kind": "progress"
+  },
+  {
+    "qid": "c075-asof",
+    "type": "as_of",
+    "text": "エントリーシートの進み具合",
+    "as_of": "2026-04-13",
+    "relevant_id": "c075-v1",
+    "stale_ids": [],
+    "chain_id": "c075",
+    "kind": "progress"
+  },
+  {
+    "qid": "c076-current",
+    "type": "current",
+    "text": "部屋の掃除は終わったっけ",
+    "as_of": null,
+    "relevant_id": "c076-v2",
+    "stale_ids": [
+      "c076-v1"
+    ],
+    "chain_id": "c076",
+    "kind": "progress"
+  },
+  {
+    "qid": "c076-asof",
+    "type": "as_of",
+    "text": "部屋の掃除の進み具合",
+    "as_of": "2026-05-12",
+    "relevant_id": "c076-v1",
+    "stale_ids": [],
+    "chain_id": "c076",
+    "kind": "progress"
+  },
+  {
+    "qid": "c077-current",
+    "type": "current",
+    "text": "アンケートの集計ってどうなってる？",
+    "as_of": null,
+    "relevant_id": "c077-v3",
+    "stale_ids": [
+      "c077-v1",
+      "c077-v2"
+    ],
+    "chain_id": "c077",
+    "kind": "progress"
+  },
+  {
+    "qid": "c077-asof",
+    "type": "as_of",
+    "text": "アンケートの集計ってどうなってる？",
+    "as_of": "2026-05-01",
+    "relevant_id": "c077-v1",
+    "stale_ids": [],
+    "chain_id": "c077",
+    "kind": "progress"
+  },
+  {
+    "qid": "c078-current",
+    "type": "current",
+    "text": "資格の勉強ってどうなってる？",
+    "as_of": null,
+    "relevant_id": "c078-v2",
+    "stale_ids": [
+      "c078-v1"
+    ],
+    "chain_id": "c078",
+    "kind": "progress"
+  },
+  {
+    "qid": "c078-asof",
+    "type": "as_of",
+    "text": "資格の勉強ってどうなってる？",
+    "as_of": "2026-04-23",
+    "relevant_id": "c078-v1",
+    "stale_ids": [],
+    "chain_id": "c078",
+    "kind": "progress"
+  },
+  {
+    "qid": "c079-current",
+    "type": "current",
+    "text": "学会の発表スライドってどうなってる？",
+    "as_of": null,
+    "relevant_id": "c079-v3",
+    "stale_ids": [
+      "c079-v1",
+      "c079-v2"
+    ],
+    "chain_id": "c079",
+    "kind": "progress"
+  },
+  {
+    "qid": "c079-asof",
+    "type": "as_of",
+    "text": "学会の発表スライドってどうなってる？",
+    "as_of": "2026-05-19",
+    "relevant_id": "c079-v1",
+    "stale_ids": [],
+    "chain_id": "c079",
+    "kind": "progress"
+  },
+  {
+    "qid": "c080-current",
+    "type": "current",
+    "text": "参考文献リストってどうなってる？",
+    "as_of": null,
+    "relevant_id": "c080-v2",
+    "stale_ids": [
+      "c080-v1"
+    ],
+    "chain_id": "c080",
+    "kind": "progress"
+  },
+  {
+    "qid": "c080-asof",
+    "type": "as_of",
+    "text": "参考文献リストの進み具合",
+    "as_of": "2026-04-16",
+    "relevant_id": "c080-v1",
+    "stale_ids": [],
+    "chain_id": "c080",
+    "kind": "progress"
+  },
+  {
+    "qid": "c001-win",
+    "type": "windowed",
+    "text": "アルバイトの面談の集合時間と場所を確認したい",
+    "as_of": null,
+    "time_from": "2026-05-03",
+    "time_to": "2026-05-07",
+    "relevant_id": "c001-v2",
+    "stale_ids": [
+      "c001-v1"
+    ],
+    "chain_id": "c001",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c002-win",
+    "type": "windowed",
+    "text": "自動車の点検の予定を教えて",
+    "as_of": null,
+    "time_from": "2026-06-07",
+    "time_to": "2026-06-11",
+    "relevant_id": "c002-v2",
+    "stale_ids": [
+      "c002-v1"
+    ],
+    "chain_id": "c002",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c003-win",
+    "type": "windowed",
+    "text": "サークルの新歓はいつどこだっけ",
+    "as_of": null,
+    "time_from": "2026-05-26",
+    "time_to": "2026-05-30",
+    "relevant_id": "c003-v2",
+    "stale_ids": [
+      "c003-v1"
+    ],
+    "chain_id": "c003",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c004-win",
+    "type": "windowed",
+    "text": "読書会の予定を教えて",
+    "as_of": null,
+    "time_from": "2026-06-17",
+    "time_to": "2026-06-21",
+    "relevant_id": "c004-v3",
+    "stale_ids": [
+      "c004-v1",
+      "c004-v2"
+    ],
+    "chain_id": "c004",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c005-win",
+    "type": "windowed",
+    "text": "映画の約束はいつどこだっけ",
+    "as_of": null,
+    "time_from": "2026-05-23",
+    "time_to": "2026-05-27",
+    "relevant_id": "c005-v2",
+    "stale_ids": [
+      "c005-v1"
+    ],
+    "chain_id": "c005",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c006-win",
+    "type": "windowed",
+    "text": "引っ越しの立ち会いの予定を教えて",
+    "as_of": null,
+    "time_from": "2026-06-09",
+    "time_to": "2026-06-13",
+    "relevant_id": "c006-v3",
+    "stale_ids": [
+      "c006-v1",
+      "c006-v2"
+    ],
+    "chain_id": "c006",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c007-win",
+    "type": "windowed",
+    "text": "美容室の予約の予定を教えて",
+    "as_of": null,
+    "time_from": "2026-05-02",
+    "time_to": "2026-05-06",
+    "relevant_id": "c007-v2",
+    "stale_ids": [
+      "c007-v1"
+    ],
+    "chain_id": "c007",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c008-win",
+    "type": "windowed",
+    "text": "家族の食事会の集合時間と場所を確認したい",
+    "as_of": null,
+    "time_from": "2026-06-18",
+    "time_to": "2026-06-22",
+    "relevant_id": "c008-v2",
+    "stale_ids": [
+      "c008-v1"
+    ],
+    "chain_id": "c008",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c009-win",
+    "type": "windowed",
+    "text": "英会話のレッスンの集合時間と場所を確認したい",
+    "as_of": null,
+    "time_from": "2026-06-02",
+    "time_to": "2026-06-06",
+    "relevant_id": "c009-v2",
+    "stale_ids": [
+      "c009-v1"
+    ],
+    "chain_id": "c009",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c010-win",
+    "type": "windowed",
+    "text": "旅行の集合の予定を教えて",
+    "as_of": null,
+    "time_from": "2026-06-04",
+    "time_to": "2026-06-08",
+    "relevant_id": "c010-v2",
+    "stale_ids": [
+      "c010-v1"
+    ],
+    "chain_id": "c010",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c011-win",
+    "type": "windowed",
+    "text": "結婚式の二次会はいつどこだっけ",
+    "as_of": null,
+    "time_from": "2026-06-22",
+    "time_to": "2026-06-26",
+    "relevant_id": "c011-v2",
+    "stale_ids": [
+      "c011-v1"
+    ],
+    "chain_id": "c011",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c012-win",
+    "type": "windowed",
+    "text": "OB会の集合時間と場所を確認したい",
+    "as_of": null,
+    "time_from": "2026-06-03",
+    "time_to": "2026-06-07",
+    "relevant_id": "c012-v2",
+    "stale_ids": [
+      "c012-v1"
+    ],
+    "chain_id": "c012",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c013-win",
+    "type": "windowed",
+    "text": "留学説明会はいつどこだっけ",
+    "as_of": null,
+    "time_from": "2026-05-02",
+    "time_to": "2026-05-06",
+    "relevant_id": "c013-v2",
+    "stale_ids": [
+      "c013-v1"
+    ],
+    "chain_id": "c013",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c014-win",
+    "type": "windowed",
+    "text": "指導教員との面談はいつどこだっけ",
+    "as_of": null,
+    "time_from": "2026-06-04",
+    "time_to": "2026-06-08",
+    "relevant_id": "c014-v3",
+    "stale_ids": [
+      "c014-v1",
+      "c014-v2"
+    ],
+    "chain_id": "c014",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c015-win",
+    "type": "windowed",
+    "text": "インターンの説明会の集合時間と場所を確認したい",
+    "as_of": null,
+    "time_from": "2026-05-24",
+    "time_to": "2026-05-28",
+    "relevant_id": "c015-v2",
+    "stale_ids": [
+      "c015-v1"
+    ],
+    "chain_id": "c015",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c016-win",
+    "type": "windowed",
+    "text": "勉強会はいつどこだっけ",
+    "as_of": null,
+    "time_from": "2026-05-19",
+    "time_to": "2026-05-23",
+    "relevant_id": "c016-v3",
+    "stale_ids": [
+      "c016-v1",
+      "c016-v2"
+    ],
+    "chain_id": "c016",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c017-win",
+    "type": "windowed",
+    "text": "ゼミの中間発表はいつどこだっけ",
+    "as_of": null,
+    "time_from": "2026-05-01",
+    "time_to": "2026-05-05",
+    "relevant_id": "c017-v2",
+    "stale_ids": [
+      "c017-v1"
+    ],
+    "chain_id": "c017",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c018-win",
+    "type": "windowed",
+    "text": "ボランティア説明会の集合時間と場所を確認したい",
+    "as_of": null,
+    "time_from": "2026-06-02",
+    "time_to": "2026-06-06",
+    "relevant_id": "c018-v3",
+    "stale_ids": [
+      "c018-v1",
+      "c018-v2"
+    ],
+    "chain_id": "c018",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c019-win",
+    "type": "windowed",
+    "text": "同窓会の予定を教えて",
+    "as_of": null,
+    "time_from": "2026-05-08",
+    "time_to": "2026-05-12",
+    "relevant_id": "c019-v2",
+    "stale_ids": [
+      "c019-v1"
+    ],
+    "chain_id": "c019",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c020-win",
+    "type": "windowed",
+    "text": "研究室の飲み会はいつどこだっけ",
+    "as_of": null,
+    "time_from": "2026-06-07",
+    "time_to": "2026-06-11",
+    "relevant_id": "c020-v2",
+    "stale_ids": [
+      "c020-v1"
+    ],
+    "chain_id": "c020",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c021-win",
+    "type": "windowed",
+    "text": "就活セミナーの集合時間と場所を確認したい",
+    "as_of": null,
+    "time_from": "2026-05-18",
+    "time_to": "2026-05-22",
+    "relevant_id": "c021-v2",
+    "stale_ids": [
+      "c021-v1"
+    ],
+    "chain_id": "c021",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c022-win",
+    "type": "windowed",
+    "text": "内定者懇親会の集合時間と場所を確認したい",
+    "as_of": null,
+    "time_from": "2026-05-05",
+    "time_to": "2026-05-09",
+    "relevant_id": "c022-v2",
+    "stale_ids": [
+      "c022-v1"
+    ],
+    "chain_id": "c022",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c023-win",
+    "type": "windowed",
+    "text": "就職面接の予定を教えて",
+    "as_of": null,
+    "time_from": "2026-05-05",
+    "time_to": "2026-05-09",
+    "relevant_id": "c023-v2",
+    "stale_ids": [
+      "c023-v1"
+    ],
+    "chain_id": "c023",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c024-win",
+    "type": "windowed",
+    "text": "ゴルフコンペはいつどこだっけ",
+    "as_of": null,
+    "time_from": "2026-06-14",
+    "time_to": "2026-06-18",
+    "relevant_id": "c024-v3",
+    "stale_ids": [
+      "c024-v1",
+      "c024-v2"
+    ],
+    "chain_id": "c024",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c025-win",
+    "type": "windowed",
+    "text": "運転免許の更新の集合時間と場所を確認したい",
+    "as_of": null,
+    "time_from": "2026-05-18",
+    "time_to": "2026-05-22",
+    "relevant_id": "c025-v2",
+    "stale_ids": [
+      "c025-v1"
+    ],
+    "chain_id": "c025",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c026-win",
+    "type": "windowed",
+    "text": "健康診断の集合時間と場所を確認したい",
+    "as_of": null,
+    "time_from": "2026-05-21",
+    "time_to": "2026-05-25",
+    "relevant_id": "c026-v2",
+    "stale_ids": [
+      "c026-v1"
+    ],
+    "chain_id": "c026",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c027-win",
+    "type": "windowed",
+    "text": "親戚の法事の予定を教えて",
+    "as_of": null,
+    "time_from": "2026-05-23",
+    "time_to": "2026-05-27",
+    "relevant_id": "c027-v2",
+    "stale_ids": [
+      "c027-v1"
+    ],
+    "chain_id": "c027",
+    "kind": "reschedule"
+  },
+  {
+    "qid": "c028-win",
+    "type": "windowed",
+    "text": "歯医者の予約の集合時間と場所を確認したい",
+    "as_of": null,
+    "time_from": "2026-05-03",
+    "time_to": "2026-05-07",
+    "relevant_id": "c028-v2",
+    "stale_ids": [
+      "c028-v1"
+    ],
+    "chain_id": "c028",
+    "kind": "reschedule"
+  }
+]
