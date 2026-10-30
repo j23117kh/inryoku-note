@@ -34,7 +34,8 @@
         }
     </style>
 </head>
-<body class="p-3 sm:p-5 md:p-6 h-screen flex flex-col overflow-hidden">
+<!-- スマホは min-h-screen で全体スクロール許可、PC(lg) は h-screen でスクロール禁止しピタッと収める -->
+<body class="p-3 sm:p-5 md:p-6 min-h-screen flex flex-col lg:h-screen lg:overflow-hidden">
 
     <!-- ヘッダー -->
     <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-4 sm:mb-5 px-1 shrink-0">
@@ -54,11 +55,11 @@
         </div>
     </header>
 
-    <!-- メインコンテンツ (画面内にピタッと収めるレイアウト) -->
-    <main class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 flex-grow min-h-0 overflow-hidden pb-1">
+    <!-- メインコンテンツ -->
+    <main class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 flex-grow pb-4 lg:pb-1 lg:min-h-0 lg:overflow-hidden">
         
-        <!-- 左カラム：アーカイブ -->
-        <div class="lg:col-span-3 flex flex-col glass-panel rounded-2xl p-4 h-full overflow-hidden">
+        <!-- 左カラム：アーカイブ (スマホでは高さ固定、PCでは親に合わせる) -->
+        <div class="lg:col-span-3 flex flex-col glass-panel rounded-2xl p-4 h-64 lg:h-full overflow-hidden">
             <div class="flex justify-between items-center mb-3 px-1 shrink-0">
                 <h3 class="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center">
                     <i class="fa-solid fa-database mr-2 text-emerald-400"></i>蓄積された思考
@@ -72,10 +73,9 @@
             </div>
         </div>
 
-        <!-- 中央カラム：エディタと検索設定 (ボタンが消えないように構造修正) -->
-        <div class="lg:col-span-5 flex flex-col glass-panel rounded-2xl p-4 sm:p-5 gap-3 h-full overflow-hidden">
+        <!-- 中央カラム：エディタと検索設定 (スマホでは最小高さを確保、PCでは親に合わせる) -->
+        <div class="lg:col-span-5 flex flex-col glass-panel rounded-2xl p-4 sm:p-5 gap-3 min-h-[500px] lg:min-h-0 lg:h-full overflow-hidden">
             
-            <!-- 検索手法・モード切り替えパネルを上部に配置 -->
             <div class="bg-slate-950/80 p-2 rounded-xl border border-slate-800 shrink-0 flex flex-wrap items-center justify-between gap-2">
                 <span class="text-[10px] text-slate-400 font-bold ml-1.5 hidden sm:block whitespace-nowrap"><i class="fa-solid fa-code-compare mr-1"></i>検索モデル切替</span>
                 <div class="flex gap-1.5 flex-grow sm:flex-grow-0">
@@ -92,12 +92,10 @@
                 <input type="hidden" id="search-mode" value="thought_evolution">
             </div>
 
-            <!-- タイトルとエディタエリア (枠内で自動伸縮) -->
             <input type="text" id="memo-title" placeholder="無題の思考" class="w-full px-3.5 py-2.5 rounded-xl text-lg sm:text-xl font-bold placeholder-slate-600 bg-slate-900/60 border-slate-800 shrink-0 mt-1">
             
-            <textarea id="editor" class="w-full flex-grow p-4 bg-slate-900/60 border border-slate-800 rounded-xl resize-none text-sm sm:text-base leading-relaxed custom-scrollbar placeholder-slate-600 min-h-[100px]" placeholder="ここに今の考えを書き連ねてください..."></textarea>
+            <textarea id="editor" class="w-full flex-grow p-4 bg-slate-900/60 border border-slate-800 rounded-xl resize-none text-sm sm:text-base leading-relaxed custom-scrollbar placeholder-slate-600 min-h-[150px]" placeholder="ここに今の考えを書き連ねてください..."></textarea>
             
-            <!-- 保存ボタン (常に一番下に固定表示される) -->
             <div class="flex justify-between items-center px-1 shrink-0 pt-1">
                 <span id="char-count" class="text-xs text-slate-400 font-medium">0文字</span>
                 <button onclick="saveMemo()" class="px-6 py-2.5 bg-emerald-600 hover:bg-emerald-500 rounded-xl font-bold text-xs sm:text-sm text-white transition-all shadow-lg shadow-emerald-900/30 flex items-center gap-2">
@@ -106,8 +104,8 @@
             </div>
         </div>
 
-        <!-- 右カラム：検索結果 -->
-        <div class="lg:col-span-4 flex flex-col glass-panel rounded-2xl p-4 h-full overflow-hidden">
+        <!-- 右カラム：検索結果 (スマホでは高さ固定、PCでは親に合わせる) -->
+        <div class="lg:col-span-4 flex flex-col glass-panel rounded-2xl p-4 h-[550px] lg:h-full overflow-hidden">
             <div class="flex justify-between items-center mb-3 px-1 shrink-0">
                 <h3 class="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center">
                     <i class="fa-solid fa-network-wired mr-2 text-emerald-400"></i>関連する記憶
@@ -118,20 +116,17 @@
                 </div>
             </div>
 
-            <!-- 質問結果表示エリア -->
             <div id="ask-result" class="hidden mb-3 p-3.5 bg-slate-900/95 border border-slate-700 rounded-xl text-xs max-h-40 overflow-y-auto custom-scrollbar relative shadow-lg shrink-0">
                 <button onclick="this.parentElement.classList.add('hidden')" class="absolute top-2.5 right-3 text-slate-400 hover:text-white transition-colors"><i class="fa-solid fa-xmark"></i></button>
                 <div id="ask-result-content"></div>
             </div>
 
-            <!-- リストビュー -->
             <div id="view-list" class="flex-grow overflow-y-auto custom-scrollbar pr-1 relative">
                 <div id="association-list" class="space-y-3">
                     <p class="text-center text-slate-500 text-xs mt-12">入力すると自動で検索されます</p>
                 </div>
             </div>
 
-            <!-- マップビュー (サイズ0による崩壊を防ぐため position relative で構築) -->
             <div id="view-map" class="flex-grow bg-slate-950 rounded-xl border border-slate-800/80 overflow-hidden relative hidden shadow-inner">
                 <div class="absolute top-2.5 left-2.5 z-10 flex bg-slate-900/90 backdrop-blur-md rounded-xl p-1 border border-slate-700/80 shadow-md">
                     <button id="map-style-hybrid" onclick="changeMapStyle('hybrid')" class="px-2.5 py-1 text-[10px] font-bold rounded-lg bg-emerald-600 text-white shadow-sm transition-all">全体像</button>
@@ -299,7 +294,6 @@
                 drawList(lastResults);
                 
                 const viewMap = document.getElementById('view-map');
-                // MAPが表示されている場合のみ、すぐに描画更新（非表示の場合はタブ切替時に描画される）
                 if (!viewMap.classList.contains('hidden')) {
                     drawMap(lastResults);
                 }
@@ -404,18 +398,13 @@
             }
         }
 
-        // MAP真っ白問題を解消するための確実な描画関数
         function drawMap(data) {
             const container = document.getElementById('mynetwork');
             const viewMap = document.getElementById('view-map');
             const modeElement = document.getElementById('search-mode');
 
             if (!container || !modeElement || typeof vis === 'undefined') return;
-            
-            // MAPタブが非表示、またはコンテナの幅/高さが0の場合は描画しない（エラーを防ぐ）
-            if (viewMap.classList.contains('hidden') || container.clientHeight === 0) {
-                return;
-            }
+            if (viewMap.classList.contains('hidden') || container.clientHeight === 0) return;
 
             const mode = modeElement.value;
             const style = typeof currentMapStyle !== 'undefined' ? currentMapStyle : 'hybrid';
@@ -618,7 +607,6 @@
 
             const isTemporal = (mode === 'thought_evolution' && style === 'time') || mode === 'time';
 
-            // バネの長さをさらに伸ばし、反発を強くして広々と表示させる
             const options = {
                 autoResize: true,
                 interaction: { hover: true, navigationButtons: true, keyboard: true },
@@ -632,9 +620,9 @@
                     solver: 'forceAtlas2Based',
                     stabilization: { iterations: 150 },
                     forceAtlas2Based: { 
-                        gravitationalConstant: -120, // 強く反発させて重なりを防ぐ
-                        centralGravity: 0.02,        // 中心に集まる力を弱めて広げる
-                        springLength: 250,           // 線の長さをさらに長く
+                        gravitationalConstant: -120,
+                        centralGravity: 0.02,
+                        springLength: 250,
                         springConstant: 0.05 
                     }
                 }
@@ -675,7 +663,6 @@
             searchTimer = setTimeout(searchRelatedMemos, 800);
         });
 
-        // 真っ白問題を根本的に解決するタブ切替処理
         function switchView(v) {
             currentView = v;
             const viewMap = document.getElementById('view-map');
@@ -687,10 +674,8 @@
                 document.getElementById('btn-map').className = "px-3 py-1 text-[11px] font-bold rounded-lg bg-slate-800 text-emerald-400 transition-all";
                 document.getElementById('btn-list').className = "px-3 py-1 text-[11px] font-bold rounded-lg text-slate-400 hover:text-slate-200 transition-all";
 
-                // ブラウザにMAPエリアのサイズを認識させるための強制リフロー
                 void viewMap.offsetWidth;
 
-                // レンダリングが確実に完了した直後（次のフレーム）に描画を実行
                 requestAnimationFrame(() => {
                     if (lastResults && lastResults.length > 0) {
                         drawMap(lastResults);
