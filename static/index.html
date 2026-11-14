@@ -366,10 +366,10 @@ html body #view-map:fullscreen {
             <section class="bg-slate-950/80 p-3 rounded-xl border border-slate-800 shrink-0" aria-label="関連メモの検索方式">
                 <h2 class="text-xs font-bold text-slate-200 mb-2"><i class="fa-solid fa-code-compare mr-1 text-emerald-400" aria-hidden="true"></i>関連メモの検索方式</h2>
                 <div class="flex flex-wrap gap-1.5" role="group" aria-label="検索方式を選択">
-                    <button type="button" id="mode-integrated_intent_v1" onclick="setMode('integrated_intent_v1')" aria-pressed="false" class="tab-btn tab-inactive py-1.5 px-2.5 text-[10px] sm:text-[11px] rounded-lg border flex items-center justify-center gap-1" title="Hybrid検索＋保存済み思考関係＋質問目的別の日時・旧版処理。Oracle情報は使用しません。">
+                    <button type="button" id="mode-integrated_intent_v1" onclick="setMode('integrated_intent_v1')" aria-pressed="true" class="tab-btn tab-active py-1.5 px-2.5 text-[10px] sm:text-[11px] rounded-lg border flex items-center justify-center gap-1" title="Hybrid検索＋保存済み思考関係＋質問目的別の日時・旧版処理。Oracle情報は使用しません。">
                         <i class="fa-solid fa-diagram-project" aria-hidden="true"></i><span>統合提案：意味＋思考＋時間</span>
                     </button>
-                    <button type="button" id="mode-semantic_lineage" onclick="setMode('semantic_lineage')" aria-pressed="true" class="tab-btn tab-active py-1.5 px-2.5 text-[10px] sm:text-[11px] rounded-lg border flex items-center justify-center gap-1" title="意味検索を基本に、保存済みの思考関係と弱い推定関係を利用して順位を調整する方式です。">
+                    <button type="button" id="mode-semantic_lineage" onclick="setMode('semantic_lineage')" aria-pressed="false" class="tab-btn tab-inactive py-1.5 px-2.5 text-[10px] sm:text-[11px] rounded-lg border flex items-center justify-center gap-1" title="意味検索を基本に、保存済みの思考関係と弱い推定関係を利用して順位を調整する方式です。">
                         <i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>提案：意味＋思考関係</span>
                     </button>
                     <button type="button" id="mode-thought_evolution" onclick="setMode('thought_evolution')" aria-pressed="false" class="tab-btn tab-inactive py-1.5 px-2.5 text-[10px] sm:text-[11px] rounded-lg border flex items-center justify-center gap-1" title="内容の類似度と作成日時から、古いメモと新しいメモのつながりを自動推定する方式です。">
@@ -385,8 +385,8 @@ html body #view-map:fullscreen {
                         <i class="fa-solid fa-robot" aria-hidden="true"></i><span>意味検索のみ</span>
                     </button>
                 </div>
-                <input type="hidden" id="search-mode" value="semantic_lineage">
-                <p id="mode-description" class="mt-2 text-[11px] leading-relaxed text-emerald-200" role="status" aria-live="polite">選択中：提案：意味＋思考関係 — 意味検索を基本に、保存済みの思考関係と弱い推定関係を利用して順位を調整する方式です。</p>
+                <input type="hidden" id="search-mode" value="integrated_intent_v1">
+                <p id="mode-description" class="mt-2 text-[11px] leading-relaxed text-emerald-200" role="status" aria-live="polite">選択中：統合提案：意味＋思考＋時間 — Hybrid（意味70%＋BM25 30%）に、保存した関係を最大3段階、必要に応じて日時・旧版の処理を加えます。実験用v4とは異なります。</p>
                 <p class="mt-1 text-[10px] leading-relaxed text-slate-400">これは中央で入力するメモから、右側に表示する関連メモの探し方です。保存内容は変わりません。右側の「質問文から検索」と上部の「AIに質問」は別の検索機能です。</p>
                 <details class="mt-2 text-[11px] text-slate-300">
                     <summary class="cursor-pointer text-emerald-300 hover:text-emerald-200 font-bold">各検索方式の違いを詳しく見る</summary>
