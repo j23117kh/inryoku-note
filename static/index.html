@@ -736,6 +736,7 @@ html body #view-map:fullscreen {
                         document.getElementById('memo-title').value = m.title; 
                         document.getElementById('editor').value = m.content; 
                         document.getElementById('char-count').innerText = m.content.length + "文字";
+                        window.__thesisAutoRelatedUI?.focusMemo(m.id);
                         searchRelatedMemos(); 
                     };
                     const staleBadge = m.stale ? '<span class="ml-2 text-[9px] px-1.5 py-0.5 rounded bg-amber-950 text-amber-400 border border-amber-800/50">更新済み</span>' : '';
@@ -896,6 +897,7 @@ html body #view-map:fullscreen {
                 const warning = c.needs_date_clarification ? '／日付が不明確です。必要なら日付を指定してください。' : '';
                 status.textContent = `自動判定：${names[c.intent] || '不明'}${c.as_of ? '／対象日：' + c.as_of : ''}${c.event_target_date ? '／予定日：' + c.event_target_date : ''}${warning} ／ 候補${response.total_candidates || 0}件 ／ ${method === 'integrated' ? '統合提案' : '旧方式'}`;
                 lastResults = Array.isArray(response.results) ? response.results : [];
+                window.__thesisAutoRelatedUI?.onRankedResults(lastResults, 'question');
                 drawList(lastResults);
                 if (!document.getElementById('view-map').classList.contains('hidden')) drawMap(lastResults);
             } catch (e) {
@@ -952,6 +954,7 @@ html body #view-map:fullscreen {
                 lastResults = Array.isArray(response) ? response :
                     (mode === 'integrated_intent_v1' && Array.isArray(response.results) ? response.results : []);
 
+                window.__thesisAutoRelatedUI?.onRankedResults(lastResults, 'draft');
                 drawList(lastResults);
                 
                 const viewMap = document.getElementById('view-map');
