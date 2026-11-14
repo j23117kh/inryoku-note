@@ -1,7 +1,6 @@
 import numbers
 import networkx as nx
 import numpy as np
-
 from src.config import (
     KNN_K,
     EDGE_MIN_SIM,
@@ -126,6 +125,7 @@ def build_graph(
                     graph.add_edge(ids[j], ids[i], weight=weight, relation="knn")
 
     # 5. 更新関係（supersedes）の検証とエッジ追加
+    # 5. 更新関係（supersedes）の検証とエッジ追加
     supersede_digraph = nx.DiGraph()
     supersede_digraph.add_nodes_from(ids)
 
@@ -133,10 +133,9 @@ def build_graph(
         new_id = memo["id"]
 
         for old_id in memo.get("supersedes", []):
+            # 存在しないIDや自己参照を検出してエラーを投げる
             if old_id not in id_set or old_id == new_id:
-                continue
-            if old_id not in id_set:
-                continue
+                raise ValueError(f"無効な更新関係: {old_id} -> {new_id}")
 
             supersede_digraph.add_edge(old_id, new_id)
 

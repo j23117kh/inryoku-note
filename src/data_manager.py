@@ -2,6 +2,7 @@ import datetime
 import json
 import os
 import shutil
+import tempfile
 
 from src.config import DATA_FILE, LEGACY_DATA_FILE
 
@@ -44,6 +45,9 @@ def normalize_memo(memo):
     memo.setdefault("supersedes", [])
 
     memo.setdefault("suggested", [])
+
+    # Explicitly confirmed thought relationships; legacy entries default empty.
+    memo.setdefault("thought_links", [])
 
     # 旧仕様のsupersededをactiveへ戻す
     if memo.get("status") == "superseded":
@@ -91,18 +95,29 @@ def save_memos(memos):
     メモを安全に保存する。
     """
 
-    tmp_file = str(DATA_FILE) + ".tmp"
-
-    with open(tmp_file, "w", encoding="utf-8") as f:
-        json.dump(
-            memos,
-            f,
-            ensure_ascii=False,
-            indent=2,
-        )
-
-    # 一時ファイルから正式ファイルへ原子的に置換
-    os.replace(tmp_file, DATA_FILE)
+    # Use a unique temporary file in the same directory.  A fixed .tmp
+    # filename can collide between requests/processes and corrupt the writer.
+    # This protects file replacement, NOT concurrent read-modify-write flows.
+    DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
+    tmp_file = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w", encoding="utf-8", newline="\n", delete=False,
+            dir=DATA_FILE.parent, prefix=DATA_FILE.name + ".", suffix=".tmp",
+        ) as f:
+            tmp_file = f.name
+            json.dump(memos, f, ensure_ascii=False, indent=2)
+            f.flush()
+            os.fsync(f.fileno())
+        # File is complete before it becomes the canonical data file.
+        os.replace(tmp_file, DATA_FILE)
+        tmp_file = None
+    finally:
+        if tmp_file is not None:
+            try:
+                os.unlink(tmp_file)
+            except FileNotFoundError:
+                pass
 
 
 def live_memos(memos, as_of=None):

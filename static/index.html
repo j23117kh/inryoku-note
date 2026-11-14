@@ -11,6 +11,13 @@
     <style>
         body { background-color: #080c0f; color: #e2e8f0; font-family: 'Inter', 'Noto Sans JP', sans-serif; }
         .glass-panel { background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(51, 65, 85, 0.6); backdrop-filter: blur(12px); box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3); }
+        /* Allow reaching save/actions on shorter desktop viewports. */
+        @media (min-width: 1024px) {
+            body { height: auto !important; min-height: 100vh; overflow-y: auto !important; }
+            body > main { min-height: 670px; overflow: visible !important; }
+            body > main > div:nth-child(2) { height: auto !important; min-height: 670px; overflow: visible !important; }
+            #editor { min-height: 180px; }
+        }
         textarea, input, select { background-color: #0b1329 !important; border: 1px solid #1e293b !important; color: #f8fafc !important; }
         textarea:focus, input:focus, select:focus { border-color: #10b981 !important; outline: none; box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.15); }
         .accent-text { color: #10b981; }
@@ -32,10 +39,238 @@
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
         }
-    </style>
+        /* Keep the result map legible in the narrow side panel. The panel
+           scrolls vertically rather than clipping the graph or save controls. */
+        #result-panel.map-focused { overflow-y: auto; overscroll-behavior: contain; }
+        #result-panel.map-focused #view-map {
+            width: 100%; min-height: 410px; flex: 1 0 410px;
+        }
+        /* Fullscreen uses the browser's top layer, outside the narrow grid and
+           ancestor backdrop-filter / overflow constraints. Press Esc to exit. */
+        #view-map:fullscreen {
+            display: block !important;
+            width: 100vw !important; height: 100vh !important;
+            min-height: 100vh !important; max-height: none !important;
+            flex: none !important; border: 0 !important;
+            border-radius: 0 !important; background: #020617;
+            overflow: hidden !important;
+        }
+        #view-map:fullscreen #result-map-detail { max-width: 440px; max-height: 75vh; }
+        @media (max-width: 640px) {
+            #result-panel.map-focused #view-map { min-height: 340px; flex-basis: 340px; }
+            #view-map:fullscreen { min-height: 100vh !important; }
+        }
+        /* Approved-thought graph: readable single-memo exploration by default. */
+        #thought-panel[open] { overflow: visible; }
+        @media (min-width: 1024px) {
+            body.thought-panel-expanded { height: auto !important; overflow-y: auto !important; }
+            body.thought-panel-expanded main { min-height: 580px; flex-grow: 0; }
+        }
+        #approved-thought-network { height: clamp(420px, 57vh, 620px); min-height: 380px; width: 100%; background: #0b1323;
+            border: 1px solid #334155; border-radius: 12px; }
+        #thought-node-detail { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 160px; overflow-y: auto; }
+    /* メモ入力パネルの高さ調整 */
+.glass-panel:has(#editor) {
+    height: fit-content !important;
+    min-height: 0 !important;
+    align-self: start !important;
+    flex-grow: 0 !important;
+}
+/* THESIS_RESPONSIVE_PANELS_BEGIN */
+body {
+    height: auto !important;
+    min-height: 100dvh !important;
+    overflow-y: auto !important;
+}
+
+body > main {
+    flex: 0 0 auto !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+    align-items: stretch !important;
+}
+
+body > main > div:has(#editor) {
+    height: auto !important;
+    min-height: 0 !important;
+    align-self: stretch !important;
+    flex-grow: 0 !important;
+    overflow: visible !important;
+}
+
+#editor {
+    height: clamp(125px, 24dvh, 280px) !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    flex: 0 0 auto !important;
+    overflow-y: auto !important;
+}
+
+@media (min-width: 1024px) {
+    body > main > div:first-child,
+    body > main > #result-panel {
+        height: auto !important;
+        min-height: 0 !important;
+        align-self: stretch !important;
+        overflow: hidden !important;
+    }
+
+    #memo-archive, #view-list, #view-map {
+        min-height: 0;
+    }
+
+    #result-panel.map-focused {
+        overflow-y: auto !important;
+    }
+
+    #result-panel.map-focused #view-map {
+        min-height: clamp(180px, 30dvh, 310px) !important;
+        flex-basis: auto !important;
+    }
+}
+
+@media (max-width: 1023px) {
+    body > main {
+        grid-template-columns: minmax(0, 1fr) !important;
+    }
+
+    body > main > div:first-child,
+    body > main > #result-panel {
+        height: clamp(240px, 40dvh, 480px) !important;
+        min-height: 0 !important;
+        overflow: hidden !important;
+    }
+
+    #result-panel.map-focused {
+        overflow-y: auto !important;
+    }
+}
+/* THESIS_RESPONSIVE_PANELS_END */
+
+
+
+
+/* THESIS_BOUNDED_THREE_PANELS_V4_BEGIN */
+/* Desktop: archive content must NEVER determine the height of the grid row. */
+html body {
+    min-height: 100dvh !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+html body > main > div { min-width: 0 !important; }
+html body > main #editor {
+    height: clamp(130px, 21dvh, 275px) !important;
+    min-height: 110px !important;
+    max-height: none !important;
+    flex: 0 0 auto !important;
+    resize: vertical !important;
+    overflow-y: auto !important;
+}
+@media (min-width: 1024px) {
+    html body > main {
+        display: grid !important;
+        grid-template-rows: minmax(0, 1fr) !important;
+        height: clamp(610px, calc(100dvh - 160px), 900px) !important;
+        min-height: 0 !important;
+        max-height: 900px !important;
+        flex: 0 0 auto !important;
+        align-items: stretch !important;
+        overflow: hidden !important;
+    }
+    html body > main > div:first-child,
+    html body > main > div:has(#editor),
+    html body > main > #result-panel {
+        height: 100% !important;
+        min-height: 0 !important;
+        max-height: 100% !important;
+        align-self: stretch !important;
+        flex-grow: 0 !important;
+    }
+    html body > main > div:first-child,
+    html body > main > #result-panel {
+        overflow: hidden !important;
+    }
+    /* Small desktop screens: only editor panel scrolls if it cannot fit. */
+    html body > main > div:has(#editor) {
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        overscroll-behavior-y: contain;
+    }
+    html body > main #memo-archive,
+    html body > main #view-list {
+        flex: 1 1 0% !important;
+        min-height: 0 !important;
+        overflow-y: auto !important;
+        overscroll-behavior-y: contain;
+    }
+    html body > main #result-panel.map-focused {
+        overflow: hidden !important;
+    }
+    html body > main #result-panel #view-map:not(:fullscreen) {
+        flex: 1 1 0% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: hidden !important;
+    }
+}
+@media (max-width: 1023px) {
+    /* On narrow screens, stack panels and bound their individual contents. */
+    html body > main {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        flex: 0 0 auto !important;
+        overflow: visible !important;
+        align-items: stretch !important;
+    }
+    html body > main > div:first-child {
+        height: clamp(220px, 33dvh, 400px) !important;
+        min-height: 0 !important;
+        overflow: hidden !important;
+    }
+    html body > main > div:has(#editor) {
+        height: auto !important;
+        min-height: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+    html body > main #result-panel {
+        height: clamp(380px, 65dvh, 700px) !important;
+        min-height: 0 !important;
+        overflow: hidden !important;
+    }
+    html body > main #memo-archive,
+    html body > main #view-list {
+        flex: 1 1 0% !important;
+        min-height: 0 !important;
+        overflow-y: auto !important;
+    }
+    html body > main #result-panel #view-map:not(:fullscreen) {
+        flex: 1 1 0% !important;
+        min-height: 0 !important;
+        height: auto !important;
+        overflow: hidden !important;
+    }
+    html body > main #result-panel.map-focused { overflow: hidden !important; }
+}
+/* Preserve full-screen map sizing independently of the grid. */
+html body #view-map:fullscreen {
+    display: block !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: none !important;
+    flex: none !important;
+}
+/* THESIS_BOUNDED_THREE_PANELS_V4_END */
+</style>
 </head>
-<!-- スマホは min-h-screen で全体スクロール許可、PC(lg) は h-screen でスクロール禁止しピタッと収める -->
-<body class="p-3 sm:p-5 md:p-6 min-h-screen flex flex-col lg:h-screen lg:overflow-hidden">
+<!-- Desktop also scrolls: fixed viewport height used to hide the save button. -->
+<body class="p-3 sm:p-5 md:p-6 min-h-screen flex flex-col lg:h-auto lg:overflow-y-auto">
 
     <!-- ヘッダー -->
     <header class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3 mb-4 sm:mb-5 px-1 shrink-0">
@@ -46,7 +281,7 @@
         </div>
         <div class="text-xs text-slate-400 flex flex-wrap gap-2.5 sm:gap-4 items-center w-full sm:w-auto justify-between sm:justify-end">
             <div class="flex gap-2 items-center bg-slate-900/60 p-1.5 rounded-xl border border-slate-800 flex-grow sm:flex-grow-0">
-                <input type="text" id="ask-input" placeholder="メモに質問する..." class="px-3 py-1.5 rounded-lg text-xs w-full sm:w-48 bg-slate-950 border-none">
+                <input type="text" id="ask-input" placeholder="AIにメモの内容を質問..." aria-label="AIに質問し文章で回答してもらう" title="AIで文章回答を生成します。検索だけしたい場合は右側の「質問文から検索」を使用してください" class="px-3 py-1.5 rounded-lg text-xs w-full sm:w-48 bg-slate-950 border-none">
                 <button onclick="askMemos()" class="px-3 py-1.5 bg-emerald-600 hover:bg-emerald-500 rounded-lg text-white font-medium transition-all shadow-md shadow-emerald-900/20 shrink-0"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
             <p id="status-text" class="flex items-center bg-slate-900/80 px-3 py-1.5 rounded-xl border border-slate-800 text-slate-300 shrink-0">
@@ -55,8 +290,59 @@
         </div>
     </header>
 
+    <!-- Approved thought relations; default to a neighborhood, not a wall of all memos. -->
+    <details id="thought-panel" class="glass-panel rounded-xl p-3 mb-3 shrink-0 text-xs">
+        <summary class="cursor-pointer font-bold text-emerald-300">思考関係の承認・分岐グラフ</summary>
+        <div class="flex flex-wrap gap-2 mt-3 items-center">
+            <label for="thought-parent">元メモ</label>
+            <select id="thought-parent" class="rounded p-2 max-w-48"></select>
+            <label for="thought-child">新しいメモ</label>
+            <select id="thought-child" class="rounded p-2 max-w-48"></select>
+            <select id="thought-relation" class="rounded p-2" aria-label="関係の種類">
+                <option value="development">発展</option>
+                <option value="branch">分岐</option>
+                <option value="revision">修正・置換</option>
+                <option value="related">関連</option>
+            </select>
+            <button type="button" onclick="saveApprovedThoughtLink()" class="px-3 py-2 rounded bg-emerald-700">関係を承認・保存</button>
+            <button type="button" onclick="removeApprovedThoughtLink()" class="px-3 py-2 rounded bg-slate-700">関係を解除</button>
+            <button type="button" onclick="refreshApprovedThoughtGraph()" class="px-3 py-2 rounded bg-slate-700">グラフ更新</button>
+        </div>
+        <p id="thought-link-message" role="status" class="mt-2 text-slate-300"></p>
+        <div class="border-t border-slate-700/60 mt-2 pt-3 flex flex-wrap gap-2 items-end">
+            <div class="flex flex-col gap-1 min-w-0">
+                <label for="thought-focus" class="text-slate-300">中心にするメモ</label>
+                <select id="thought-focus" class="rounded p-2 max-w-64" onchange="renderApprovedThoughtGraph()"></select>
+            </div>
+            <div class="flex flex-col gap-1 min-w-0">
+                <label for="thought-scope" class="text-slate-300">表示範囲</label>
+                <select id="thought-scope" class="rounded p-2" onchange="renderApprovedThoughtGraph()">
+                    <option value="1">周辺（1段階）</option>
+                    <option value="2">周辺（2段階）</option>
+                    <option value="all">全体（多数の場合は縮小）</option>
+                </select>
+            </div>
+            <div class="flex flex-col gap-1 min-w-0">
+                <label for="thought-search">メモ検索（タイトル・本文）</label>
+                <input id="thought-search" type="search" class="rounded p-2 max-w-60" placeholder="メモのキーワード"
+                    onkeydown="if(event.key==='Enter'){event.preventDefault();searchApprovedThoughtMemo();}">
+            </div>
+            <button type="button" onclick="searchApprovedThoughtMemo()" class="px-3 py-2 rounded bg-slate-700">検索して中心にする</button>
+            <button type="button" onclick="zoomApprovedThoughtGraph(1.3)" class="px-3 py-2 rounded bg-slate-700" aria-label="拡大">＋</button>
+            <button type="button" onclick="zoomApprovedThoughtGraph(1/1.3)" class="px-3 py-2 rounded bg-slate-700" aria-label="縮小">－</button>
+            <button type="button" onclick="fitApprovedThoughtGraph()" class="px-3 py-2 rounded bg-slate-700">全体を収める</button>
+        </div>
+        <p id="thought-graph-summary" role="status" class="mt-2 text-slate-400"></p>
+        <div class="mt-2 text-slate-300">線の種類：<span class="text-emerald-300">発展</span> ／ <span class="text-violet-300">分岐</span> ／ <span class="text-amber-300">修正・置換</span> ／ <span class="text-slate-400">関連</span></div>
+        <div id="approved-thought-network" class="mt-2" aria-label="承認済みの思考関係グラフ"></div>
+        <div class="mt-2 p-3 rounded-lg border border-slate-700 bg-slate-900/60">
+            <p class="font-bold text-slate-200 mb-1">選択したメモの詳細（グラフのメモをクリック）</p>
+            <div id="thought-node-detail" class="text-slate-300" aria-live="polite">メモを選択すると、本文・日時・関係がここに表示されます。</div>
+        </div>
+    </details>
+
     <!-- メインコンテンツ -->
-    <main class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 flex-grow pb-4 lg:pb-1 lg:min-h-0 lg:overflow-hidden">
+    <main class="grid grid-cols-1 lg:grid-cols-12 gap-4 sm:gap-5 flex-grow pb-4 lg:pb-4 lg:min-h-[670px] lg:overflow-visible">
         
         <!-- 左カラム：アーカイブ (スマホでは高さ固定、PCでは親に合わせる) -->
         <div class="lg:col-span-3 flex flex-col glass-panel rounded-2xl p-4 h-64 lg:h-full overflow-hidden">
@@ -74,27 +360,59 @@
         </div>
 
         <!-- 中央カラム：エディタと検索設定 (スマホでは最小高さを確保、PCでは親に合わせる) -->
-        <div class="lg:col-span-5 flex flex-col glass-panel rounded-2xl p-4 sm:p-5 gap-3 min-h-[500px] lg:min-h-0 lg:h-full overflow-hidden">
+        <div class="lg:col-span-5 flex flex-col glass-panel rounded-2xl p-4 sm:p-5 gap-3 min-h-[500px] lg:min-h-[670px] lg:h-auto lg:overflow-visible custom-scrollbar">
             
-            <div class="bg-slate-950/80 p-2 rounded-xl border border-slate-800 shrink-0 flex flex-wrap items-center justify-between gap-2">
-                <span class="text-[10px] text-slate-400 font-bold ml-1.5 hidden sm:block whitespace-nowrap"><i class="fa-solid fa-code-compare mr-1"></i>検索モデル切替</span>
-                <div class="flex gap-1.5 flex-grow sm:flex-grow-0">
-                    <button id="mode-thought_evolution" onclick="setMode('thought_evolution')" class="tab-btn tab-active py-1.5 px-3 text-[10px] sm:text-[11px] rounded-lg border flex-1 sm:flex-none flex items-center justify-center gap-1 whitespace-nowrap">
-                        <i class="fa-solid fa-code-branch"></i><span>提案手法</span>
+            <!-- The following six modes apply to draft-memo related-search. -->
+            <section class="bg-slate-950/80 p-3 rounded-xl border border-slate-800 shrink-0" aria-label="関連メモの検索方式">
+                <h2 class="text-xs font-bold text-slate-200 mb-2"><i class="fa-solid fa-code-compare mr-1 text-emerald-400" aria-hidden="true"></i>関連メモの検索方式</h2>
+                <div class="flex flex-wrap gap-1.5" role="group" aria-label="検索方式を選択">
+                    <button type="button" id="mode-integrated_intent_v1" onclick="setMode('integrated_intent_v1')" aria-pressed="false" class="tab-btn tab-inactive py-1.5 px-2.5 text-[10px] sm:text-[11px] rounded-lg border flex items-center justify-center gap-1" title="Hybrid検索＋保存済み思考関係＋質問目的別の日時・旧版処理。Oracle情報は使用しません。">
+                        <i class="fa-solid fa-diagram-project" aria-hidden="true"></i><span>統合提案：意味＋思考＋時間</span>
                     </button>
-                    <button id="mode-full" onclick="setMode('full')" class="tab-btn tab-inactive py-1.5 px-3 text-[10px] sm:text-[11px] rounded-lg border flex-1 sm:flex-none flex items-center justify-center gap-1 whitespace-nowrap">
-                        <i class="fa-solid fa-circle-nodes"></i><span>基準モデル</span>
+                    <button type="button" id="mode-semantic_lineage" onclick="setMode('semantic_lineage')" aria-pressed="true" class="tab-btn tab-active py-1.5 px-2.5 text-[10px] sm:text-[11px] rounded-lg border flex items-center justify-center gap-1" title="意味検索を基本に、保存済みの思考関係と弱い推定関係を利用して順位を調整する方式です。">
+                        <i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>提案：意味＋思考関係</span>
                     </button>
-                    <button id="mode-semantic" onclick="setMode('semantic')" class="tab-btn tab-inactive py-1.5 px-3 text-[10px] sm:text-[11px] rounded-lg border flex-1 sm:flex-none flex items-center justify-center gap-1 whitespace-nowrap">
-                        <i class="fa-solid fa-robot"></i><span>ベース</span>
+                    <button type="button" id="mode-thought_evolution" onclick="setMode('thought_evolution')" aria-pressed="false" class="tab-btn tab-inactive py-1.5 px-2.5 text-[10px] sm:text-[11px] rounded-lg border flex items-center justify-center gap-1" title="内容の類似度と作成日時から、古いメモと新しいメモのつながりを自動推定する方式です。">
+                        <i class="fa-solid fa-code-branch" aria-hidden="true"></i><span>旧方式：自動系列推定</span>
+                    </button>
+                    <button type="button" id="mode-thought_approved" onclick="setMode('thought_approved')" aria-pressed="false" class="tab-btn tab-inactive py-1.5 px-2.5 text-[10px] sm:text-[11px] rounded-lg border flex items-center justify-center gap-1" title="ユーザーが承認・保存した思考関係を主に利用して順位を調整する方式です。">
+                        <i class="fa-solid fa-check-double" aria-hidden="true"></i><span>承認済み関係だけ</span>
+                    </button>
+                    <button type="button" id="mode-full" onclick="setMode('full')" aria-pressed="false" class="tab-btn tab-inactive py-1.5 px-2.5 text-[10px] sm:text-[11px] rounded-lg border flex items-center justify-center gap-1" title="意味類似度とグラフの情報を組み合わせる従来方式です。時間条件が指定されれば日時情報も利用し、更新済みメモを減点します。">
+                        <i class="fa-solid fa-circle-nodes" aria-hidden="true"></i><span>従来の統合方式</span>
+                    </button>
+                    <button type="button" id="mode-semantic" onclick="setMode('semantic')" aria-pressed="false" class="tab-btn tab-inactive py-1.5 px-2.5 text-[10px] sm:text-[11px] rounded-lg border flex items-center justify-center gap-1" title="意味の近さだけで検索する比較用の基本方式です。思考関係やグラフによる順位調整はしません。">
+                        <i class="fa-solid fa-robot" aria-hidden="true"></i><span>意味検索のみ</span>
                     </button>
                 </div>
-                <input type="hidden" id="search-mode" value="thought_evolution">
-            </div>
+                <input type="hidden" id="search-mode" value="semantic_lineage">
+                <p id="mode-description" class="mt-2 text-[11px] leading-relaxed text-emerald-200" role="status" aria-live="polite">選択中：提案：意味＋思考関係 — 意味検索を基本に、保存済みの思考関係と弱い推定関係を利用して順位を調整する方式です。</p>
+                <p class="mt-1 text-[10px] leading-relaxed text-slate-400">これは中央で入力するメモから、右側に表示する関連メモの探し方です。保存内容は変わりません。右側の「質問文から検索」と上部の「AIに質問」は別の検索機能です。</p>
+                <details class="mt-2 text-[11px] text-slate-300">
+                    <summary class="cursor-pointer text-emerald-300 hover:text-emerald-200 font-bold">各検索方式の違いを詳しく見る</summary>
+                    <dl class="mt-2 p-2 rounded-lg border border-slate-700/60 bg-slate-900/70">
+                    <dt class="font-bold text-slate-200">統合提案：意味＋思考＋時間（今回追加）</dt>
+                    <dd class="mb-2 text-slate-400 leading-relaxed">意味検索＋BM25のHybridを基準に、保存済み思考関係を最大3ホップたどります。質問目的と日時に応じて、更新済みメモの減点・過去時点の対象制限・予定日の近さを切り替えます。正解ラベルは使いません。</dd>
+                    <dt class="font-bold text-slate-200">提案：意味＋思考関係</dt>
+                    <dd class="mb-2 text-slate-400 leading-relaxed">意味検索を基本に、保存済みの思考関係と弱い推定関係を利用して順位を調整する方式です。</dd>
+                    <dt class="font-bold text-slate-200">旧方式：自動系列推定</dt>
+                    <dd class="mb-2 text-slate-400 leading-relaxed">内容の類似度と作成日時から、古いメモと新しいメモのつながりを自動推定する方式です。</dd>
+                    <dt class="font-bold text-slate-200">承認済み関係だけ</dt>
+                    <dd class="mb-2 text-slate-400 leading-relaxed">ユーザーが承認・保存した思考関係を主に利用して順位を調整する方式です。</dd>
+                    <dt class="font-bold text-slate-200">従来の統合方式</dt>
+                    <dd class="mb-2 text-slate-400 leading-relaxed">意味類似度とグラフの情報を組み合わせる従来方式です。時間条件が指定されれば日時情報も利用し、更新済みメモを減点します。</dd>
+                    <dt class="font-bold text-slate-200">意味検索のみ</dt>
+                    <dd class="mb-2 text-slate-400 leading-relaxed">意味の近さだけで検索する比較用の基本方式です。思考関係やグラフによる順位調整はしません。</dd>
+                    </dl>
+                    <p class="text-[10px] text-slate-400 mt-1">※実験用の「Hybrid＋多段階関係（v4）」と、これらのWeb画面の検索方式は同一ではありません。</p>
+                </details>
+            </section>
 
+            <label for="memo-title" class="text-[11px] font-bold text-slate-300 mt-1">メモのタイトル</label>
             <input type="text" id="memo-title" placeholder="無題の思考" class="w-full px-3.5 py-2.5 rounded-xl text-lg sm:text-xl font-bold placeholder-slate-600 bg-slate-900/60 border-slate-800 shrink-0 mt-1">
             
-            <textarea id="editor" class="w-full flex-grow p-4 bg-slate-900/60 border border-slate-800 rounded-xl resize-none text-sm sm:text-base leading-relaxed custom-scrollbar placeholder-slate-600 min-h-[150px]" placeholder="ここに今の考えを書き連ねてください..."></textarea>
+            <label for="editor" class="text-[11px] font-bold text-slate-300">メモの本文（入力中の内容をもとに関連メモを表示）</label>
+            <textarea id="editor" class="w-full h-[180px] flex-none p-4 bg-slate-900/60 border border-slate-800 rounded-xl resize-none text-sm sm:text-base leading-relaxed custom-scrollbar placeholder-slate-600 min-h-[150px]" placeholder="ここに今の考えを書き連ねてください..."></textarea>
             
             <div class="flex justify-between items-center px-1 shrink-0 pt-1">
                 <span id="char-count" class="text-xs text-slate-400 font-medium">0文字</span>
@@ -105,15 +423,43 @@
         </div>
 
         <!-- 右カラム：検索結果 (スマホでは高さ固定、PCでは親に合わせる) -->
-        <div class="lg:col-span-4 flex flex-col glass-panel rounded-2xl p-4 h-[550px] lg:h-full overflow-hidden">
+        <div id="result-panel" class="lg:col-span-4 flex flex-col glass-panel rounded-2xl p-4 h-[550px] lg:h-full overflow-hidden">
             <div class="flex justify-between items-center mb-3 px-1 shrink-0">
                 <h3 class="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center">
-                    <i class="fa-solid fa-network-wired mr-2 text-emerald-400"></i>関連する記憶
+                    <i class="fa-solid fa-network-wired mr-2 text-emerald-400"></i>関連する記憶（検索結果）
                 </h3>
                 <div class="flex bg-slate-900/90 rounded-xl p-1 border border-slate-800 shrink-0">
-                    <button id="btn-list" onclick="switchView('list')" class="px-3 py-1 text-[11px] font-bold rounded-lg bg-slate-800 text-emerald-400 transition-all">LIST</button>
-                    <button id="btn-map" onclick="switchView('map')" class="px-3 py-1 text-[11px] font-bold rounded-lg text-slate-400 hover:text-slate-200 transition-all">MAP</button>
+                    <button id="btn-list" onclick="switchView('list')" class="px-3 py-1 text-[11px] font-bold rounded-lg bg-slate-800 text-emerald-400 transition-all" title="関連メモを一覧で見る">一覧</button>
+                    <button id="btn-map" onclick="switchView('map')" class="px-3 py-1.5 text-[13px] font-bold rounded-lg text-slate-200 hover:text-white transition-all" title="メモ間のつながりを図で見る（全画面拡大もできます）">関係図</button>
                 </div>
+            </div>
+
+            <!-- Saved approved/recorded links, independent of ranking mode. -->
+            <div class="mb-2 shrink-0 flex flex-wrap items-center gap-2 rounded-lg bg-slate-900/70 border border-slate-800 px-2 py-1.5">
+                <button type="button" id="browse-saved-button" onclick="toggleSavedRelationsBrowse()" aria-pressed="false" class="text-[11px] font-bold text-emerald-300 rounded bg-slate-800 hover:bg-slate-700 border border-slate-700 px-2 py-1.5">保存済みの思考関係を表示</button>
+                <span id="saved-relations-status" role="status" class="text-[10px] text-slate-400">検索結果に接続する保存済み関係も表示します</span>
+                <button type="button" id="browse-more-button" onclick="showMoreSavedRelations()" class="hidden text-[10px] rounded px-2 py-1 bg-slate-700 text-white">さらに60件</button>
+            </div>
+
+            <!-- Opt-in text-question search: separate from the draft memo editor and LLM answer. -->
+            <div class="mb-3 shrink-0 rounded-lg border border-slate-700 bg-slate-900/80 p-2">
+                <label for="intent-query" class="block text-[11px] text-emerald-300 mb-1 font-bold">質問文から検索（現在・過去・変化を自動判定）</label>
+                <div class="flex gap-1">
+                    <input id="intent-query" type="search" class="min-w-0 flex-1 rounded px-2 py-1 text-xs" placeholder="例：4月7日時点の判断は？" aria-label="質問を入力してメモ検索">
+                    <button type="button" id="intent-search-button" onclick="searchQuestionIntent()" class="rounded bg-emerald-700 hover:bg-emerald-600 px-3 text-xs shrink-0">検索</button>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-1.5 items-center">
+                    <label for="intent-as-of" class="text-[10px] text-slate-400">過去時点（任意）</label>
+                    <input id="intent-as-of" type="date" class="text-[10px] rounded px-1 py-0.5" title="日時が不明確なときのみ指定">
+                </div>
+                <div class="flex gap-2 mt-1.5 items-center">
+                    <label for="intent-search-method" class="text-[10px] text-slate-400">検索方式</label>
+                    <select id="intent-search-method" class="flex-1 min-w-0 text-[11px] rounded bg-slate-900 border border-slate-700 p-1" aria-label="質問検索の方式">
+                        <option value="integrated">統合提案：Hybrid＋思考＋時間</option>
+                        <option value="stored">旧方式：Hybrid＋保存済み関係</option>
+                    </select>
+                </div>
+                <p id="intent-search-status" role="status" class="text-[10px] text-slate-400 mt-1">質問文の目的・日時を自動判定します。関係は保存・承認済みのものだけを利用します。</p>
             </div>
 
             <div id="ask-result" class="hidden mb-3 p-3.5 bg-slate-900/95 border border-slate-700 rounded-xl text-xs max-h-40 overflow-y-auto custom-scrollbar relative shadow-lg shrink-0">
@@ -128,14 +474,30 @@
             </div>
 
             <div id="view-map" class="flex-grow bg-slate-950 rounded-xl border border-slate-800/80 overflow-hidden relative hidden shadow-inner">
-                <div class="absolute top-2.5 left-2.5 z-10 flex bg-slate-900/90 backdrop-blur-md rounded-xl p-1 border border-slate-700/80 shadow-md">
-                    <button id="map-style-hybrid" onclick="changeMapStyle('hybrid')" class="px-2.5 py-1 text-[10px] font-bold rounded-lg bg-emerald-600 text-white shadow-sm transition-all">全体像</button>
-                    <button id="map-style-time" onclick="changeMapStyle('time')" class="px-2.5 py-1 text-[10px] font-bold rounded-lg text-slate-400 hover:text-slate-200 transition-all">時間軸</button>
-                    <button id="map-style-topic" onclick="changeMapStyle('topic')" class="px-2.5 py-1 text-[10px] font-bold rounded-lg text-slate-400 hover:text-slate-200 transition-all">トピック</button>
+                <div class="absolute top-2 left-2 right-2 z-10 flex flex-wrap items-start justify-between gap-1 pointer-events-none">
+                    <div class="flex bg-slate-900/95 backdrop-blur-md rounded-lg p-1 border border-slate-600 shadow-md pointer-events-auto" role="group" aria-label="関係図の表示形式">
+                        <button id="map-style-hybrid" onclick="changeMapStyle('hybrid')" class="px-2 py-1.5 text-[11px] font-bold rounded-md bg-emerald-600 text-white shadow-sm transition-all">全体像</button>
+                        <button id="map-style-time" onclick="changeMapStyle('time')" class="px-2 py-1.5 text-[11px] font-bold rounded-md text-slate-300 hover:text-white transition-all">時間軸</button>
+                        <button id="map-style-topic" onclick="changeMapStyle('topic')" class="px-2 py-1.5 text-[11px] font-bold rounded-md text-slate-300 hover:text-white transition-all">トピック</button>
+                    </div>
+                    <div class="flex bg-slate-900/95 backdrop-blur-md rounded-lg p-1 border border-slate-600 shadow-md gap-1 pointer-events-auto" role="group" aria-label="関係図を拡大・縮小">
+                        <button type="button" onclick="zoomResultMap(1.35)" class="px-2 py-1 rounded-md bg-slate-700 text-white text-sm font-bold hover:bg-slate-600" title="関係図を拡大" aria-label="関係図を拡大">＋</button>
+                        <button type="button" onclick="zoomResultMap(1/1.35)" class="px-2 py-1 rounded-md bg-slate-700 text-white text-sm font-bold hover:bg-slate-600" title="関係図を縮小" aria-label="関係図を縮小">－</button>
+                        <button type="button" onclick="fitResultMap()" class="px-2 py-1 rounded-md bg-slate-700 text-white text-[11px] font-bold hover:bg-slate-600" title="関係図全体を収める">全体</button>
+                        <button type="button" id="map-fullscreen-button" onclick="toggleResultMapFullscreen()" aria-pressed="false" class="px-2 py-1 rounded-md bg-emerald-700 text-white text-[11px] font-bold hover:bg-emerald-600" title="関係図を画面いっぱいに広げる（Escで戻る）">⛶ 拡大</button>
+                    </div>
                 </div>
 
-                <div id="mynetwork"></div>
-                <div class="absolute bottom-3 left-3 text-[10px] text-slate-500 pointer-events-none bg-slate-900/60 px-2 py-1 rounded-md backdrop-blur-sm border border-slate-800 z-10">距離 = 意味の近さ</div>
+                <div id="mynetwork" role="img" aria-label="関連メモの関係図。ドラッグで移動、マウスホイールで拡大・縮小、ノードをクリックすると詳細を表示"></div>
+                <div class="absolute bottom-3 left-3 right-3 z-10 flex flex-col gap-1 pointer-events-none text-[11px] leading-relaxed text-slate-100">
+                    <span id="map-legend" class="w-fit max-w-full bg-slate-950/90 px-2 py-1 rounded border border-slate-700/80">全体像：点線＝検索ヒット／実線＝保存済み関係</span>
+                    <span id="map-count" class="w-fit max-w-full bg-slate-950/90 px-2 py-1 rounded border border-slate-700/80"></span>
+                    <span class="w-fit max-w-full bg-slate-950/90 px-2 py-1 rounded border border-slate-700/80">操作：＋／－で拡大縮小、ドラッグで移動、丸を押すと詳細。⛶ 拡大で全画面表示。</span>
+                </div>
+                <div id="result-map-detail" class="hidden absolute right-2 top-12 z-20 w-[90%] max-w-[330px] max-h-[65%] rounded-lg border border-emerald-700 bg-slate-950/95 p-3 text-xs shadow-xl overflow-y-auto">
+                    <button type="button" class="float-right text-slate-300 hover:text-white px-2" onclick="closeResultMapDetail()" aria-label="メモ詳細を閉じる">×</button>
+                    <div id="result-map-detail-content" class="whitespace-pre-wrap break-words pr-4 text-slate-200"></div>
+                </div>
             </div>
         </div>
     </main>
@@ -161,12 +523,187 @@
         let currentMapStyle = 'hybrid';
         let lastResults = [];
         let searchTimer = null;
+        let searchInFlight = false;
+        let searchPending = false;
         let memoNetwork = null;
+        // The search API only returns ranked hits. Saved link endpoints may be
+        // outside that set. Keep a separate, read-only cache for LIST and MAP.
+        let savedRelationGraph = null;
+        let savedRelationRequest = null;
+        let savedRelationGeneration = 0;
+        let savedRelationError = '';
+        let savedBrowseMode = false;
+        let savedBrowseLimit = 60;
+        let displayedMemoResults = [];
+        const SAVED_BROWSE_PAGE_SIZE = 60;
+        const MAP_ADDITIONAL_LINKED_MEMOS = 36;
 
         window.onload = loadArchive;
 
         function esc(s) {
             return String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+        }
+
+        const savedRelationTitles = Object.freeze({
+            development:'発展', revision:'修正・置換', branch:'分岐', related:'関連'
+        });
+        const savedRelationOrder = Object.freeze({revision:0,branch:1,development:2,related:3});
+
+        function getSavedRelationItems(id) {
+            if (!savedRelationGraph || !Array.isArray(savedRelationGraph.edges)) return [];
+            const memoId = String(id);
+            const allMemos = Array.isArray(window.archiveData) ? window.archiveData : [];
+            const memoById = new Map(allMemos.map(m => [String(m.id),m]));
+            const graphById = new Map((savedRelationGraph.nodes || []).map(n => [String(n.id),n]));
+            return savedRelationGraph.edges.filter(e =>
+                String(e.from) === memoId || String(e.to) === memoId
+            ).map(e => {
+                const outgoing = String(e.from) === memoId;
+                const otherId = outgoing ? String(e.to) : String(e.from);
+                return {edge:e,otherId,outgoing,
+                    other:memoById.get(otherId) || graphById.get(otherId) || {id:otherId,title:'（タイトル不明）'}};
+            }).sort((a,b) =>
+                (savedRelationOrder[a.edge.relation] ?? 9) - (savedRelationOrder[b.edge.relation] ?? 9) ||
+                String(a.other.title || '').localeCompare(String(b.other.title || ''))
+            );
+        }
+
+        function savedBrowseResults() {
+            if (!savedRelationGraph || !Array.isArray(savedRelationGraph.edges)) return [];
+            const linked = new Set();
+            for (const e of savedRelationGraph.edges) {
+                linked.add(String(e.from)); linked.add(String(e.to));
+            }
+            const archive = Array.isArray(window.archiveData) ? window.archiveData : [];
+            const byId = new Map(archive.map(m=>[String(m.id),m]));
+            const nodes = savedRelationGraph.nodes || [];
+            const all = nodes.filter(n=>linked.has(String(n.id))).map(n =>
+                byId.get(String(n.id)) || {id:n.id,title:n.title || '無題',content:'',created_at:n.created_at}
+            );
+            all.sort((a,b)=>String(b.created_at || b.date || '').localeCompare(String(a.created_at || a.date || '')) ||
+                String(a.id).localeCompare(String(b.id)));
+            return all;
+        }
+
+        function resultsForDisplay(results) {
+            return savedBrowseMode ? savedBrowseResults().slice(0,savedBrowseLimit) :
+                (Array.isArray(results) ? results : []);
+        }
+
+        function refreshSavedRelationStatus() {
+            const status = document.getElementById('saved-relations-status');
+            const more = document.getElementById('browse-more-button');
+            const button = document.getElementById('browse-saved-button');
+            if (button) {
+                button.textContent = savedBrowseMode ? '検索結果に戻る' : '保存済みの思考関係を表示';
+                button.setAttribute('aria-pressed',String(savedBrowseMode));
+            }
+            if (!status || !more) return;
+            const total = savedRelationGraph?.edges?.length ?? 0;
+            if (savedRelationError) {
+                status.textContent = '保存済み関係の読み込みに失敗：' + savedRelationError;
+            } else if (!savedRelationGraph) {
+                status.textContent = '保存済み関係を確認しています…';
+            } else if (savedBrowseMode) {
+                const count = savedBrowseResults().length;
+                status.textContent = `保存済み関係 ${total}本 ／ 接続するメモ ${Math.min(count,savedBrowseLimit)} / ${count}件を表示`;
+            } else {
+                const ids = new Set(lastResults.filter(m=>m && m.id != null).map(m=>String(m.id)));
+                const linked = savedRelationGraph.edges.filter(e=>ids.has(String(e.from)) || ids.has(String(e.to)));
+                status.textContent = `保存済み関係 ${total}本（検索結果につながる関係 ${linked.length}本）`;
+            }
+            more.classList.toggle('hidden',!savedBrowseMode || savedBrowseResults().length <= savedBrowseLimit);
+        }
+
+        function redrawSearchResults() {
+            drawList(lastResults);
+            const map = document.getElementById('view-map');
+            if (map && !map.classList.contains('hidden')) drawMap(resultsForDisplay(lastResults));
+            refreshSavedRelationStatus();
+        }
+
+        function publishSavedRelationGraph(graph, memoArchive) {
+            savedRelationGeneration++;
+            savedRelationError = '';
+            savedRelationGraph = {
+                nodes: Array.isArray(graph?.nodes) ? graph.nodes : [],
+                edges: Array.isArray(graph?.edges) ? graph.edges.filter(e =>
+                    e && e.from != null && e.to != null &&
+                    Object.prototype.hasOwnProperty.call(savedRelationTitles, e.relation)) : []
+            };
+            if (Array.isArray(memoArchive)) window.archiveData = memoArchive;
+            redrawSearchResults();
+        }
+
+        async function fetchSavedRelationGraph(force=false) {
+            if (!force && savedRelationGraph) return savedRelationGraph;
+            if (!force && savedRelationRequest) return savedRelationRequest;
+            const generation = ++savedRelationGeneration;
+            const request = (async () => {
+                try {
+                    const response = await fetch('/api/thought-graph');
+                    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                    const graph = await response.json();
+                    if (!Array.isArray(graph?.nodes) || !Array.isArray(graph?.edges)) {
+                        throw new Error('関係データの形式が不正です');
+                    }
+                    if (generation !== savedRelationGeneration) return;
+                    publishSavedRelationGraph(graph);
+                } catch (error) {
+                    if (generation === savedRelationGeneration) {
+                        savedRelationError = String(error.message || error);
+                        refreshSavedRelationStatus();
+                    }
+                }
+                return savedRelationGraph;
+            })();
+            savedRelationRequest = request;
+            try { return await request; }
+            finally { if (savedRelationRequest === request) savedRelationRequest = null; }
+        }
+
+        async function toggleSavedRelationsBrowse() {
+            if (!savedBrowseMode) {
+                await fetchSavedRelationGraph();
+                if (!savedRelationGraph) return;
+            }
+            savedBrowseMode = !savedBrowseMode;
+            savedBrowseLimit = SAVED_BROWSE_PAGE_SIZE;
+            redrawSearchResults();
+        }
+
+        function showMoreSavedRelations() {
+            if (!savedBrowseMode) return;
+            savedBrowseLimit += SAVED_BROWSE_PAGE_SIZE;
+            redrawSearchResults();
+        }
+
+        function useSearchResultMode() {
+            if (!savedBrowseMode) return;
+            savedBrowseMode = false;
+            refreshSavedRelationStatus();
+        }
+
+        function savedRelationPreview(memo) {
+            const entries = getSavedRelationItems(memo.id);
+            if (!entries.length) return '';
+            const visible = entries.slice(0, 8);
+            const rows = visible.map(x => {
+                const type = savedRelationTitles[x.edge.relation] || x.edge.relation;
+                const direction = x.edge.relation === 'related' ? '↔' : (x.outgoing ? '→' : '←');
+                const body = String(x.other.content || '').replace(/\s+/g,' ').trim().slice(0, 85);
+                return `<div class="mt-1 rounded border border-slate-700/70 bg-slate-950/60 px-2 py-1.5">
+                    <span class="font-bold text-emerald-200">${esc(type)} ${direction}</span>
+                    <span class="text-slate-200 ml-1">${esc(x.other.title || '無題')}</span>
+                    ${body ? `<p class="mt-1 text-slate-400">${esc(body)}${String(x.other.content || '').length > 85 ? '…' : ''}</p>` : ''}
+                </div>`;
+            }).join('');
+            const more = entries.length > visible.length ? `<p class="mt-1 text-slate-400">ほか${entries.length-visible.length}本。上部の承認・分岐グラフで確認できます。</p>` : '';
+            return `<div class="mt-2 p-2 rounded-lg border border-emerald-900/60 bg-emerald-950/20 text-[11px]">
+                <p class="font-bold text-emerald-300">保存済みの思考関係（${entries.length}本）</p>
+                ${rows}${more}
+                <p class="mt-1 text-[10px] text-slate-400">矢印は表示メモから見た関係の向き。関連は双方向。検索スコアとは別表示です。</p>
+            </div>`;
         }
 
         function clearEditor() {
@@ -181,6 +718,10 @@
                 const res = await fetch('/api/memos');
                 const archive = await res.json();
                 window.archiveData = archive;
+                // Reload saved links only when they were already requested.
+                // A new memo/update may add or change persisted supersedes.
+                if (savedRelationGraph) void fetchSavedRelationGraph(true);
+                if (savedBrowseMode) redrawSearchResults();
                 
                 const container = document.getElementById('memo-archive');
                 container.innerHTML = '';
@@ -206,11 +747,23 @@
             }
         }
 
+        const searchModeDescriptions = Object.freeze({
+            integrated_intent_v1: '選択中：統合提案：意味＋思考＋時間 — Hybrid（意味70%＋BM25 30%）に、保存した関係を最大3段階、必要に応じて日時・旧版の処理を加えます。実験用v4とは異なります。',
+            semantic_lineage: '選択中：提案：意味＋思考関係 — 意味検索を基本に、保存済みの思考関係と弱い推定関係を利用して順位を調整する方式です。',
+            thought_evolution: '選択中：旧方式：自動系列推定 — 内容の類似度と作成日時から思考のつながりを推定します。',
+            thought_approved: '選択中：承認済み関係だけ — ユーザーが承認・保存した思考関係を利用します。',
+            full: '選択中：従来の統合方式 — 意味類似度・グラフ情報を組み合わせ、条件により時間情報や古い版への減点を利用します。',
+            semantic: '選択中：意味検索のみ — 意味の近さだけを使う基本方式です。'
+        });
         function setMode(mode) {
+            if (!Object.prototype.hasOwnProperty.call(searchModeDescriptions, mode)) return;
             document.getElementById('search-mode').value = mode;
+            const modeDescription = document.getElementById('mode-description');
+            if (modeDescription) modeDescription.textContent = searchModeDescriptions[mode];
             document.querySelectorAll('.tab-btn').forEach(btn => {
                 btn.classList.remove('tab-active');
                 btn.classList.add('tab-inactive');
+                btn.setAttribute('aria-pressed', String(btn.id === `mode-${mode}`));
             });
             const activeBtn = document.getElementById(`mode-${mode}`);
             if (activeBtn) {
@@ -230,16 +783,62 @@
                 const btn = document.getElementById('map-style-' + s);
                 if (!btn) return;
                 if (s === style) {
-                    btn.className = "px-2.5 py-1 text-[10px] font-bold rounded-lg bg-emerald-600 text-white shadow-sm transition-all";
+                    btn.className = "px-2 py-1.5 text-[11px] font-bold rounded-md bg-emerald-600 text-white shadow-sm transition-all";
                 } else {
-                    btn.className = "px-2.5 py-1 text-[10px] font-bold rounded-lg text-slate-400 hover:text-slate-200 transition-all";
+                    btn.className = "px-2 py-1.5 text-[11px] font-bold rounded-md text-slate-300 hover:text-white transition-all";
                 }
             });
 
-            if (lastResults && lastResults.length > 0) {
-                drawMap(lastResults);
+            if (savedBrowseMode || (lastResults && lastResults.length > 0)) {
+                drawMap(resultsForDisplay(lastResults));
             }
         }
+
+        function zoomResultMap(factor) {
+            if (!memoNetwork) return;
+            const scale = Math.max(0.15, Math.min(4, memoNetwork.getScale() * factor));
+            memoNetwork.moveTo({scale, animation:{duration:180,easingFunction:'easeInOutQuad'}});
+        }
+
+        function fitResultMap() {
+            if (!memoNetwork) return;
+            memoNetwork.fit({animation:{duration:280,easingFunction:'easeInOutQuad'}});
+        }
+
+        async function toggleResultMapFullscreen() {
+            const map = document.getElementById('view-map');
+            if (!map || map.classList.contains('hidden')) return;
+            try {
+                if (document.fullscreenElement === map) {
+                    await document.exitFullscreen();
+                } else if (!document.fullscreenElement && typeof map.requestFullscreen === 'function') {
+                    await map.requestFullscreen();
+                } else {
+                    throw new Error('この画面では全画面表示を利用できません。');
+                }
+            } catch (error) {
+                const count = document.getElementById('map-count');
+                if (count) count.textContent = '全画面表示に失敗しました。ブラウザーの全画面表示（F11）も利用できます。';
+                console.warn('MAP fullscreen failed:', error);
+            }
+        }
+
+        document.addEventListener('fullscreenchange', () => {
+            const expanded = document.fullscreenElement === document.getElementById('view-map');
+            const btn = document.getElementById('map-fullscreen-button');
+            if (btn) {
+                btn.textContent = expanded ? '↙ 戻る' : '⛶ 拡大';
+                btn.setAttribute('aria-pressed', String(expanded));
+                btn.title = expanded ? '関係図を通常サイズに戻す（Escでも戻れます）' : '関係図を画面いっぱいに広げる（Escで戻る）';
+            }
+            // The drawing must be recalculated after fullscreen changes its
+            // canvas size. Preserve the timeline's readable non-fit zoom.
+            requestAnimationFrame(() => requestAnimationFrame(() => {
+                if (!memoNetwork) return;
+                memoNetwork.redraw();
+                if (currentMapStyle !== 'time') memoNetwork.fit({animation:false});
+            }));
+        });
 
         async function saveMemo() {
             const title = document.getElementById('memo-title').value;
@@ -252,7 +851,7 @@
                 const res = await fetch('/api/save', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({ title, content, auto_apply: true })
+                    body: JSON.stringify({ title, content, auto_apply: false })
                 });
                 const data = await res.json();
                 if (data.status === "success") {
@@ -260,7 +859,7 @@
                     await loadArchive();
                     document.getElementById('status-text').innerHTML = '<i class="fa-solid fa-circle text-[8px] text-emerald-400 mr-2 animate-pulse"></i> System Online';
                     
-                    if (!data.auto_applied && data.proposals && data.proposals.length > 0) {
+                    if (data.applied !== true && data.proposals && data.proposals.length > 0) {
                         showProposals(data.id, data.proposals);
                     }
                 } else {
@@ -272,25 +871,87 @@
             }
         }
 
+        async function searchQuestionIntent() {
+            const input = document.getElementById('intent-query');
+            const asOf = document.getElementById('intent-as-of').value;
+            const status = document.getElementById('intent-search-status');
+            const button = document.getElementById('intent-search-button');
+            const method = document.getElementById('intent-search-method').value;
+            const question = input.value.trim();
+            if (!question || button.disabled) return;
+            useSearchResultMode();
+            button.disabled = true;
+            status.textContent = '質問の目的を判定し、メモを検索しています…';
+            try {
+                const res = await fetch(method === 'integrated' ? '/api/integrated-search' : '/api/intent-search', {
+                    method: 'POST', headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({text: question, as_of: asOf || null})
+                });
+                const response = await res.json();
+                if (!res.ok) throw new Error(response?.error || `HTTP ${res.status}`);
+                if (input.value.trim() !== question || document.getElementById('intent-as-of').value !== asOf ||
+                    document.getElementById('intent-search-method').value !== method) return;
+                const c = response.classification || {};
+                const names = {current:'現在', past:'過去', change:'思考の変化'};
+                const warning = c.needs_date_clarification ? '／日付が不明確です。必要なら日付を指定してください。' : '';
+                status.textContent = `自動判定：${names[c.intent] || '不明'}${c.as_of ? '／対象日：' + c.as_of : ''}${c.event_target_date ? '／予定日：' + c.event_target_date : ''}${warning} ／ 候補${response.total_candidates || 0}件 ／ ${method === 'integrated' ? '統合提案' : '旧方式'}`;
+                lastResults = Array.isArray(response.results) ? response.results : [];
+                drawList(lastResults);
+                if (!document.getElementById('view-map').classList.contains('hidden')) drawMap(lastResults);
+            } catch (e) {
+                status.textContent = '検索できませんでした：' + String(e.message || e);
+            } finally {
+                button.disabled = false;
+            }
+        }
+
+        document.getElementById('intent-query').addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') { e.preventDefault(); void searchQuestionIntent(); }
+        });
+
         async function searchRelatedMemos() {
             const title = document.getElementById('memo-title').value;
             const text = document.getElementById('editor').value;
             const mode = document.getElementById('search-mode').value;
             
             if (!text.trim()) return;
-            
+            useSearchResultMode();
+
+            // サーバー側の検索は通信を中断しても停止しないので、重複実行を防止。
+            if (searchInFlight) {
+                searchPending = true;
+                return;
+            }
+            searchInFlight = true;
+            searchPending = false;
+            let searchStale = false;
+
             document.getElementById('status-text').innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2 text-emerald-400"></i> Analyzing...';
             
             try {
-                const res = await fetch('/api/gravity', {
+                const integrated = mode === 'integrated_intent_v1';
+                const res = await fetch(integrated ? '/api/integrated-search' : '/api/gravity', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({ title: title, text: text, mode: mode })
+                    body: JSON.stringify(integrated ? {text: text} : {title: title, text: text, mode: mode})
                 });
                 
-                lastResults = await res.json();
-                if (!Array.isArray(lastResults)) { lastResults = []; }
-                
+                const response = await res.json();
+                if (!res.ok) throw new Error(response?.error || `検索 HTTP ${res.status}`);
+                // 古い入力・別の検索モードに対応する結果は表示しない。
+                if (document.getElementById('memo-title').value !== title ||
+                    document.getElementById('editor').value !== text ||
+                    document.getElementById('search-mode').value !== mode) {
+                    searchStale = true;
+                    // 入力中は800msの待機を尊重し、タイマーがなければ最新を再検索。
+                    if (searchTimer === null && document.getElementById('editor').value.trim()) {
+                        searchPending = true;
+                    }
+                    return;
+                }
+                lastResults = Array.isArray(response) ? response :
+                    (mode === 'integrated_intent_v1' && Array.isArray(response.results) ? response.results : []);
+
                 drawList(lastResults);
                 
                 const viewMap = document.getElementById('view-map');
@@ -302,15 +963,32 @@
             } catch (e) {
                 console.error("検索処理エラー:", e);
                 document.getElementById('status-text').innerHTML = '<i class="fa-solid fa-circle text-[8px] text-red-500 mr-2"></i> Error';
+            } finally {
+                searchInFlight = false;
+                if (searchPending) {
+                    searchPending = false;
+                    void searchRelatedMemos();  // 最新の入力だけを後続検索
+                } else if (searchStale || !document.getElementById('editor').value.trim()) {
+                    document.getElementById('status-text').innerHTML = '<i class="fa-solid fa-circle text-[8px] text-emerald-400 mr-2"></i> System Online';
+                }
             }
         }
 
         function drawList(data) {
             const container = document.getElementById('association-list');
-            container.innerHTML = ''; 
-
-            if (!Array.isArray(data) || data.length === 0) {
-                container.innerHTML = '<p class="text-center text-slate-500 text-xs mt-12">該当する記憶が見つかりませんでした</p>';
+            container.innerHTML = '';
+            const shown = resultsForDisplay(data);
+            displayedMemoResults = shown;
+            refreshSavedRelationStatus();
+            if (!savedRelationGraph && !savedRelationRequest) void fetchSavedRelationGraph();
+            if (savedBrowseMode) {
+                const label = document.createElement('p');
+                label.className = 'text-[11px] text-emerald-300 rounded p-2 border border-emerald-900/50 bg-slate-900/60';
+                label.textContent = '保存済みの関係に接続するメモを表示しています。検索スコア順ではありません。';
+                container.appendChild(label);
+            }
+            if (!Array.isArray(shown) || shown.length === 0) {
+                container.innerHTML = '<p class="text-center text-slate-500 text-xs mt-12">' + (savedBrowseMode ? '保存済みの関係がありません' : '該当する記憶が見つかりませんでした') + '</p>';
                 return;
             }
 
@@ -321,20 +999,30 @@
                 div.className = "p-3.5 bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 transition-all rounded-xl shadow-sm" + (m.stale ? " opacity-60" : "");
                 
                 let badge = m.stale ? '<span class="text-[9px] px-1.5 py-0.5 rounded bg-amber-950 text-amber-400 border border-amber-800/50 mr-2"><i class="fa-solid fa-rotate-left mr-1"></i>更新済み</span>' : '';
-                if (mode === 'thought_evolution') {
+                if (mode === 'thought_evolution' || mode === 'thought_approved') {
                     if (m.evolution_anchor) {
                         badge += '<span class="text-[9px] px-1.5 py-0.5 rounded bg-blue-950 text-blue-400 border border-blue-800/50 mr-2"><i class="fa-solid fa-anchor mr-1"></i>検索起点</span>';
                     } else if (m.thought_evolution) {
                         const hopText = (m.hop !== undefined && m.hop !== null) ? ` (${m.hop}世代前)` : '';
-                        badge += `<span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800/50 mr-2"><i class="fa-solid fa-code-branch mr-1"></i>思考の系譜${hopText}</span>`;
+                        badge += `<span class="text-[9px] px-1.5 py-0.5 rounded bg-purple-950 text-purple-300 border border-purple-800/50 mr-2"><i class="fa-solid fa-code-branch mr-1"></i>${m.approved_lineage ? '承認済みの系譜' : '推定した系譜'}${hopText}</span>`;
                     }
                 }
 
+                const autoPathExplanation = Array.isArray(m.thought_path_evidence) && m.thought_path_evidence.length ?
+                    `<p class="mt-2 text-[10px] text-emerald-300">保存済みの思考経路: ${m.thought_path_evidence.slice(0,4).map(e => esc(e.relation) + '・' + esc(e.hops) + '段階 (' + esc(e.source) + ')').join('、')}</p>` : '';
+                const lineageExplanation = mode === 'semantic_lineage' && Array.isArray(m.lineage_evidence) && m.lineage_evidence.length ? `
+                    <p class="mt-2 text-[10px] text-emerald-300">関係による順位調整: ${Number(m.lineage_delta || 0).toFixed(3)} / ${m.lineage_evidence.map(e => esc(e.type) + ' (' + esc(e.source) + ')').join('、')}</p>` : '';
+                const approvedExplanation = m.approved_path ? `
+                    <p class="mt-2 text-[10px] text-emerald-300">承認済み経路（新→旧）：${m.approved_path.memo_ids.map(esc).join(' → ')}<br>
+                    関係：${m.approved_path.relations.map(r => ({branch:'分岐',development:'発展',revision:'修正・置換'}[r] || esc(r))).join(' → ')}</p>` : '';
+
+                const storedRelationExplanation = savedRelationPreview(m);
                 const scoreDetails = m.parts ? `
                     <div class="flex gap-2 text-[10px] mt-2.5 bg-slate-950/80 p-2 rounded-lg border border-slate-800/80 text-slate-400">
                         <span>ベクトル: <strong class="text-slate-200">${m.parts.sem || 0}</strong></span>
                         ${m.parts.evolution ? `<span class="text-purple-300">系譜: <strong>${m.parts.evolution}</strong></span>` : ''}
                         ${m.parts.graph ? `<span class="text-blue-300">グラフ: <strong>${m.parts.graph}</strong></span>` : ''}
+                        ${m.search_scoring === 'hybrid_thought_time_stale_v1' ? `<span>BM25: <strong>${esc(m.parts.bm25)}</strong></span><span>Hybrid: <strong>${esc(m.parts.hybrid)}</strong></span><span>関係補正: <strong>${esc(m.parts.lineage_delta)}</strong></span><span>日時: <strong>${esc(m.parts.event_time_bonus)}</strong></span><span>旧版係数: <strong>${esc(m.parts.stale_multiplier)}</strong></span>` : ''}
                     </div>
                 ` : '';
 
@@ -344,297 +1032,517 @@
                             ${badge}
                             <span class="text-[10px] text-slate-500">${esc(m.date)}</span>
                         </div>
-                        <span class="text-[11px] font-bold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40">Score: ${m.score}</span>
+                        ${savedBrowseMode ? '<span class="text-[10px] text-slate-400">保存済み</span>' : `<span class="text-[11px] font-bold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-800/40">Score: ${esc(m.score)}</span>`}
                     </div>
                     <h4 class="text-xs font-bold text-slate-100 mb-1">${esc(m.title)}</h4>
                     <p class="memo-content text-xs text-slate-400 line-clamp-3 mb-2.5 leading-relaxed">${esc(m.content)}</p>
                     ${scoreDetails}
+                    ${approvedExplanation}
+                    ${storedRelationExplanation}
+                    ${autoPathExplanation}
+                    ${lineageExplanation}
                     <div class="flex gap-2 mt-3">
                         <button onclick="toggleMemo(this)" class="flex-1 py-1.5 bg-slate-800/80 hover:bg-slate-700 text-slate-300 text-[10px] font-bold rounded-lg transition-all border border-slate-700/80">全容</button>
                         <button onclick="quoteAt(${originalIndex})" class="flex-[2] py-1.5 bg-emerald-950/40 hover:bg-emerald-900/60 text-emerald-400 text-[10px] font-bold rounded-lg transition-all border border-emerald-900/60 shadow-sm">引用する</button>
                     </div>
                 `;
+                // BEGIN SEARCH_PATHS_V1
+                // The ranked search results above remain unchanged. Fetch a
+                // stored relationship neighborhood only when a user asks for it.
+                const pathButton = document.createElement('button');
+                pathButton.type = 'button';
+                pathButton.textContent = '思考経路を見る';
+                pathButton.className = 'mt-2 w-full py-1.5 bg-slate-800 hover:bg-slate-700 text-emerald-300 text-[10px] font-bold rounded-lg border border-slate-700';
+                const pathPanel = document.createElement('div');
+                pathPanel.className = 'hidden mt-2 p-2.5 bg-slate-950/70 rounded-lg border border-slate-700 text-[11px] text-slate-200 space-y-1';
+                div.appendChild(pathButton);
+                div.appendChild(pathPanel);
+                pathButton.addEventListener('click', async () => {
+                    if (!pathPanel.classList.contains('hidden')) {
+                        pathPanel.classList.add('hidden');
+                        pathButton.textContent = '思考経路を見る';
+                        return;
+                    }
+                    pathPanel.classList.remove('hidden');
+                    pathButton.disabled = true;
+                    pathButton.textContent = '関係を確認中...';
+                    pathPanel.textContent = '保存済みの思考関係を読み込んでいます...';
+                    try {
+                        const response = await fetch('/api/search-paths/' + encodeURIComponent(String(m.id)) + '?hops=2');
+                        const result = await response.json();
+                        if (!response.ok) throw new Error(result.message || '関係を取得できません');
+                        pathPanel.replaceChildren();
+                        if (!Array.isArray(result.edges) || result.edges.length === 0) {
+                            pathPanel.textContent = '保存済みの思考関係はありません。推定した経路は表示しません。';
+                        } else {
+                            const note = document.createElement('p');
+                            note.className = 'text-emerald-300 font-bold';
+                            note.textContent = '保存済み関係：' + result.edges.length + '本（中心から最大2段階）';
+                            pathPanel.appendChild(note);
+                            const nodeMap = new Map((result.nodes || []).map(n => [String(n.id), n]));
+                            const label = {revision:'修正・置換', development:'発展', branch:'分岐', related:'関連'};
+                            for (const edge of result.edges) {
+                                const p = nodeMap.get(String(edge.from));
+                                const c = nodeMap.get(String(edge.to));
+                                const row = document.createElement('div');
+                                row.className = 'border-t border-slate-800 pt-1.5 leading-relaxed';
+                                const direction = edge.relation === 'related' ? ' ↔ ' : ' → ';
+                                const source = edge.approved ? '承認済み' : '保存済み更新';
+                                row.textContent = `${p?.title || edge.from}${direction}${c?.title || edge.to}（${label[edge.relation] || edge.relation}／${source}）`;
+                                pathPanel.appendChild(row);
+                            }
+                            if (result.truncated) {
+                                const warning = document.createElement('p');
+                                warning.textContent = '接続数が多いため一部を省略しています。';
+                                pathPanel.appendChild(warning);
+                            }
+                            const disclaimer = document.createElement('p');
+                            disclaimer.className = 'mt-2 text-slate-400';
+                            disclaimer.textContent = '矢印は古いメモ→新しいメモ。関連は方向を示しません。検索順位は変更しません。';
+                            pathPanel.appendChild(disclaimer);
+                        }
+                    } catch (error) {
+                        pathPanel.textContent = '思考経路を取得できませんでした：' + (error.message || error);
+                    } finally {
+                        pathButton.disabled = false;
+                        pathButton.textContent = '思考経路を閉じる';
+                    }
+                });
+                // END SEARCH_PATHS_V1
                 return div;
             };
 
-            if (mode === 'thought_evolution') {
-                const evolutionData = data.filter(m => m.thought_evolution || m.evolution_anchor);
-                const semanticData = data.filter(m => !m.thought_evolution && !m.evolution_anchor);
+            if (!savedBrowseMode && (mode === 'thought_evolution' || mode === 'thought_approved')) {
+                const evolutionData = shown.filter(m => m.thought_evolution || m.evolution_anchor);
+                const semanticData = shown.filter(m => !m.thought_evolution && !m.evolution_anchor);
 
-                if ((currentMapStyle === 'hybrid' || currentMapStyle === 'time') && evolutionData.length > 0) {
+                if (evolutionData.length > 0) {
                     const header = document.createElement('div');
                     header.innerHTML = '<h4 class="text-xs font-bold text-purple-400 mb-3 mt-1 border-b border-purple-900/40 pb-1.5 flex items-center"><i class="fa-solid fa-code-branch mr-1.5"></i>過去の思考の系譜</h4>';
                     container.appendChild(header);
                     
                     const grid = document.createElement('div');
                     grid.className = "space-y-3";
-                    evolutionData.forEach(m => grid.appendChild(createCard(m, data.indexOf(m))));
+                    evolutionData.forEach(m => grid.appendChild(createCard(m, shown.indexOf(m))));
                     container.appendChild(grid);
                 }
 
-                if ((currentMapStyle === 'hybrid' || currentMapStyle === 'topic') && semanticData.length > 0) {
+                if (semanticData.length > 0) {
                     const header = document.createElement('div');
-                    header.className = (currentMapStyle === 'hybrid' && evolutionData.length > 0) ? "mt-5" : "mt-1";
+                    header.className = evolutionData.length > 0 ? "mt-5" : "mt-1";
                     header.innerHTML = '<h4 class="text-xs font-bold text-slate-300 mb-3 border-b border-slate-800 pb-1.5 flex items-center"><i class="fa-solid fa-robot mr-1.5"></i>意味的に近い記憶</h4>';
                     container.appendChild(header);
 
                     const grid = document.createElement('div');
                     grid.className = "space-y-3";
-                    semanticData.forEach(m => grid.appendChild(createCard(m, data.indexOf(m))));
+                    semanticData.forEach(m => grid.appendChild(createCard(m, shown.indexOf(m))));
                     container.appendChild(grid);
                 }
 
                 if (container.children.length === 0) {
                     const grid = document.createElement('div');
                     grid.className = "space-y-3";
-                    data.forEach((m, i) => grid.appendChild(createCard(m, i)));
+                    shown.forEach((m, i) => grid.appendChild(createCard(m, i)));
                     container.appendChild(grid);
                 }
             } else {
                 const grid = document.createElement('div');
                 grid.className = "space-y-3";
-                data.forEach((m, i) => grid.appendChild(createCard(m, i)));
+                shown.forEach((m, i) => grid.appendChild(createCard(m, i)));
                 container.appendChild(grid);
             }
+        }
+
+        // A readable label is a presentation-only preview. It never changes a memo's title.
+        function memoMapCaption(memo, length=17) {
+            const rawTitle=String(memo?.title || '').trim();
+            const isUntitled = !rawTitle || /^(?:無題(?:の思考)?|untitled)$/i.test(rawTitle);
+            const rawBody=String(memo?.content || '').replace(/\s+/g,' ').trim();
+            const contentLead=rawBody.split(/[。！？!?\n]/,1)[0].trim();
+            const value=(isUntitled && rawBody ? (contentLead || rawBody) : rawTitle) || '内容未設定';
+            return value.length > length ? value.slice(0,length) + '…' : value;
+        }
+
+        // The three MAP styles are presentation choices, independent of the search model.
+        // No search-ranking or memo-storage fields are changed here.
+        function buildResultMapModel(data, mode, style) {
+            const byId = new Map();
+            for (const memo of (Array.isArray(data) ? data : [])) {
+                if (memo && memo.id != null && String(memo.id) !== '__query__') {
+                    byId.set(String(memo.id), memo);
+                }
+            }
+            const searchedIds = new Set(byId.keys());
+            let linkedExtraCount = 0;
+            let omittedExtraCount = 0;
+            if (!savedBrowseMode && savedRelationGraph && byId.size) {
+                const available = new Map((Array.isArray(window.archiveData) ? window.archiveData : [])
+                    .map(m=>[String(m.id),m]));
+                const graphNodes = new Map((savedRelationGraph.nodes || []).map(m=>[String(m.id),m]));
+                for (const e of savedRelationGraph.edges) {
+                    const parentId = String(e.from), childId = String(e.to);
+                    if (!searchedIds.has(parentId) && !searchedIds.has(childId)) continue;
+                    for (const id of [parentId,childId]) {
+                        if (byId.has(id)) continue;
+                        if (linkedExtraCount >= MAP_ADDITIONAL_LINKED_MEMOS) {
+                            omittedExtraCount++; continue;
+                        }
+                        const memo = available.get(id) || graphNodes.get(id);
+                        if (memo) {
+                            byId.set(id,memo);
+                            linkedExtraCount++;
+                        }
+                    }
+                }
+            }
+            const memos = [...byId.values()];
+            const C = {
+                query: '#10b981', semantic: '#60a5fa', lineage: '#fbbf24',
+                approved: '#34d399', branch: '#c084fc', neutral: '#64748b',
+                stale: '#b45309', text: '#e2e8f0'
+            };
+            const nodes = [];
+            const edges = [];
+            const edgeMeta = new Map();
+            const ids = new Set(memos.map(m => String(m.id)));
+            const QUERY_ID = '__query__';
+            const maxLabel = (value, length=16) => {
+                const s = String(value || '無題');
+                return s.length > length ? s.slice(0, length) + '…' : s;
+            };
+            const normalizeIds = value => (Array.isArray(value) ? value : value == null ? [] : [value])
+                .map(item => item && typeof item === 'object' ?
+                    (item.id ?? item.memo_id ?? item.target_id) : item)
+                .filter(item => item != null).map(String);
+            const timestampOf = memo => {
+                const raw = memo.created_at ?? memo.createdAt ?? memo.timestamp ?? memo.date;
+                if (raw == null || raw === '') return null;
+                const num = typeof raw === 'number' ? (raw < 1e12 ? raw * 1000 : raw) : Date.parse(String(raw));
+                return Number.isFinite(num) ? num : null;
+            };
+            const dayOf = memo => {
+                const t = timestampOf(memo);
+                return t == null ? '日時不明' : new Date(t).toLocaleDateString('ja-JP');
+            };
+            const scoreOf = memo => {
+                if (memo.score == null || memo.score === '') return null;
+                const value = Number(memo.score);
+                return Number.isFinite(value) ? value : null;
+            };
+            const memoTooltip = memo => {
+                const score = scoreOf(memo);
+                const safeText = value => String(value).replace(/[&<>"']/g, c =>
+                    ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+                const body = safeText(String(memo.content || '').slice(0, 160));
+                return `表示名：${safeText(memoMapCaption(memo,32))}\n保存タイトル：${safeText(memo.title || '無題')}`
+                    + `\n日時：${dayOf(memo)}${score == null ? '' : `\nスコア：${score}`}\nID：${safeText(memo.id)}\n本文：${body}`;
+            };
+            const memoNode = memo => ({
+                id: String(memo.id),
+                label: memoMapCaption(memo),
+                title: memoTooltip(memo),
+                shape: 'dot', size: memo.evolution_anchor ? 24 : 20,
+                color: !searchedIds.has(String(memo.id)) ? '#475569' : memo.stale ? C.stale : memo.evolution_anchor ? C.approved : '#1d4ed8',
+                borderWidth: !searchedIds.has(String(memo.id)) ? 2 : memo.evolution_anchor ? 2 : 1,
+                font: {color:C.text,size:17,face:'Noto Sans JP, sans-serif'}
+            });
+            const queryNode = () => ({
+                id:QUERY_ID, label:'現在の検索', shape:'diamond', size:21,
+                color:C.query, font:{color:'#ffffff',size:16,bold:true},
+                title:'検索要求（メモ同士の関係ではありません）'
+            });
+            // A memo pair has at most one visible line, while every recorded
+            // relation remains in its tooltip. Do not count query/topic edges.
+            function addRecordedRelation(from, to, kind, label, rank, color, dashed=false, directed=true) {
+                from = String(from); to = String(to);
+                if (from === to || !ids.has(from) || !ids.has(to)) return;
+                const key = JSON.stringify([from, to].sort());
+                const existing = edgeMeta.get(key);
+                if (existing) {
+                    existing.labels.add(label);
+                    if (rank > existing.rank) {
+                        const edge = existing.edge;
+                        edge.from = from; edge.to = to;
+                        edge.label = rank === 1 ? '' : label; edge.dashes = dashed;
+                        edge.arrows = directed ? {to:{enabled:true,scaleFactor:0.65}} : '';
+                        edge.color = {color,opacity:rank === 1 ? 0.42 : 0.95};
+                        edge.width = rank === 1 ? 1.4 : rank >= 3 ? 2.8 : 2;
+                        existing.rank = rank;
+                    }
+                    existing.edge.title = '記録されている関係：' + [...existing.labels].join('／');
+                    return;
+                }
+                const edge = {
+                    from,to,label:rank === 1 ? '' : label, dashes: dashed,
+                    arrows: directed ? {to:{enabled:true,scaleFactor:0.65}} : '',
+                    color:{color,opacity:rank === 1 ? 0.42 : 0.95},
+                    width:rank === 1 ? 1.4 : rank >= 3 ? 2.8 : 2,
+                    font:{color:C.text,size:12,strokeColor:'#0b1323',strokeWidth:3},
+                    title:'記録されている関係：' + label
+                };
+                edgeMeta.set(key,{edge,labels:new Set([label]),rank});
+                edges.push(edge);
+            }
+            function addRecordedEdges({includeRelated=true} = {}) {
+                for (const memo of memos) {
+                    const id = String(memo.id);
+                    for (const oldId of normalizeIds(memo.supersedes)) {
+                        addRecordedRelation(oldId,id,'supersedes','更新・置換',3,C.lineage);
+                    }
+                    if (includeRelated) {
+                        for (const otherId of normalizeIds(memo.related_ids)) {
+                            addRecordedRelation(id,otherId,'related','関連',1,C.semantic,true,false);
+                        }
+                    }
+                    const path = memo.approved_path;
+                    if (!path || !Array.isArray(path.memo_ids) || !Array.isArray(path.relations)) continue;
+                    const names = {development:'発展',branch:'分岐',revision:'修正・置換'};
+                    const colors = {development:C.approved,branch:C.branch,revision:C.lineage};
+                    for (let i=0; i < path.relations.length && i+1 < path.memo_ids.length; i++) {
+                        const rel=path.relations[i];
+                        if (!Object.prototype.hasOwnProperty.call(names,rel)) continue;
+                        addRecordedRelation(path.memo_ids[i+1],path.memo_ids[i],
+                            'approved_'+rel,'承認済み：'+names[rel],4,colors[rel],rel === 'branch');
+                    }
+                }
+                // Ground truth for what the user actually saved in the approval
+                // panel: this endpoint contains every persisted thought link,
+                // including branch, development, revision and related.
+                if (savedRelationGraph) {
+                    for (const e of savedRelationGraph.edges) {
+                        if (e.from == null || e.to == null) continue;
+                        const rel = String(e.relation || '');
+                        const colors = {development:C.approved,branch:C.branch,revision:C.lineage,related:C.neutral};
+                        if (!Object.prototype.hasOwnProperty.call(colors,rel)) continue;
+                        addRecordedRelation(e.from,e.to,'saved_'+rel,
+                            '保存済み：'+savedRelationTitles[rel],5,colors[rel],
+                            rel === 'branch' || rel === 'related',rel !== 'related');
+                    }
+                }
+            }
+            function makeOverview() {
+                if (!savedBrowseMode) nodes.push(queryNode());
+                for (const memo of memos) {
+                    nodes.push(memoNode(memo));
+                    if (!savedBrowseMode && searchedIds.has(String(memo.id))) {
+                        const score = scoreOf(memo);
+                        edges.push({
+                            from:QUERY_ID,to:String(memo.id),label:'',arrows:'',
+                            dashes:[2,7],color:{color:'#64748b',opacity:0.32},width:1,
+                            title:score == null ? '検索ヒット（メモ間の関係ではありません）' :
+                                `検索ヒット：スコア ${score}（メモ間の関係ではありません）`
+                        });
+                    }
+                }
+                addRecordedEdges();
+                return {
+                    nodes,edges,
+                    options:{
+                        layout:{improvedLayout:true},
+                        physics:{enabled:true,solver:'forceAtlas2Based',
+                            stabilization:{iterations:140},
+                            forceAtlas2Based:{gravitationalConstant:-95,centralGravity:0.06,
+                                springLength:155,springConstant:0.055}}
+                    },
+                    legend:'全体像：細い点線＝検索との一致、太い色線＝保存済みの思考関係（灰色の点＝接続先メモ）',
+                    detail:savedBrowseMode ? `保存済みの接続メモ${memos.length}件・関係${edgeMeta.size}本（全件は上部の承認・分岐グラフ）` :
+                        `検索結果${searchedIds.size}件＋保存済み関係の接続先${linkedExtraCount}件、表示中の関係${edgeMeta.size}本` + (omittedExtraCount ? `（接続先を${omittedExtraCount}件省略）` : '')
+                };
+            }
+            function makeTimeline() {
+                const ordered = [...memos].sort((a,b) => {
+                    const ta=timestampOf(a), tb=timestampOf(b);
+                    if (ta == null && tb == null) return String(a.id).localeCompare(String(b.id));
+                    if (ta == null) return 1;
+                    if (tb == null) return -1;
+                    return ta - tb || String(a.id).localeCompare(String(b.id));
+                });
+                ordered.forEach((memo,i) => {
+                    nodes.push({
+                        ...memoNode(memo),shape:'box',margin:14,
+                        label:memoMapCaption(memo,13)+'\n'+dayOf(memo),
+                        color:{background:'#15263e',border:memo.stale ? C.stale : C.semantic},
+                        font:{color:C.text,size:16,face:'Noto Sans JP, sans-serif'},
+                        x:i*290, y:(i%2)*145, fixed:{x:true,y:true}
+                    });
+                });
+                // Time position is ordered by date; only approved/update relations
+                // can form meaningful directed paths here, not generic related_ids.
+                // Never join adjacent memos merely because their dates are close.
+                addRecordedEdges({includeRelated:false});
+                return {
+                    nodes,edges,
+                    options:{physics:false,layout:{improvedLayout:false},
+                        edges:{smooth:{enabled:true,type:'cubicBezier',roundness:0.15}}},
+                    legend:'時間軸：左から日時順。線は承認済み関係・更新のみ／無関係な日時同士は結びません',
+                    detail:`日時あり${ordered.filter(m=>timestampOf(m)!=null).length}件／日時不明${ordered.filter(m=>timestampOf(m)==null).length}件。左右へドラッグして移動`,
+                    initialPosition:ordered.length ? {x:Math.min(1,ordered.length-1)*290,y:65,scale:1}:null
+                };
+            }
+            // These groups express shared topic words, never confirmed thought evolution.
+            function topicTokens(memo) {
+                const text = `${memo.title || ''} ${memo.content || ''}`.slice(0,1000).toLocaleLowerCase();
+                const ignore = new Set(['無題','思考','こと','もの','ため','これ','それ','この','その',
+                    'する','した','して','ます','です','ある','いる','ない','から','よう','という',
+                    'また','より','など','について','として','できる','考え','メモ','情報','検索',
+                    'できるだけ','できます','でき','だけ','したい','ほしい','思う','考える','考えたい',
+                    'お願いします','ください','お願い','おもう','必要','現在','今回','状況',
+                    '方法','例えば','そして','しかし','さらに','とても','もっと','すべて',
+                    'the','and','for','with','from','this','that','are','you']);
+                const out = new Set();
+                if (typeof Intl !== 'undefined' && Intl.Segmenter) {
+                    const seg = new Intl.Segmenter('ja',{granularity:'word'});
+                    for (const part of seg.segment(text)) {
+                        const w=part.segment.trim();
+                        if (part.isWordLike && w.length >= 2 && w.length <= 28 && !ignore.has(w)
+                            && !/^[\p{Script=Hiragana}ー]+$/u.test(w)
+                            && !/^\d+$/.test(w) && /^[\p{L}\p{N}ー_-]+$/u.test(w)) out.add(w);
+                    }
+                } else {
+                    for (const word of (text.match(/[\p{Script=Han}]{2,}|[\p{Script=Katakana}ー]{2,}|[a-z][a-z0-9_-]{2,}/gu) || [])) {
+                        if (!ignore.has(word) && word.length <= 28) out.add(word);
+                    }
+                }
+                return out;
+            }
+            function topicGroups() {
+                const groups = new Map();
+                const inferred = [];
+                for (const memo of memos) {
+                    const tag = Array.isArray(memo.tags) ? memo.tags[0] : memo.tags;
+                    const category = String(memo.category || '').trim();
+                    const genericCategories = new Set(['wiki','wikipedia','general','other','未分類','一般','知識']);
+                    const explicit = memo.topic ?? memo.topic_name ?? memo.topic_label ?? tag ??
+                        (genericCategories.has(category.toLocaleLowerCase()) ? '' : category);
+                    const label = String(explicit || '').trim();
+                    if (label) {
+                        const key='explicit:'+label;
+                        if (!groups.has(key)) groups.set(key,{label:'分類：'+label,kind:'explicit',memos:[]});
+                        groups.get(key).memos.push(memo);
+                    } else inferred.push(memo);
+                }
+                const tokens = inferred.map(topicTokens);
+                const parent=inferred.map((_,i)=>i);
+                const root=i=>{while(parent[i]!==i){parent[i]=parent[parent[i]];i=parent[i];}return i;};
+                for(let i=0;i<inferred.length;i++)for(let j=i+1;j<inferred.length;j++) {
+                    const common=[...tokens[i]].filter(w=>tokens[j].has(w));
+                    const similarity=common.length/Math.max(1,Math.min(tokens[i].size,tokens[j].size));
+                    if(common.length>=2 && similarity>=0.18) parent[root(j)]=root(i);
+                }
+                const clusters=new Map();
+                inferred.forEach((memo,i)=>{
+                    const key=root(i);
+                    if(!clusters.has(key)) clusters.set(key,[]);
+                    clusters.get(key).push({memo,tokens:tokens[i]});
+                });
+                for (const [key,items] of clusters) {
+                    const counts=new Map();
+                    for(const item of items)for(const word of item.tokens)counts.set(word,(counts.get(word)||0)+1);
+                    const terms=[...counts]
+                        .filter(([word,frequency])=>word.length>=2 && frequency>=Math.min(2,items.length))
+                        .sort((a,b)=>b[1]-a[1]||b[0].length-a[0].length||a[0].localeCompare(b[0]));
+                    const shared=terms.slice(0,2).map(([word])=>word).join('・');
+                    groups.set('inferred:'+key,{
+                        label:items.length>1 ? `共通語：${shared || '分類未確定'}（${items.length}件）` :
+                            '単独：'+memoMapCaption(items[0].memo,13),
+                        kind:'inferred',memos:items.map(item=>item.memo)
+                    });
+                }
+                return [...groups.values()];
+            }
+            function makeTopics() {
+                const groups=topicGroups();
+                const palette=['#14b8a6','#818cf8','#f59e0b','#38bdf8','#f472b6','#a3e635'];
+                const cols=Math.max(1,Math.min(3,Math.ceil(Math.sqrt(groups.length))));
+                groups.forEach((group,i)=>{
+                    const col=i%cols, row=Math.floor(i/cols);
+                    const centerX=col*480,centerY=row*360;
+                    const color=palette[i%palette.length];
+                    const groupId='__topic_'+i+'__';
+                    nodes.push({id:groupId,label:maxLabel(group.label,22),title:group.label+'\n（話題の分類・推定。承認済みの思考関係ではありません）',
+                        shape:'box',margin:10,color:{background:'#0f172a',border:color},
+                        font:{color:C.text,size:17,bold:true},borderWidth:2,
+                        x:centerX,y:centerY,fixed:{x:true,y:true}});
+                    group.memos.forEach((memo,j)=>{
+                        const angle=2*Math.PI*j/Math.max(1,group.memos.length)-Math.PI/2;
+                        const radius=group.memos.length===1?115:Math.min(180,105+group.memos.length*8);
+                        nodes.push({...memoNode(memo),color:memo.stale?C.stale:color,
+                            x:centerX+Math.cos(angle)*radius,y:centerY+Math.sin(angle)*radius,
+                            fixed:{x:true,y:true}});
+                        edges.push({from:groupId,to:String(memo.id),arrows:'',dashes:[2,8],width:1.1,
+                            color:{color,opacity:0.5},
+                            title:group.kind==='explicit' ? '保存済みの話題分類（思考関係ではありません）' :
+                                '語彙による暫定的な話題分類（思考関係ではありません）'});
+                    });
+                });
+                // Topic membership is a presentation-only similarity group.
+                // Hide generic related_ids lines here; they are available in Overview.
+                addRecordedEdges({includeRelated:false});
+                return {
+                    nodes,edges,
+                    options:{physics:false,layout:{improvedLayout:false}},
+                    legend:'トピック：色・点線＝同じ話題（語彙による暫定分類）／太線＝承認済み関係・更新のみ',
+                    detail:`話題グループ${groups.length}件（未分類・暫定分類を含む）、記録済み関係${edgeMeta.size}本`
+                };
+            }
+            if (!memos.length) return {
+                nodes:[],edges:[],options:{},legend:'検索結果がありません',detail:''
+            };
+            const result = style === 'time' ? makeTimeline() : style === 'topic' ? makeTopics() : makeOverview();
+            result.visibleMemoById = byId;
+            return result;
+        }
+
+        function closeResultMapDetail() {
+            document.getElementById('result-map-detail')?.classList.add('hidden');
         }
 
         function drawMap(data) {
             const container = document.getElementById('mynetwork');
             const viewMap = document.getElementById('view-map');
-            const modeElement = document.getElementById('search-mode');
-
-            if (!container || !modeElement || typeof vis === 'undefined') return;
+            if (!container || !viewMap || !window.vis?.Network || !window.vis?.DataSet) return;
             if (viewMap.classList.contains('hidden') || container.clientHeight === 0) return;
-
-            const mode = modeElement.value;
-            const style = typeof currentMapStyle !== 'undefined' ? currentMapStyle : 'hybrid';
-            const input = Array.isArray(data) ? data : [];
-
-            const byId = new Map();
-            input.forEach(memo => {
-                if (!memo || memo.id == null) return;
-                byId.set(String(memo.id), memo);
-            });
-
-            const memos = [...byId.values()];
-            const ids = new Set(memos.map(m => String(m.id)));
-
-            const C = {
-                query: '#10b981',
-                temporal: '#c084fc',
-                semantic: '#60a5fa',
-                lineage: '#fbbf24',
-                neutral: '#64748b',
-                stale: '#78350f',
-                text: '#e2e8f0'
-            };
-
-            const QUERY_ID = '__query__';
-            const nodes = [{
-                id: QUERY_ID,
-                label: '現在の検索',
-                shape: 'dot',
-                size: 26,
-                color: C.query,
-                font: { color: '#ffffff', bold: true, size: 14 },
-                level: 0
-            }];
-
-            const edges = [];
-            const nodeIds = new Set([QUERY_ID]);
-            const edgeKeys = new Set();
-
-            function scoreOf(memo) {
-                const value = Number(memo.score);
-                return Number.isFinite(value) ? value : null;
-            }
-
-            function timestampOf(memo) {
-                const value = memo.created_at ?? memo.createdAt ?? memo.timestamp ?? memo.date;
-                if (value == null || value === '') return null;
-                const time = typeof value === 'number' ? (value < 1e12 ? value * 1000 : value) : Date.parse(value);
-                return Number.isFinite(time) ? time : null;
-            }
-
-            function normalizeIds(value) {
-                if (value == null) return [];
-                const values = Array.isArray(value) ? value : [value];
-                return values.map(item => {
-                    if (item && typeof item === 'object') {
-                        return item.id ?? item.memo_id ?? item.target_id;
-                    }
-                    return item;
-                }).filter(value => value != null).map(String);
-            }
-
-            function addNode(memo, extra = {}) {
-                const id = String(memo.id);
-                if (nodeIds.has(id)) return;
-                nodeIds.add(id);
-                nodes.push({
-                    id,
-                    label: String(memo.title || '無題'),
-                    title: String(memo.title || '無題'),
-                    shape: 'dot',
-                    size: 16,
-                    color: memo.stale ? C.stale : C.neutral,
-                    font: { color: C.text, size: 12 },
-                    ...extra
-                });
-            }
-
-            function addEdge(from, to, type, extra = {}) {
-                from = String(from);
-                to = String(to);
-                if (from === to || !nodeIds.has(from) || !nodeIds.has(to)) return;
-
-                const key = `${type}:${from}->${to}`;
-                if (edgeKeys.has(key)) return;
-                edgeKeys.add(key);
-
-                const base = {
-                    from,
-                    to,
-                    arrows: { to: { enabled: true, scaleFactor: 0.7 } },
-                    width: 1.5,
-                    color: { color: C.neutral, opacity: 0.5 },
-                    label: '',
-                    font: { color: C.text, size: 10, align: 'middle' }
-                };
-
-                const styles = {
-                    temporal: { label: '時系列チェーン', color: { color: C.temporal, opacity: 0.85 }, width: 2 },
-                    supersedes: { label: '更新・置換', color: { color: C.lineage, opacity: 0.95 }, width: 2.5 },
-                    related: { label: '関連メモ', color: { color: C.semantic, opacity: 0.8 }, dashes: true, arrows: '' },
-                    retrieval: { label: '検索ヒット', color: { color: C.neutral, opacity: 0.25 }, dashes: true, arrows: '' },
-                    semantic: { label: '関連度', color: { color: C.semantic, opacity: 0.65 } }
-                };
-
-                edges.push({ ...base, ...(styles[type] || {}), ...extra });
-            }
-
-            memos.forEach(memo => addNode(memo));
-
-            function addLineageAndRelatedEdges() {
-                memos.forEach(memo => {
-                    const newId = String(memo.id);
-                    normalizeIds(memo.supersedes).forEach(oldId => {
-                        if (ids.has(String(oldId))) addEdge(String(oldId), newId, 'supersedes');
-                    });
-                    normalizeIds(memo.related_ids).forEach(otherId => {
-                        if (ids.has(String(otherId))) addEdge(newId, String(otherId), 'related');
-                    });
-                });
-            }
-
-            function addTemporalChainEdges() {
-                const ordered = [...memos].sort((a, b) => {
-                    const ta = timestampOf(a);
-                    const tb = timestampOf(b);
-                    if (ta == null && tb == null) return String(a.id).localeCompare(String(b.id));
-                    if (ta == null) return 1;
-                    if (tb == null) return -1;
-                    return ta - tb;
-                });
-
-                ordered.forEach((memo, index) => {
-                    const id = String(memo.id);
-                    const node = nodes.find(n => n.id === id);
-                    if (node) {
-                        node.level = index + 1;
-                        node.color = memo.stale ? C.stale : C.temporal;
-                    }
-                    if (index > 0) {
-                        const fromId = String(ordered[index - 1].id);
-                        addEdge(fromId, id, 'temporal');
-                    }
-                });
-
-                const queryNode = nodes.find(n => n.id === QUERY_ID);
-                if (queryNode) queryNode.level = ordered.length + 1;
-
-                if (ordered.length > 0) {
-                    const newestId = String(ordered[ordered.length - 1].id);
-                    addEdge(newestId, QUERY_ID, 'temporal');
-                }
-            }
-
-            function addTopicNetworkEdges() {
-                memos.forEach(memo => {
-                    const id = String(memo.id);
-                    const score = scoreOf(memo);
-                    addEdge(QUERY_ID, id, 'semantic', { title: score == null ? '検索結果' : `検索スコア: ${score}` });
-                });
-
-                memos.forEach((memo, i) => {
-                    const newId = String(memo.id);
-                    const rels = normalizeIds(memo.related_ids);
-                    if (rels.length > 0) {
-                        rels.forEach(otherId => {
-                            if (ids.has(String(otherId))) addEdge(newId, String(otherId), 'related');
-                        });
-                    } else {
-                        for (let k = 1; k <= 2; k++) {
-                            if (i + k < memos.length) {
-                                const otherId = String(memos[i + k].id);
-                                addEdge(newId, otherId, 'related');
-                            }
-                        }
-                    }
-                });
-            }
-
-            if (mode === 'thought_evolution') {
-                if (style === 'time') {
-                    addTemporalChainEdges();
-                } else if (style === 'topic') {
-                    addTopicNetworkEdges();
-                } else {
-                    addLineageAndRelatedEdges();
-                    memos.forEach(memo => {
-                        const id = String(memo.id);
-                        const hasConnection = edges.some(e => e.from === id || e.to === id);
-                        if (!hasConnection) addEdge(QUERY_ID, id, 'retrieval');
-                    });
-                }
-            } else if (style === 'time' || mode === 'time') {
-                addTemporalChainEdges();
-            } else if (style === 'topic' || mode === 'semantic') {
-                addTopicNetworkEdges();
-            } else {
-                addLineageAndRelatedEdges();
-            }
-
-            const isTemporal = (mode === 'thought_evolution' && style === 'time') || mode === 'time';
-
-            const options = {
-                autoResize: true,
-                interaction: { hover: true, navigationButtons: true, keyboard: true },
-                nodes: { borderWidth: 1 },
-                edges: { smooth: { enabled: true, type: 'dynamic', roundness: 0.2 } },
-                layout: isTemporal ? {
-                    hierarchical: { enabled: true, direction: 'UD', sortMethod: 'directed', nodeSpacing: 250, levelSeparation: 150 }
-                } : { improvedLayout: true },
-                physics: isTemporal ? { enabled: false } : {
-                    enabled: true,
-                    solver: 'forceAtlas2Based',
-                    stabilization: { iterations: 150 },
-                    forceAtlas2Based: { 
-                        gravitationalConstant: -120,
-                        centralGravity: 0.02,
-                        springLength: 250,
-                        springConstant: 0.05 
-                    }
-                }
-            };
-
-            if (memoNetwork) {
-                memoNetwork.destroy();
-                memoNetwork = null;
-            }
+            const mode = document.getElementById('search-mode')?.value || 'semantic_lineage';
+            const model = buildResultMapModel(resultsForDisplay(data), mode, currentMapStyle);
+            if (!savedRelationGraph && !savedRelationRequest) void fetchSavedRelationGraph();
+            const legend = document.getElementById('map-legend');
+            const count = document.getElementById('map-count');
+            if (legend) legend.textContent = model.legend;
+            if (count) count.textContent = model.detail;
+            closeResultMapDetail();
+            if (memoNetwork) { memoNetwork.destroy(); memoNetwork = null; }
             container.replaceChildren();
-
-            memoNetwork = new vis.Network(container, { nodes: new vis.DataSet(nodes), edges: new vis.DataSet(edges) }, options);
+            if (!model.nodes.length) return;
+            const common = {
+                autoResize:true,
+                interaction:{hover:true,navigationButtons:false,keyboard:{enabled:true,bindToWindow:false},
+                    dragView:true,zoomView:true},
+                nodes:{font:{color:'#e2e8f0'}},
+                edges:{smooth:{enabled:true,type:'dynamic',roundness:0.18}}
+            };
+            const options={...common,...model.options};
+            memoNetwork = new vis.Network(container,{
+                nodes:new vis.DataSet(model.nodes),edges:new vis.DataSet(model.edges)
+            },options);
+            if (model.initialPosition) {
+                // Time axis can be wider than the panel; start at a readable zoom.
+                memoNetwork.moveTo({position:{x:model.initialPosition.x,y:model.initialPosition.y},
+                    scale:model.initialPosition.scale,animation:false});
+            }
+            memoNetwork.on('click',params=>{
+                if (!params.nodes || params.nodes.length!==1) return;
+                const id=String(params.nodes[0]);
+                const memo=model.visibleMemoById?.get(id);
+                const detail=document.getElementById('result-map-detail');
+                const content=document.getElementById('result-map-detail-content');
+                if (!memo || !detail || !content) return;
+                const when=memo.created_at || memo.date || '日時不明';
+                const relationText = getSavedRelationItems(memo.id).map(x =>
+                    `${savedRelationTitles[x.edge.relation] || x.edge.relation} ${x.edge.relation === 'related' ? '↔' : (x.outgoing ? '→' : '←')} ${x.other.title || x.otherId}`
+                ).join('\n');
+                content.textContent=`表示名：${memoMapCaption(memo,50)}\n保存タイトル：${memo.title || '無題'}\n日時：${when}\nID：${memo.id}\n\n${memo.content || '（本文なし）'}\n\n保存済みの思考関係：\n${relationText || 'なし'}`;
+                detail.classList.remove('hidden');
+            });
         }
 
         function toggleMemo(btn) {
@@ -649,7 +1557,7 @@
         }
 
         function quoteAt(i) {
-            const m = lastResults[i];
+            const m = displayedMemoResults[i];
             if (m) {
                 const editor = document.getElementById('editor');
                 editor.value += `\n\n【引用：${m.title}】\n${m.content}\n`;
@@ -660,25 +1568,29 @@
         document.getElementById('editor').addEventListener('input', (e) => {
             document.getElementById('char-count').innerText = e.target.value.length + "文字";
             clearTimeout(searchTimer);
-            searchTimer = setTimeout(searchRelatedMemos, 800);
+            searchTimer = setTimeout(() => {
+                searchTimer = null;
+                void searchRelatedMemos();
+            }, 800);
         });
 
         function switchView(v) {
             currentView = v;
             const viewMap = document.getElementById('view-map');
             const viewList = document.getElementById('view-list');
+            document.getElementById('result-panel')?.classList.toggle('map-focused', v === 'map');
             
             if (v === 'map') {
                 viewMap.classList.remove('hidden');
                 viewList.classList.add('hidden');
-                document.getElementById('btn-map').className = "px-3 py-1 text-[11px] font-bold rounded-lg bg-slate-800 text-emerald-400 transition-all";
+                document.getElementById('btn-map').className = "px-3 py-1.5 text-[13px] font-bold rounded-lg bg-slate-800 text-emerald-400 transition-all";
                 document.getElementById('btn-list').className = "px-3 py-1 text-[11px] font-bold rounded-lg text-slate-400 hover:text-slate-200 transition-all";
 
                 void viewMap.offsetWidth;
 
                 requestAnimationFrame(() => {
-                    if (lastResults && lastResults.length > 0) {
-                        drawMap(lastResults);
+                    if (savedBrowseMode || (lastResults && lastResults.length > 0)) {
+                        drawMap(resultsForDisplay(lastResults));
                     } else {
                         searchRelatedMemos();
                     }
@@ -686,7 +1598,7 @@
             } else {
                 viewMap.classList.add('hidden');
                 viewList.classList.remove('hidden');
-                document.getElementById('btn-map').className = "px-3 py-1 text-[11px] font-bold rounded-lg text-slate-400 hover:text-slate-200 transition-all";
+                document.getElementById('btn-map').className = "px-3 py-1.5 text-[13px] font-bold rounded-lg text-slate-200 hover:text-white transition-all";
                 document.getElementById('btn-list').className = "px-3 py-1 text-[11px] font-bold rounded-lg bg-slate-800 text-emerald-400 transition-all";
             }
         }
@@ -705,7 +1617,14 @@
                     body: JSON.stringify({question})
                 });
                 const d = await res.json();
-                if (!res.ok || d.status === 'error') { content.textContent = d.error || d.message; return; }
+                if (!res.ok || d.status === 'error') {
+                    if (res.status === 503) {
+                        content.textContent = 'AIの文章回答を生成できませんでした（HTTP 503）。回答生成サービスが一時的に利用できない可能性があります。メモ検索とは別の機能です。時間をおいて再試行するか、右側の「質問文から検索」で関連メモを探してください。';
+                    } else {
+                        content.textContent = 'AI回答エラー（HTTP ' + res.status + '）：' + (d.error || d.message || '詳細を取得できませんでした。');
+                    }
+                    return;
+                }
                 
                 let html = `<div class="text-slate-100 leading-relaxed font-bold mb-1">${esc(d.answer)}</div>`;
                 if (d.evidence && d.evidence.length) {
@@ -724,7 +1643,7 @@
             proposals.forEach(p => {
                 const label = document.createElement('label');
                 label.className = "flex gap-3 p-3 bg-slate-900 border border-slate-800 rounded-xl cursor-pointer hover:border-slate-700 transition-all";
-                label.innerHTML = `<input type="checkbox" class="mt-1 accent-emerald-500 w-4 h-4 rounded" data-id="${esc(p.id)}" checked>
+                label.innerHTML = `<input type="checkbox" class="mt-1 accent-emerald-500 w-4 h-4 rounded" data-id="${esc(p.id)}">
                     <div><div class="text-[10px] text-slate-500 mb-0.5">${esc(p.date)}</div>
                     <div class="text-xs font-bold text-slate-200">${esc(p.title)}</div></div>`;
                 list.appendChild(label);
@@ -734,15 +1653,233 @@
 
         async function resolveProposals(apply) {
             const accept = apply ? [...document.querySelectorAll('#proposal-list input:checked')].map(i => i.dataset.id) : [];
-            await fetch('/api/confirm', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({id: pendingId, accept})
-            });
-            document.getElementById('proposal-modal').classList.add('hidden');
-            pendingId = null;
-            loadArchive();
+            if (apply && accept.length === 0) {
+                alert('更新として反映するメモを選択してください。');
+                return;
+            }
+            try {
+                const res = await fetch('/api/confirm', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({id: pendingId, accept})
+                });
+                const result = await res.json();
+                if (!res.ok || result.status !== 'success') {
+                    alert(result.message || '更新関係を保存できませんでした。');
+                    return; // Keep the confirmation window open on errors.
+                }
+                document.getElementById('proposal-modal').classList.add('hidden');
+                pendingId = null;
+                await loadArchive();
+            } catch (error) {
+                console.error('更新関係の確認に失敗しました', error);
+                alert('通信エラーのため更新関係を保存できませんでした。');
+            }
         }
     </script>
+<script>
+// Confirmed relationships are a separate visualization, not recommendation-score inputs.
+let approvedThoughtNetwork = null;
+let approvedThoughtGraph = { nodes: [], edges: [] };
+let approvedThoughtMemos = [];
+let approvedThoughtRefreshId = 0;
+const approvedRelationNames = {revision:'修正・置換', development:'発展', branch:'分岐', related:'関連'};
+const approvedRelationColors = {revision:'#f59e0b', development:'#34d399', branch:'#a78bfa', related:'#94a3b8'};
+
+function fillThoughtSelect(id, memos, preferred) {
+    const select = document.getElementById(id);
+    select.replaceChildren();
+    for (const memo of memos) {
+        const option = document.createElement('option');
+        option.value = String(memo.id);
+        option.textContent = `${memo.title || '無題'} (${memo.created_at || memo.date || ''})`;
+        select.appendChild(option);
+    }
+    if (memos.some(m => String(m.id) === String(preferred))) select.value = String(preferred);
+}
+
+// Undirected breadth-first traversal for display only. It does not alter graph data.
+function approvedNeighborhood(graph, focusId, hops) {
+    if (hops === 'all') return {nodes:graph.nodes, edges:graph.edges};
+    const adjacency = new Map(graph.nodes.map(n => [String(n.id), new Set()]));
+    for (const edge of graph.edges) {
+        const a = String(edge.from), b = String(edge.to);
+        if (adjacency.has(a) && adjacency.has(b)) {
+            adjacency.get(a).add(b);
+            adjacency.get(b).add(a);
+        }
+    }
+    if (!adjacency.has(String(focusId))) return {nodes:[], edges:[]};
+    const selected = new Set([String(focusId)]);
+    let frontier = [String(focusId)];
+    for (let step=0; step < Number(hops); step++) {
+        const next = [];
+        for (const id of frontier) {
+            for (const adjacent of adjacency.get(id) || []) {
+                if (!selected.has(adjacent)) { selected.add(adjacent); next.push(adjacent); }
+            }
+        }
+        frontier = next;
+    }
+    return {
+        nodes:graph.nodes.filter(n => selected.has(String(n.id))),
+        edges:graph.edges.filter(e => selected.has(String(e.from)) && selected.has(String(e.to)))
+    };
+}
+
+function showApprovedThoughtDetails(id) {
+    const container = document.getElementById('thought-node-detail');
+    const memo = approvedThoughtMemos.find(m => String(m.id) === String(id));
+    const node = approvedThoughtGraph.nodes.find(n => String(n.id) === String(id));
+    if (!memo && !node) { container.textContent = 'メモを選択してください。'; return; }
+    const title = memo?.title || node?.title || '無題';
+    const date = memo?.created_at || memo?.date || node?.created_at || '日時不明';
+    const relations = approvedThoughtGraph.edges
+        .filter(e => String(e.from) === String(id) || String(e.to) === String(id))
+        .map(e => {
+            const otherId = String(e.from) === String(id) ? e.to : e.from;
+            const other = approvedThoughtGraph.nodes.find(n => String(n.id) === String(otherId));
+            const direction = String(e.from) === String(id) ? '→' : '←';
+            return `${direction} ${other?.title || otherId}（${approvedRelationNames[e.relation] || e.relation}）`;
+        });
+    container.textContent = `タイトル：${title}\n作成日時：${date}\nID：${id}\n\n本文：\n${memo?.content || '（本文なし）'}\n\n承認済み関係：\n${relations.length ? relations.join('\n') : 'なし'}`;
+}
+
+function renderApprovedThoughtGraph() {
+    const summary = document.getElementById('thought-graph-summary');
+    const focusId = document.getElementById('thought-focus').value;
+    const scope = document.getElementById('thought-scope').value;
+    const graph = approvedNeighborhood(approvedThoughtGraph, focusId, scope);
+    if (approvedThoughtNetwork) { approvedThoughtNetwork.destroy(); approvedThoughtNetwork = null; }
+    if (!graph.nodes.length) {
+        summary.textContent = '表示するメモがありません。メモを保存してから更新してください。';
+        document.getElementById('thought-node-detail').textContent = 'メモがありません。';
+        return;
+    }
+    if (!window.vis?.Network || !window.vis?.DataSet) {
+        summary.textContent = 'グラフ描画ライブラリの読み込みに失敗しました。ネット接続を確認してください。';
+        return;
+    }
+    const shorten = (value, size=18) => {
+        const valueString = String(value || '無題');
+        return valueString.length > size ? valueString.slice(0, size) + '…' : valueString;
+    };
+    const nodes = new vis.DataSet(graph.nodes.map(n => ({
+        id:n.id, label:shorten(n.title), shape:'box', margin:12,
+        color:{background:String(n.id) === String(focusId) ? '#14532d' : '#172554',
+               border:String(n.id) === String(focusId) ? '#facc15' : '#34d399'},
+        font:{color:'#f8fafc', size:15, face:'Noto Sans JP, sans-serif'},
+        borderWidth:String(n.id) === String(focusId) ? 3 : 1.5
+    })));
+    const edges = new vis.DataSet(graph.edges.map(e => ({
+        from:e.from, to:e.to,
+        label:approvedRelationNames[e.relation] || e.relation,
+        arrows:e.relation === 'related' ? '' : {to:{enabled:true, scaleFactor:0.7}},
+        dashes:e.relation === 'branch' || e.relation === 'related',
+        color:{color:approvedRelationColors[e.relation] || '#94a3b8', inherit:false},
+        font:{color:'#e2e8f0', size:12, strokeWidth:4, strokeColor:'#0b1323'},
+        width:2.3
+    })));
+    approvedThoughtNetwork = new vis.Network(
+        document.getElementById('approved-thought-network'), {nodes,edges}, {
+            autoResize:true,
+            layout:{hierarchical:{enabled:true,direction:'UD',sortMethod:'directed',
+                levelSeparation:115,nodeSpacing:170,treeSpacing:210}},
+            physics:false,
+            edges:{smooth:{enabled:true,type:'cubicBezier',forceDirection:'vertical',roundness:0.4}},
+            interaction:{hover:true,dragView:true,zoomView:true,dragNodes:false,
+                keyboard:{enabled:true,bindToWindow:false}},
+            nodes:{shadow:false}
+        }
+    );
+    approvedThoughtNetwork.on('click', params => {
+        if (params.nodes && params.nodes.length) showApprovedThoughtDetails(params.nodes[0]);
+    });
+    approvedThoughtNetwork.fit({animation:false});
+    summary.textContent = `表示中：${graph.nodes.length}件のメモ・${graph.edges.length}本の関係（全体：${approvedThoughtGraph.nodes.length}件・${approvedThoughtGraph.edges.length}本）。`
+        + (scope === 'all' && graph.nodes.length > 60 ? ' 全体表示は密集します。周辺表示に切り替えてください。' : '')
+        + (scope !== 'all' && graph.edges.length === 0 ? ' 周囲に承認済みの関係がないメモです。' : '');
+    showApprovedThoughtDetails(focusId);
+}
+
+function searchApprovedThoughtMemo() {
+    const input = document.getElementById('thought-search');
+    const term = input.value.trim().toLocaleLowerCase();
+    const summary = document.getElementById('thought-graph-summary');
+    if (!term) { summary.textContent = '検索するキーワードを入力してください。'; return; }
+    const matches = approvedThoughtMemos.filter(m =>
+        `${m.title || ''} ${m.content || ''}`.toLocaleLowerCase().includes(term));
+    if (!matches.length) { summary.textContent = '一致するメモが見つかりません。'; return; }
+    const focus = document.getElementById('thought-focus');
+    focus.value = String(matches[0].id);
+    renderApprovedThoughtGraph();
+    if (matches.length > 1) {
+        summary.textContent += ` 検索結果は${matches.length}件あります。中心メモの一覧から他のメモも選択できます。`;
+    }
+}
+function zoomApprovedThoughtGraph(multiplier) {
+    if (!approvedThoughtNetwork) return;
+    const newScale = Math.min(4, Math.max(0.1, approvedThoughtNetwork.getScale() * multiplier));
+    approvedThoughtNetwork.moveTo({scale:newScale,animation:{duration:180}});
+}
+function fitApprovedThoughtGraph() {
+    approvedThoughtNetwork?.fit({animation:{duration:180}});
+}
+async function changeThoughtLink(remove = false) {
+    const message = document.getElementById('thought-link-message');
+    const child_id = document.getElementById('thought-child').value;
+    const parent_id = document.getElementById('thought-parent').value;
+    if (!child_id || !parent_id) { message.textContent = '2件以上のメモが必要です'; return; }
+    const payload = {child_id, parent_id};
+    if (!remove) payload.relation = document.getElementById('thought-relation').value;
+    try {
+        const response = await fetch(remove ? '/api/thought-links/remove' : '/api/thought-links', {
+            method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify(payload)
+        });
+        const result = await response.json();
+        if (!response.ok) throw new Error(result.message || '関係の更新に失敗しました');
+        message.textContent = remove ? '関係を解除しました' : '承認済みの関係を保存しました';
+        await refreshApprovedThoughtGraph(parent_id);
+    } catch(error) { message.textContent = error.message; }
+}
+function saveApprovedThoughtLink() { return changeThoughtLink(false); }
+function removeApprovedThoughtLink() { return changeThoughtLink(true); }
+async function refreshApprovedThoughtGraph(focusAfterSave = null) {
+    const message = document.getElementById('thought-link-message');
+    const refreshId = ++approvedThoughtRefreshId;
+    try {
+        const [memoResponse, graphResponse] = await Promise.all([fetch('/api/memos'), fetch('/api/thought-graph')]);
+        if (!memoResponse.ok) throw new Error('メモ一覧を取得できません');
+        if (!graphResponse.ok) throw new Error('グラフを取得できません');
+        const memos = await memoResponse.json();
+        const graph = await graphResponse.json();
+        if (refreshId !== approvedThoughtRefreshId) return;
+        const oldFocus = document.getElementById('thought-focus').value;
+        const parent = document.getElementById('thought-parent').value;
+        const child = document.getElementById('thought-child').value;
+        approvedThoughtMemos = memos;
+        approvedThoughtGraph = graph;
+        publishSavedRelationGraph(graph,memos);
+        fillThoughtSelect('thought-parent', memos, parent);
+        fillThoughtSelect('thought-child', memos, child);
+        if (memos.length > 1 && document.getElementById('thought-child').value === document.getElementById('thought-parent').value) {
+            document.getElementById('thought-child').selectedIndex = 1;
+        }
+        const focus = focusAfterSave || oldFocus || graph.edges[0]?.from || graph.nodes[0]?.id;
+        fillThoughtSelect('thought-focus', memos, focus);
+        renderApprovedThoughtGraph();
+    } catch(error) { message.textContent = error.message; }
+}
+document.addEventListener('DOMContentLoaded', () => {
+    const details = document.getElementById('thought-panel');
+    details.addEventListener('toggle', () => {
+        document.body.classList.toggle('thought-panel-expanded', details.open);
+        if (details.open) refreshApprovedThoughtGraph();
+    });
+});
+</script>
+<script src="/static/memo_focus_scope_v1.js"></script>
+<script src="/static/memo_graph_readability_v1.js"></script>
+<script src="/static/map_legend_compact_v1.js"></script>
 </body>
 </html>

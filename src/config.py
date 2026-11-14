@@ -188,7 +188,19 @@ RAW_DIR = BASE_DIR / "data" / "raw"
 
 # 初回起動時に DATA_FILE が無ければ、このファイルからコピーされる
 LEGACY_DATA_FILE = RAW_DIR / "memos_wikipedia_951.json"
-DATA_FILE = DATA_DIR / "memos_data_v3.json"
+# Opt-in isolated participant session. The normal production database remains
+# untouched. An explicit, existing absolute path is required; never initialize
+# a missing study file from the legacy production dataset.
+_STUDY_DATA_FILE = os.getenv("THESIS_STUDY_DATA_FILE", "").strip()
+if os.getenv("THESIS_STUDY_SEARCH_LOCK") == "1" and not _STUDY_DATA_FILE:
+    raise RuntimeError("実験モードには THESIS_STUDY_DATA_FILE の指定が必要です。")
+if _STUDY_DATA_FILE:
+    _STUDY_PATH = Path(_STUDY_DATA_FILE).expanduser()
+    if not _STUDY_PATH.is_absolute() or not _STUDY_PATH.is_file():
+        raise RuntimeError("THESIS_STUDY_DATA_FILE は既存の絶対パスを指定してください。")
+    DATA_FILE = _STUDY_PATH.resolve()
+else:
+    DATA_FILE = DATA_DIR / "memos_data_v3.json"
 
 # 評価データ（experiments/ のパイプラインが生成する）
 EVAL_DIR = BASE_DIR / "data" / "eval"
