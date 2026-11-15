@@ -1059,6 +1059,53 @@ async def gravity_compat(
 
     data = await request.json()
 
+    # UNIFIED_V1_GRAVITY: draft memo uses the production integrated ranker.
+    if isinstance(data, dict) and data.get("mode") == "integrated_intent_v1":
+        try:
+            query = data.get("text", "")
+            if not isinstance(query, str):
+                raise ValueError("text must be a string")
+            query = query.strip()
+            if not query:
+                return []
+
+            percent = data.get("threshold", APP_DEFAULT_THRESHOLD_PERCENT)
+            if isinstance(percent, bool) or not isinstance(percent, (int, float)):
+                raise ValueError("threshold must be numeric")
+            percent = float(percent)
+            if not 0 <= percent <= 100:
+                raise ValueError("threshold must be between 0 and 100")
+
+            memos = load_memos()
+            if not any(
+                m.get("status") != "deleted" and m.get("vector") is not None
+                for m in memos
+            ):
+                return []
+
+            vector = get_vector(query, "RETRIEVAL_QUERY")
+            if vector is None:
+                return JSONResponse(
+                    status_code=503,
+                    content={"error": "Embedding unavailable"}
+                )
+
+            response = integrated_search(
+                query,
+                memos=memos,
+                query_vector=vector,
+                as_of=data.get("as_of"),
+                top_k=APP_DEFAULT_TOP_K,
+                threshold=percent / 100.0,
+            )
+            return response["results"]
+
+        except (ValueError, TypeError) as exc:
+            return JSONResponse(
+                status_code=400,
+                content={"error": str(exc)}
+            )
+
     mode = resolve_gravity_mode(data.get("mode", GRAVITY_DEFAULT_MODE))
 
     result = search_core(
