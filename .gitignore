@@ -3,3 +3,9 @@ __pycache__/
 .env
 venv/
 .venv/
+# Study A/B: exclude legacy research data
+/data/eval/
+/data/processed/
+/data/raw/
+/experiments/
+/results/

@@ -58,7 +58,7 @@ def resolve_embed_style(value):
     return key
 
 
-EMBED_STYLE = resolve_embed_style(os.getenv("EMBED_STYLE", "legacy"))
+EMBED_STYLE = resolve_embed_style(os.getenv("EMBED_STYLE", "documented"))
 
 
 # =========================

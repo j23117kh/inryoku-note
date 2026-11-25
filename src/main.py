@@ -71,7 +71,7 @@ _STUDY_BLOCKED_POSTS = frozenset({
 async def freeze_study_requests(request: Request, call_next):
     if (os.getenv("THESIS_STUDY_SEARCH_LOCK") == "1"
             and request.method == "POST"
-            and request.url.path in _STUDY_BLOCKED_POSTS):
+            and request.url.path != "/api/integrated-search"):
         return JSONResponse(status_code=403, content={
             "status": "error", "message": "参加者実験では固定の統合検索だけ使用できます"
         })
@@ -1219,3 +1219,16 @@ if __name__ == "__main__":
     
 
     uvicorn.run(app,host="127.0.0.1",port=8000,)
+# EXPERIMENT_PARITY_ROUTER_V1
+from src.experiment_api import router as experiment_router
+app.include_router(experiment_router)
+
+
+# THESIS_PROPOSAL_B_ROUTER_V1
+from src.proposal_b_routes import router as proposal_b_router
+app.include_router(proposal_b_router)
+
+
+# AUTO_GEMMA_DIRECT_APP_ROUTE_V1
+from src.auto_relation_suggestion import router as auto_gemma_router
+app.include_router(auto_gemma_router)

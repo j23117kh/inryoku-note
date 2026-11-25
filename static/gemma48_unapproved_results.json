@@ -1,0 +1,570 @@
+{
+  "dataset_memo_count": 48,
+  "candidate_total": 30,
+  "model": "gemma-4-26b-a4b-it",
+  "source_csv_sha256": "1ed0794312f5897340daa9d8fa32d0c9c252453ce0a8991de4039ab443e07b34",
+  "source_corpus_sha256": "018c431610f551b325c16de79e2dbe247cbdb686fcd8ae6baf747ff2fd1a163c",
+  "memo_identity": [
+    {
+      "id": "N11-m01",
+      "title": "講演会の会場案",
+      "content": "2月20日の学内講演会は東棟201教室を仮予約する案。まだ施設担当から最終確認は来ていない。"
+    },
+    {
+      "id": "N11-m02",
+      "title": "案内画像の下書き",
+      "content": "講演会の仮会場として東棟201教室を記載した案内画像を作った。確定前なので配布はしていない。"
+    },
+    {
+      "id": "N11-m03",
+      "title": "施設からの会場変更連絡",
+      "content": "施設担当から東棟201教室は設備点検で使えないと連絡があった。代わりに西棟301教室を使用できるとのこと。"
+    },
+    {
+      "id": "N11-m04",
+      "title": "講演会の会場を確定",
+      "content": "2月20日の学内講演会は西棟301教室で確定。東棟201教室という以前の案内は取り消し、掲示物も修正する。"
+    },
+    {
+      "id": "N11-m05",
+      "title": "会場案内の修正完了",
+      "content": "講演会の案内画像を西棟301教室に差し替え、参加予定者にも正しい会場を知らせた。"
+    },
+    {
+      "id": "N12-m01",
+      "title": "生物展示の構想",
+      "content": "学校の生物展示では、近隣の昆虫の写真を壁に並べるだけの小さなコーナーから始めたい。"
+    },
+    {
+      "id": "N12-m02",
+      "title": "展示に観察記録を加える案",
+      "content": "昆虫の写真だけでなく、発見した場所と季節を短い文章で添えることにした。"
+    },
+    {
+      "id": "N12-m03",
+      "title": "観察カードの試作品",
+      "content": "昆虫の写真、見つけた時期、生息場所を1枚にまとめた観察カードを6種類作成した。"
+    },
+    {
+      "id": "N12-m04",
+      "title": "来場者の感想を集める",
+      "content": "試しにカードを見てもらったところ、成長過程の比較があると分かりやすいという感想が多かった。"
+    },
+    {
+      "id": "N12-m05",
+      "title": "展示内容の最終構成",
+      "content": "生物展示は写真、観察カード、成長過程の比較パネルの3点で構成する。カードは6種類を掲載する。"
+    },
+    {
+      "id": "N13-m01",
+      "title": "河川調査の集合予定",
+      "content": "河川の水質調査は4月15日8時20分に北口駅前集合の予定。交通手段を各自で調べておく。"
+    },
+    {
+      "id": "N13-m02",
+      "title": "集合時刻を共有",
+      "content": "担当メンバーに4月15日8時20分の北口駅前集合という仮予定を共有した。"
+    },
+    {
+      "id": "N13-m03",
+      "title": "調査日の変更相談",
+      "content": "調査機材の貸出日程が重なったので、4月15日の実施を変更できないか相談中。まだ新しい日時は未確定。"
+    },
+    {
+      "id": "N13-m04",
+      "title": "河川調査の新日程確定",
+      "content": "河川調査は4月22日9時10分に北口駅前へ集合することに決定。4月15日8時20分の旧予定は無効。"
+    },
+    {
+      "id": "N13-m05",
+      "title": "集合案内を再送",
+      "content": "4月22日9時10分・北口駅前集合と全員に再送した。機材の貸出予約も新日程で完了。"
+    },
+    {
+      "id": "N14-m01",
+      "title": "備品管理の出発点",
+      "content": "サークルの備品を貸し出すたびに記録が抜けてしまう。表計算で一覧にするかスマホで読み取るかは未決定。"
+    },
+    {
+      "id": "N14-m02",
+      "title": "表計算で管理する案",
+      "content": "備品番号、貸出者、返却予定日を表計算で管理する案を作った。手入力なので導入しやすい。"
+    },
+    {
+      "id": "N14-m03",
+      "title": "スマホ読み取りの別案",
+      "content": "備品ラベルのQRコードをスマホで読み取り、貸出履歴を登録する別案も進める。表計算案の置き換えとは決めていない。"
+    },
+    {
+      "id": "N14-m04",
+      "title": "表計算の運用テスト",
+      "content": "表計算方式では備品12点の貸出記録を試し、入力漏れがないか点検した。"
+    },
+    {
+      "id": "N14-m05",
+      "title": "スマホ読み取りの試作",
+      "content": "スマホ方式ではQRコードを読み取って備品名を表示する試作が動いた。貸出登録の保存機能は未完成。"
+    },
+    {
+      "id": "N15-m01",
+      "title": "紙のちらし配布案",
+      "content": "地域の清掃イベントは紙のちらしを800枚印刷して周辺に配る方針で検討する。予算は2万円以内が理想。"
+    },
+    {
+      "id": "N15-m02",
+      "title": "印刷費の概算",
+      "content": "ちらし800枚の印刷見積は3万4千円だった。予定より高いので別案を探す。"
+    },
+    {
+      "id": "N15-m03",
+      "title": "QRポスター案へ見直し",
+      "content": "紙ちらし800枚の案を撤回し、QRコード付きポスター40枚とWeb案内に方針変更する。"
+    },
+    {
+      "id": "N15-m04",
+      "title": "新しい広報費用の確定",
+      "content": "QRポスター40枚とWeb案内の予算は合計1万2千円で確定。紙ちらし800枚は印刷しない。"
+    },
+    {
+      "id": "N15-m05",
+      "title": "新しい案内を配布",
+      "content": "QRポスターを公共施設に掲示し、Web案内も公開した。紙のちらしの大量配布は行っていない。"
+    },
+    {
+      "id": "N16-m01",
+      "title": "夜間観察会を計画",
+      "content": "公園で2月28日の夜に星空観察会を開催する案を立てた。機材担当を決める。"
+    },
+    {
+      "id": "N16-m02",
+      "title": "観察会の準備",
+      "content": "双眼鏡3台と防寒具を確認した。観察会はまだ2月28日の開催予定として扱っている。"
+    },
+    {
+      "id": "N16-m03",
+      "title": "公園の夜間利用制限",
+      "content": "公園管理者から夜間利用の許可が下りないと連絡があった。別の会場が必要。"
+    },
+    {
+      "id": "N16-m04",
+      "title": "観察会をいったん保留",
+      "content": "代替会場が見つからず、2月28日の開催を保留する。中止確定ではない。"
+    },
+    {
+      "id": "N16-m05",
+      "title": "夜間観察会の中止確定",
+      "content": "代替会場を確保できなかったため、2月28日の夜間観察会は中止する。次回開催日は未定。"
+    },
+    {
+      "id": "N17-m01",
+      "title": "工作教室の開始",
+      "content": "月2回の電子工作教室を公民館で始めた。参加者には小型LED工作を体験してもらう。"
+    },
+    {
+      "id": "N17-m02",
+      "title": "工作教室の休止",
+      "content": "工具の故障が続いたため、3月の電子工作教室をいったん休止する。"
+    },
+    {
+      "id": "N17-m03",
+      "title": "工具の修理と再開検討",
+      "content": "工具の修理が終わった。4月から教室を再開できるか公民館に相談している。"
+    },
+    {
+      "id": "N17-m04",
+      "title": "工作教室の再開決定",
+      "content": "公民館の部屋を確保できたので、4月12日から電子工作教室を月1回で再開する。"
+    },
+    {
+      "id": "N17-m05",
+      "title": "再開後の工作教室",
+      "content": "4月12日に工作教室を再開し、参加者8人でLED工作を行った。今後も月1回開催する。"
+    },
+    {
+      "id": "N18-m01",
+      "title": "地域案内の作り方を検討",
+      "content": "地域の史跡を紹介する企画を考えた。写真展示と地図の体験型案内を別々に検討する。"
+    },
+    {
+      "id": "N18-m02",
+      "title": "写真展示の企画",
+      "content": "古い街並みと現在の写真を比較する展示を作りたい。説明文は短めにする。"
+    },
+    {
+      "id": "N18-m03",
+      "title": "体験型地図の企画",
+      "content": "紙の地図に史跡の番号を付け、スマホで説明を読める体験型案内を考えた。写真展示とは別案。"
+    },
+    {
+      "id": "N18-m04",
+      "title": "写真と地図を統合",
+      "content": "写真展示の比較画像と、QR付き地図を1つの案内コーナーとして統合する方針に決めた。"
+    },
+    {
+      "id": "N18-m05",
+      "title": "地域案内コーナー完成",
+      "content": "古今の比較写真6組とQR付き地図1枚を備えた案内コーナーが完成。二つの構想を一緒に体験できる。"
+    },
+    {
+      "id": "n11",
+      "title": "講演会の録音機材",
+      "content": "別の講演会に使う録音マイクを点検した。会場変更の決定については何も聞いていない。"
+    },
+    {
+      "id": "n12",
+      "title": "昆虫写真の整理ソフト",
+      "content": "昆虫写真のタグ付けに使う写真管理ソフトを試した。学校の生物展示とは別件。"
+    },
+    {
+      "id": "n13",
+      "title": "河川沿いの電車広告",
+      "content": "河川沿いの電車の広告で、北口駅前の集合イベントを紹介していた。自分の調査予定とは無関係。"
+    },
+    {
+      "id": "n14",
+      "title": "QRコード決済を試す",
+      "content": "スマホでQRコード決済を試した。サークル備品の貸出管理とは別の話。"
+    },
+    {
+      "id": "n15",
+      "title": "地域の印刷会社の料金表",
+      "content": "地域の印刷会社のちらし料金表を比較したが、清掃イベントの配布方針とは無関係。"
+    },
+    {
+      "id": "n16",
+      "title": "星空の写真集",
+      "content": "公園を撮影した星空の写真集を見つけた。夜間観察会の実施・中止を示す記録ではない。"
+    },
+    {
+      "id": "n17",
+      "title": "LED工具を販売する店",
+      "content": "LEDや工具の販売店を調べた。公民館の工作教室の再開とは別件。"
+    },
+    {
+      "id": "n18",
+      "title": "街並みの位置情報アプリ",
+      "content": "街並みの位置情報アプリを見つけた。地域史跡案内の企画には参加していない。"
+    }
+  ],
+  "results": [
+    {
+      "parent_id": "N11-m01",
+      "child_id": "N11-m02",
+      "parent_title": "講演会の会場案",
+      "child_title": "案内画像の下書き",
+      "relation": "revision",
+      "confidence": 0.9,
+      "cosine": 0.866571,
+      "reason": "旧メモの会場案（201教室）が、新メモにおいて201教室へと変更・置換されている。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N11-m01",
+      "child_id": "N11-m03",
+      "parent_title": "講演会の会場案",
+      "child_title": "施設からの会場変更連絡",
+      "relation": "revision",
+      "confidence": 0.95,
+      "cosine": 0.810232,
+      "reason": "旧メモの東棟201教室の仮予約案に対し、設備点検による使用不可と施設担当からの連絡を受け、西棟301教室へ会場を変更している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N11-m03",
+      "child_id": "N11-m04",
+      "parent_title": "施設からの会場変更連絡",
+      "child_title": "講演会の会場を確定",
+      "relation": "revision",
+      "confidence": 0.95,
+      "cosine": 0.858604,
+      "reason": "新メモが旧メモで提示された代替案である西棟301教室の使用を確定させ、東棟201教室の案内を取り消すと明記しているため。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N11-m04",
+      "child_id": "N11-m05",
+      "parent_title": "講演会の会場を確定",
+      "child_title": "会場案内の修正完了",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.894109,
+      "reason": "旧メモで決定した西棟301教室への修正方針に基づき、新メモでは案内画像の差し替えと参加者への周知という具体的なアクションを実行している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N11-m02",
+      "child_id": "N11-m05",
+      "parent_title": "案内画像の下書き",
+      "child_title": "会場案内の修正完了",
+      "relation": "revision",
+      "confidence": 0.95,
+      "cosine": 0.835127,
+      "reason": "旧メモの東棟201教室という情報を、新メモが西棟301教室へと差し替え、確定後の対応を行ったことが明示されている。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N16-m01",
+      "child_id": "N16-m02",
+      "parent_title": "夜間観察会を計画",
+      "child_title": "観察会の準備",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.80869,
+      "reason": "旧メモの計画段階から、新メモでは具体的な備品確認という準備作業へ内容を具体化させている。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N16-m02",
+      "child_id": "N16-m04",
+      "parent_title": "観察会の準備",
+      "child_title": "観察会をいったん保留",
+      "relation": "revision",
+      "confidence": 0.9,
+      "cosine": 0.84232,
+      "reason": "旧メモで予定されていた2月28日の開催予定を、新メモが会場の問題により保留すると決定し、以前の状態を修正・変更している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N15-m03",
+      "child_id": "N15-m04",
+      "parent_title": "QRポスター案へ見直し",
+      "child_title": "新しい広報費用の確定",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.874716,
+      "reason": "旧メモで決定したQRポスターとWeb案内の方針に対し、新メモでは具体的な予算額を確定させることで内容を具体化している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N16-m01",
+      "child_id": "N16-m05",
+      "parent_title": "夜間観察会を計画",
+      "child_title": "夜間観察会の中止確定",
+      "relation": "revision",
+      "confidence": 1.0,
+      "cosine": 0.81381,
+      "reason": "新メモは、旧メモで計画されていた2月28日の夜間観察会の開催を、会場確保の失敗を理由に中止すると決定し、旧案を否定・置換している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N15-m03",
+      "child_id": "N15-m05",
+      "parent_title": "QRポスター案へ見直し",
+      "child_title": "新しい案内を配布",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.82792,
+      "reason": "旧メモで決定したQRポスターとWeb案内の実施方針に基づき、実際に掲示と公開を行ったという実行結果を記述している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N15-m04",
+      "child_id": "N15-m05",
+      "parent_title": "新しい広報費用の確定",
+      "child_title": "新しい案内を配布",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.809305,
+      "reason": "旧メモで確定した予算と配布計画に基づき、QRポスターの掲示やWeb案内の公開といった具体的な実行に移ったことが示されている。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "n18",
+      "child_id": "N18-m01",
+      "parent_title": "街並みの位置情報アプリ",
+      "child_title": "地域案内の作り方を検討",
+      "relation": "development",
+      "confidence": 0.8,
+      "cosine": 0.800194,
+      "reason": "旧メモで言及された地域史跡案内の企画への不参加という状況から、新メモでは自ら企画を検討し、具体的な手法として写真展示と地図体験型案内の二案を提示して内容を具体化させている。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N13-m01",
+      "child_id": "N13-m02",
+      "parent_title": "河川調査の集合予定",
+      "child_title": "集合時刻を共有",
+      "relation": "development",
+      "confidence": 0.8,
+      "cosine": 0.831363,
+      "reason": "旧メモの調査集合予定を、担当メンバーへの共有という具体的なアクションへ進展させている。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N14-m01",
+      "child_id": "N14-m02",
+      "parent_title": "備品管理の出発点",
+      "child_title": "表計算で管理する案",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.865963,
+      "reason": "旧メモで未決定だった管理手法について、新メモで表計算を用いるという具体的な方針を決定し、管理項目を具体化している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N18-m01",
+      "child_id": "N18-m02",
+      "parent_title": "地域案内の作り方を検討",
+      "child_title": "写真展示の企画",
+      "relation": "development",
+      "confidence": 0.8,
+      "cosine": 0.80075,
+      "reason": "旧メモで検討対象として挙げられた「写真展示」について、具体的な展示内容や説明文の構成方針を具体化している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N14-m01",
+      "child_id": "N14-m03",
+      "parent_title": "備品管理の出発点",
+      "child_title": "スマホ読み取りの別案",
+      "relation": "branch",
+      "confidence": 0.9,
+      "cosine": 0.849845,
+      "reason": "旧メモで未決定だった手法に対し、スマホ読み取りという新たな検討系列を提示しているが、表計算案の置き換えは否定している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N14-m02",
+      "child_id": "N14-m03",
+      "parent_title": "表計算で管理する案",
+      "child_title": "スマホ読み取りの別案",
+      "relation": "branch",
+      "confidence": 0.9,
+      "cosine": 0.836928,
+      "reason": "旧メモの表計算案に対し、スマホ読み取りという別の選択肢を検討する内容であり、旧案の置き換えは明示的に否定されている。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N18-m01",
+      "child_id": "N18-m03",
+      "parent_title": "地域案内の作り方を検討",
+      "child_title": "体験型地図の企画",
+      "relation": "branch",
+      "confidence": 0.9,
+      "cosine": 0.89177,
+      "reason": "旧メモで検討対象としていた写真展示と地図の体験型案内のうち、地図案に焦点を絞りつつ、写真展示を別案として残しているため。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N14-m02",
+      "child_id": "N14-m04",
+      "parent_title": "表計算で管理する案",
+      "child_title": "表計算の運用テスト",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.838479,
+      "reason": "旧メモで提案された表計算による管理案に対し、新メモでは実際の備品を用いた運用テストを実施し、具体化・検証の段階へ進展させている。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N18-m01",
+      "child_id": "N18-m04",
+      "parent_title": "地域案内の作り方を検討",
+      "child_title": "写真と地図を統合",
+      "relation": "revision",
+      "confidence": 0.9,
+      "cosine": 0.80539,
+      "reason": "旧メモで別々に検討していた写真展示と地図を、新メモで一つの案内コーナーに統合する方針へと決定・置換している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N14-m03",
+      "child_id": "N14-m05",
+      "parent_title": "スマホ読み取りの別案",
+      "child_title": "スマホ読み取りの試作",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.889732,
+      "reason": "旧メモで検討されていたスマホによるQRコード読み取りの案について、新メモでは具体的な試作が開始されたことが示されており、方針が具体化されている。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N14-m01",
+      "child_id": "N14-m05",
+      "parent_title": "備品管理の出発点",
+      "child_title": "スマホ読み取りの試作",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.820245,
+      "reason": "旧メモで未決定だった管理手法のうち、スマホ方式の具体的な実装・試作段階へと内容を具体化させている。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N13-m04",
+      "child_id": "N13-m05",
+      "parent_title": "河川調査の新日程確定",
+      "child_title": "集合案内を再送",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.841014,
+      "reason": "旧メモで決定した集合日時と場所を、新メモでは機材予約の完了という具体的な進捗を含めて具体化している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N13-m02",
+      "child_id": "N13-m05",
+      "parent_title": "集合時刻を共有",
+      "child_title": "集合案内を再送",
+      "relation": "revision",
+      "confidence": 0.9,
+      "cosine": 0.807691,
+      "reason": "旧メモの4月15日8時20分という集合予定を、新メモが4月22日9時10分という新しい日程に置き換えている。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N17-m02",
+      "child_id": "N17-m03",
+      "parent_title": "工作教室の休止",
+      "child_title": "工具の修理と再開検討",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.800308,
+      "reason": "旧メモの休止理由であった工具の故障が解消し、休止状態から再開に向けた具体的な検討段階へ進展している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N18-m04",
+      "child_id": "N18-m05",
+      "parent_title": "写真と地図を統合",
+      "child_title": "地域案内コーナー完成",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.819996,
+      "reason": "旧メモで決定した写真と地図の統合方針に基づき、具体的な展示内容（比較写真6組、地図1枚）が確定し、コーナーが完成したことを示している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N17-m01",
+      "child_id": "N17-m04",
+      "parent_title": "工作教室の開始",
+      "child_title": "工作教室の再開決定",
+      "relation": "revision",
+      "confidence": 0.9,
+      "cosine": 0.875973,
+      "reason": "旧メモの月2回の開催頻度を、新メモが月1回での再開という内容に訂正・置換している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N17-m04",
+      "child_id": "N17-m05",
+      "parent_title": "工作教室の再開決定",
+      "child_title": "再開後の工作教室",
+      "relation": "development",
+      "confidence": 0.9,
+      "cosine": 0.895097,
+      "reason": "旧メモの再開予定を、実施後の実績報告として具体化し、開催頻度の継続性も示している。",
+      "approval_status": "UNAPPROVED"
+    },
+    {
+      "parent_id": "N17-m01",
+      "child_id": "N17-m05",
+      "parent_title": "工作教室の開始",
+      "child_title": "再開後の工作教室",
+      "relation": "revision",
+      "confidence": 0.8,
+      "cosine": 0.864894,
+      "reason": "旧メモの「月2回」という開催頻度を、新メモが「月1回」へと変更・訂正している。",
+      "approval_status": "UNAPPROVED"
+    }
+  ]
+}

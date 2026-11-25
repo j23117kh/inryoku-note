@@ -5,3 +5,6 @@ networkx
 google-genai
 python-dotenv
 matplotlib
+pytest
+scipy
+pandas

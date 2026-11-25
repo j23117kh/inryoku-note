@@ -386,7 +386,7 @@ html body #view-map:fullscreen {
                     </button>
                 </div>
                 <input type="hidden" id="search-mode" value="integrated_intent_v1">
-                <p id="mode-description" class="mt-2 text-[11px] leading-relaxed text-emerald-200" role="status" aria-live="polite">選択中：統合提案：意味＋思考＋時間 — Hybrid（意味70%＋BM25 30%）に、保存した関係を最大3段階、必要に応じて日時・旧版の処理を加えます。実験用v4とは異なります。</p>
+                <p id="mode-description" class="mt-2 text-[11px] leading-relaxed text-emerald-200" role="status" aria-live="polite">選択中：統合提案：意味＋思考＋時間 — Hybrid（意味80%＋BM25 20%・旧版0.80倍）に、保存した関係を最大3段階、必要に応じて日時・旧版の処理を加えます。実験用v4とは異なります。</p>
                 <p class="mt-1 text-[10px] leading-relaxed text-slate-400">これは中央で入力するメモから、右側に表示する関連メモの探し方です。保存内容は変わりません。右側の「質問文から検索」と上部の「AIに質問」は別の検索機能です。</p>
                 <details class="mt-2 text-[11px] text-slate-300">
                     <summary class="cursor-pointer text-emerald-300 hover:text-emerald-200 font-bold">各検索方式の違いを詳しく見る</summary>
@@ -700,7 +700,7 @@ html body #view-map:fullscreen {
             }).join('');
             const more = entries.length > visible.length ? `<p class="mt-1 text-slate-400">ほか${entries.length-visible.length}本。上部の承認・分岐グラフで確認できます。</p>` : '';
             return `<div class="mt-2 p-2 rounded-lg border border-emerald-900/60 bg-emerald-950/20 text-[11px]">
-                <p class="font-bold text-emerald-300">保存済みの思考関係（${entries.length}本）</p>
+                <p class="font-bold text-emerald-300">保存済みの関係（旧版置換を含む・${entries.length}本）</p>
                 ${rows}${more}
                 <p class="mt-1 text-[10px] text-slate-400">矢印は表示メモから見た関係の向き。関連は双方向。検索スコアとは別表示です。</p>
             </div>`;
@@ -749,7 +749,7 @@ html body #view-map:fullscreen {
         }
 
         const searchModeDescriptions = Object.freeze({
-            integrated_intent_v1: '選択中：統合提案：意味＋思考＋時間 — Hybrid（意味70%＋BM25 30%）に、保存した関係を最大3段階、必要に応じて日時・旧版の処理を加えます。実験用v4とは異なります。',
+            integrated_intent_v1: '選択中：統合提案：意味＋思考＋時間 — Hybrid（意味80%＋BM25 20%・旧版0.80倍）に、保存した関係を最大3段階、必要に応じて日時・旧版の処理を加えます。実験用v4とは異なります。',
             semantic_lineage: '選択中：提案：意味＋思考関係 — 意味検索を基本に、保存済みの思考関係と弱い推定関係を利用して順位を調整する方式です。',
             thought_evolution: '選択中：旧方式：自動系列推定 — 内容の類似度と作成日時から思考のつながりを推定します。',
             thought_approved: '選択中：承認済み関係だけ — ユーザーが承認・保存した思考関係を利用します。',
@@ -932,7 +932,7 @@ html body #view-map:fullscreen {
             
             try {
                 const integrated = mode === 'integrated_intent_v1';
-                const res = await fetch(integrated ? '/api/integrated-search' : '/api/gravity', {
+                const res = await fetch(integrated ? '/api/proposal-search' : '/api/proposal-gravity', {
                     method: 'POST',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify(integrated ? {text: text} : {title: title, text: text, mode: mode})
@@ -1500,6 +1500,141 @@ html body #view-map:fullscreen {
             document.getElementById('result-map-detail')?.classList.add('hidden');
         }
 
+
+        // GM48_GRAPH_OVERLAY_V1
+        let gm48GraphRecords = null;
+        let gm48GraphMemos = null;
+        let gm48GraphRequest = null;
+
+        function loadGm48Graph() {
+            if (new URLSearchParams(location.search).get('study') !== 'B') return;
+            if (gm48GraphRecords || gm48GraphRequest) return;
+
+            gm48GraphRequest = Promise.all([
+                fetch('/static/gemma48_unapproved_results.json', {cache:'no-store'}),
+                fetch('/api/memos', {cache:'no-store'})
+            ]).then(async ([r1,r2]) => {
+                if (!r1.ok || !r2.ok) throw Error('Gemma data fetch failed');
+                const data = await r1.json();
+                const memos = await r2.json();
+
+                if (!Array.isArray(memos) || memos.length !== 48 ||
+                    !Array.isArray(data.results) || data.results.length !== 29 ||
+                    !Array.isArray(data.memo_identity) || data.memo_identity.length !== 48) {
+                    throw Error('Gemma dataset mismatch');
+                }
+
+                const byId = new Map(memos.map(m => [String(m.id),m]));
+                if (byId.size !== 48) throw Error('Duplicate memo IDs');
+
+                for (const m of data.memo_identity) {
+                    const got = byId.get(String(m.id));
+                    if (!got || got.title !== m.title ||
+                        got.content !== m.content) {
+                        throw Error('Memo identity mismatch: ' + m.id);
+                    }
+                }
+
+                const allowed = new Set(['development','revision','branch','related']);
+                for (const r of data.results) {
+                    if (!byId.has(String(r.parent_id)) ||
+                        !byId.has(String(r.child_id)) ||
+                        !allowed.has(r.relation)) {
+                        throw Error('Invalid inferred relation');
+                    }
+                }
+
+                gm48GraphMemos = byId;
+                gm48GraphRecords = data.results;
+
+                if (typeof lastResults !== 'undefined') {
+                    drawMap(lastResults);
+                }
+            }).catch(err => {
+                console.error('Gemma graph load:', err);
+                const legend = document.getElementById('map-legend');
+                if (legend) legend.textContent += ' / Gemma 4: load error';
+            });
+        }
+
+        function addGm48GraphEdges(model, rankedResults) {
+            if (new URLSearchParams(location.search).get('study') !== 'B') return;
+            if (!gm48GraphRecords || !gm48GraphMemos) return;
+
+            const nodeIds = new Set(model.nodes.map(n => String(n.id)));
+            const labels = {
+                development:'\u767a\u5c55',
+                revision:'\u4fee\u6b63\u30fb\u7f6e\u63db',
+                branch:'\u5206\u5c90',
+                related:'\u95a2\u9023'
+            };
+
+            // 検索結果に直接つながるAI推定関係だけ表示
+            const hitIds = new Set(
+                (Array.isArray(rankedResults) ? rankedResults : [])
+                    .slice(0, 10)
+                    .map(m => String(m.id))
+            );
+
+            // 保存済み関係と重複しないAI推定だけを表示
+            if (!savedRelationGraph ||
+                !Array.isArray(savedRelationGraph.edges)) return;
+
+            const savedPairs = new Set(
+                savedRelationGraph.edges.map(e =>
+                    [String(e.from), String(e.to)].sort().join('|')
+                )
+            );
+
+            for (const r of gm48GraphRecords) {
+                const pairKey = [
+                    String(r.parent_id),
+                    String(r.child_id)
+                ].sort().join('|');
+
+                // 関係の種類にかかわらず、既存の接続は除外
+                if (savedPairs.has(pairKey)) continue;
+                if (!hitIds.has(String(r.parent_id)) &&
+                    !hitIds.has(String(r.child_id))) continue;
+                for (const id of [String(r.parent_id),String(r.child_id)]) {
+                    if (nodeIds.has(id)) continue;
+                    const memo = gm48GraphMemos.get(id);
+                    if (!memo) continue;
+
+                    model.nodes.push({
+                        id:id,
+                        label:String(memo.title || id).slice(0,24),
+                        shape:'box',
+                        color:{background:'#26364a',border:'#64748b'},
+                        font:{color:'#f8fafc',size:13}
+                    });
+                    nodeIds.add(id);
+                    model.visibleMemoById?.set(id,memo);
+                }
+
+                model.edges.push({
+                    id:'gm48-inferred-' + String(r.parent_id) + '-' +
+                        String(r.child_id) + '-' + r.relation,
+                    from:String(r.parent_id),
+                    to:String(r.child_id),
+                    label:'AI: ' + (labels[r.relation] || r.relation),
+                    arrows:{to:{enabled:true,scaleFactor:0.6}},
+                    dashes:[7,5],
+                    width:2.5,
+                    color:{color:'#f59e0b',inherit:false},
+                    font:{color:'#fbbf24',size:11,
+                          strokeWidth:3,strokeColor:'#0f172a'},
+                    smooth:{enabled:true,type:'curvedCW',roundness:0.23},
+                    title:'Gemma 4 / AI\u63a8\u5b9a\u30fb\u672a\u627f\u8a8d\n' +
+                        (labels[r.relation] || r.relation) +
+                        '\nConfidence: ' + r.confidence +
+                        '\n' + (r.reason || '')
+                });
+            }
+
+            model.legend += ' / \u30aa\u30ec\u30f3\u30b8\u306e\u7834\u7dda\uff1dGemma 4\u63a8\u5b9a\uff08\u672a\u627f\u8a8d\uff09';
+        }
+
         function drawMap(data) {
             const container = document.getElementById('mynetwork');
             const viewMap = document.getElementById('view-map');
@@ -1507,6 +1642,8 @@ html body #view-map:fullscreen {
             if (viewMap.classList.contains('hidden') || container.clientHeight === 0) return;
             const mode = document.getElementById('search-mode')?.value || 'semantic_lineage';
             const model = buildResultMapModel(resultsForDisplay(data), mode, currentMapStyle);
+            loadGm48Graph();
+            addGm48GraphEdges(model, resultsForDisplay(data));
             if (!savedRelationGraph && !savedRelationRequest) void fetchSavedRelationGraph();
             const legend = document.getElementById('map-legend');
             const count = document.getElementById('map-count');
@@ -1884,5 +2021,19 @@ document.addEventListener('DOMContentLoaded', () => {
 <script src="/static/memo_focus_scope_v1.js"></script>
 <script src="/static/memo_graph_readability_v1.js"></script>
 <script src="/static/map_legend_compact_v1.js"></script>
+<script defer src="/static/gemma_review.js"></script>
+<script defer src="/static/proposal_only_v1.js"></script>
+<script defer src="/static/proposal_b_ui.js"></script>
+<script defer src="/static/auto_relation_after_save.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const condition = new URLSearchParams(window.location.search).get('study');
+    if (condition === 'B') {
+        const script = document.createElement('script');
+        script.src = '/static/gemma48_unapproved_view.js';
+        document.body.appendChild(script);
+    }
+});
+</script>
 </body>
 </html>
